@@ -6,15 +6,15 @@
 
 const SITE_SETTINGS = {
     // 0. SEO / Мета-теги страницы
-    pageTitle: "Cardssellers — Обновление карточек Wildberries под ключ",
+    pageTitle: "TKtorg — Обновление карточек Wildberries под ключ",
     pageMetaDesc: "Обновим карточки на Wildberries без большой предоплаты. Новые фото, описания, SEO-наименования. Оплата с результата.",
 
     // 1. Ссылка на Telegram
-    telegramLink: "https://t.me/cardssellers",
+    telegramLink: "https://t.me/tktorg",
 
     // 2. Шапка (Логотип и Меню)
-    logoMark: "CS",
-    logoTextBold: "Cardssellers",
+    logoMark: "TK",
+    logoTextBold: "TKtorg",
     logoTextSmall: "Карточки товаров для Wildberries",
     
     navBenefits: "Преимущества",
@@ -146,8 +146,18 @@ const SITE_SETTINGS = {
     ctaSubmitBtn: "Отправить заявку",
     ctaPrivacy: "Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.",
 
+    // 10.5. Блок "Отзывы клиентов"
+    reviewsEyebrow: "ОТЗЫВЫ КЛИЕНТОВ",
+    reviewsTitle: "Что говорят селлеры о нашей работе",
+    review1_text: "«Обновили карточки для 80 товаров. Конверсия из клика в корзину выросла на 24%, выкупы пошли в гору. Система оплаты с выкупов очень удобная, плачу постепенно без кассовых разрывов.»",
+    review1_author: "Дмитрий К. (Ниша: Электроника)",
+    review2_text: "«Сначала сомневался, дали тест на 3 артикула. Визуал сделали бомбический, сразу пошли первые заказы. В итоге отдали в работу весь ассортимент (более 600 позиций). Рекомендую!»",
+    review2_author: "Ольга С. (Ниша: Одежда и обувь)",
+    review3_text: "«Отличный подход. Не нужно платить 50 тысяч вперед за дизайн. Ребята сами разработали инфографику, написали SEO. Продажи выросли на 30% через две недели после публикации.»",
+    review3_author: "Артем М. (Ниша: Дом и кухня)",
+
     // 12. Подвал (Footer)
-    footerLogoTextBold: "Cardssellers",
+    footerLogoTextBold: "TKtorg",
     footerLogoTextSmall: "Продаём образы, которые покупают",
-    footerCopy: "Cardssellers © 2026. Все права защищены."
+    footerCopy: "TKtorg © 2026. Все права защищены."
 };

@@ -408,6 +408,30 @@ section { padding: 90px 48px; }
 .footer-brand small { display: block; font-size: 11px; color: rgba(255,255,255,0.4); }
 .footer-copy { font-size: 13px; color: rgba(255,255,255,0.4); }
 
+/* ===== REVIEWS (DARK) ===== */
+.reviews { background: var(--bg-dark-alt); color: white; border-top: 1px solid rgba(255,255,255,0.05); }
+.reviews-inner { max-width: 1200px; margin: 0 auto; text-align: center; }
+.reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+.review-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+.review-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(139, 65, 255, 0.3);
+  background: rgba(255, 255, 255, 0.04);
+}
+.review-stars { color: #FFAA00; font-size: 16px; letter-spacing: 2px; margin-bottom: 16px; }
+.review-card p { font-size: 14px; color: rgba(255, 255, 255, 0.8); line-height: 1.6; margin-bottom: 24px; font-style: italic; }
+.review-author { font-size: 13px; color: var(--purple); font-weight: 700; }
+
 /* ===== SCROLL REVEAL ANIMATIONS ===== */
 .reveal {
   opacity: 0;
@@ -645,9 +669,15 @@ section { padding: 90px 48px; }
   .audience-note p { font-size: 13px; }
 
   /* Security mobile */
-  .security-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 28px; }
-  .security-icon { width: 48px; height: 48px; border-radius: 14px; margin-bottom: 12px; }
-  .security-item p { font-size: 12px; }
+  .security-grid { display: flex; flex-direction: column; gap: 16px; margin-top: 28px; }
+  .security-item { display: flex; align-items: center; gap: 14px; text-align: left; }
+  .security-icon { margin: 0; flex-shrink: 0; width: 48px; height: 48px; border-radius: 14px; }
+  .security-item p { font-size: 14px; margin: 0; color: rgba(255,255,255,0.85); }
+
+  /* Reviews mobile */
+  .reviews-grid { grid-template-columns: 1fr; gap: 16px; margin-top: 28px; }
+  .review-card { padding: 24px; border-radius: 12px; }
+  .review-card p { font-size: 13px; margin-bottom: 16px; }
 
   /* CTA mobile */
   .cta-inner h2 { font-size: clamp(22px, 5.5vw, 30px); }

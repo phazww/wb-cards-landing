@@ -9,8 +9,12 @@ const SITE_SETTINGS = {
     pageTitle: "TKtorg — Обновление карточек Wildberries под ключ",
     pageMetaDesc: "Обновим карточки на Wildberries без большой предоплаты. Новые фото, описания, SEO-наименования. Оплата с результата.",
 
-    // 1. Ссылка на Telegram
+    // 1. Контакты
     telegramLink: "https://t.me/tktorg",
+    whatsappLink: "https://wa.me/79528771718",
+    maxLink: "https://max.ru/u/79528771718",
+    phoneVal: "+7 (952) 877-17-18",
+    phoneLink: "tel:+79528771718",
 
     // 2. Шапка (Логотип и Меню)
     logoMark: "",

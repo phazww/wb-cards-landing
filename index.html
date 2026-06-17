@@ -17,7 +17,26 @@
   <!-- HEADER -->
   <header class="header" id="header">
     <a class="logo" href="#top" id="header-logo">
-      <span class="logo-mark" aria-hidden="true">TK</span>
+      <span class="logo-mark" aria-hidden="true">
+        <svg class="logo-svg" viewBox="0 0 100 100" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#D4AF37"/>
+              <stop offset="50%" stop-color="#F7D77A"/>
+              <stop offset="100%" stop-color="#D4AF37"/>
+            </linearGradient>
+            <linearGradient id="purple-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#8B41FF"/>
+              <stop offset="100%" stop-color="#5C16C5"/>
+            </linearGradient>
+          </defs>
+          <path d="M 35,65 C 20,65 20,35 35,35 C 50,35 50,65 65,65 C 80,65 80,35 65,35 C 57,35 52,48 45,55" stroke="url(#gold-grad)" stroke-width="8" stroke-linecap="round" fill="none"/>
+          <path d="M 68,52 L 85,30 M 85,30 L 74,30 M 85,30 L 85,41" stroke="url(#gold-grad)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <rect x="25" y="48" width="5" height="10" rx="1.5" fill="url(#purple-grad)"/>
+          <rect x="33" y="43" width="5" height="15" rx="1.5" fill="url(#purple-grad)"/>
+          <rect x="41" y="38" width="5" height="20" rx="1.5" fill="url(#purple-grad)"/>
+        </svg>
+      </span>
       <span class="logo-text">
         <b>TKtorg</b>
         <small>Карточки товаров для Wildberries</small>
@@ -388,24 +407,136 @@
   <!-- ОТЗЫВЫ -->
   <section class="reviews" id="reviews">
     <div class="reviews-inner">
-      <span id="dynamic-reviews-eyebrow" class="section-eyebrow reveal">ОТЗЫВЫ КЛИЕНТОВ</span>
-      <h2 id="dynamic-reviews-title" class="reveal">Что говорят селлеры о нашей работе</h2>
+      <div class="reviews-badge-wrap reveal">
+        <span class="reviews-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="reviews-badge-icon">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+          <span id="dynamic-reviews-eyebrow">ДОВЕРИЕ СЕЛЛЕРОВ</span>
+        </span>
+      </div>
+      <h2 class="reveal" id="dynamic-reviews-title">Отзывы клиентов <span class="text-purple">о нас</span></h2>
+      <p class="reviews-subtitle reveal" id="dynamic-reviews-subtitle">Что говорят селлеры о работе с нами</p>
+      
       <div class="reviews-grid reveal-stagger">
+        <!-- Card 1 -->
         <article class="review-card reveal">
+          <div class="review-header">
+            <img id="dynamic-review-1-img" src="assets/alexey_avatar.png" alt="Алексей С." class="review-avatar">
+            <div class="review-user-info">
+              <b id="dynamic-review-1-author">Алексей С.</b>
+              <small id="dynamic-review-1-niche">Спорт и отдых</small>
+            </div>
+          </div>
           <div class="review-stars">★★★★★</div>
-          <p id="dynamic-review-1-text">«Обновили карточки для 80 товаров. Конверсия из клика в корзину выросла на 24%, выкупы пошли в гору. Система оплаты с выкупов очень удобная, плачу постепенно без кассовых разрывов.»</p>
-          <div class="review-author" id="dynamic-review-1-author">Дмитрий К. (Ниша: Электроника)</div>
+          <p id="dynamic-review-1-text">Карточки стали намного понятнее и профессиональнее. Улучшили SEO и структуру — выросли просмотры и конверсия. Отдельно отмечу, что показывают результат до публикации — это очень удобно.</p>
+          <div class="review-tag">
+            <span class="review-tag-check">✓</span>
+            <span id="dynamic-review-1-tagtext">Работаем по согласованию</span>
+          </div>
         </article>
+
+        <!-- Card 2 -->
         <article class="review-card reveal">
+          <div class="review-header">
+            <img id="dynamic-review-2-img" src="assets/maria_avatar.png" alt="Мария К." class="review-avatar">
+            <div class="review-user-info">
+              <b id="dynamic-review-2-author">Мария К.</b>
+              <small id="dynamic-review-2-niche">Красота и уход</small>
+            </div>
+          </div>
           <div class="review-stars">★★★★★</div>
-          <p id="dynamic-review-2-text">«Сначала сомневался, дали тест на 3 артикула. Визуал сделали бомбический, сразу пошли первые заказы. В итоге отдали в работу весь ассортимент (более 600 позиций). Рекомендую!»</p>
-          <div class="review-author" id="dynamic-review-2-author">Ольга С. (Ниша: Одежда и обувь)</div>
+          <p id="dynamic-review-2-text">У нас большой каталог, и раньше было сложно поддерживать единообразие. Команда привела карточки к единому стилю, добавила инфографику и преимущества. Стало проще масштабироваться и запускать новые товары.</p>
+          <div class="review-tag">
+            <span class="review-tag-check">✓</span>
+            <span id="dynamic-review-2-tagtext">Подходит для больших каталогов</span>
+          </div>
         </article>
+
+        <!-- Card 3 -->
         <article class="review-card reveal">
+          <div class="review-header">
+            <img id="dynamic-review-3-img" src="assets/dmitry_avatar.png" alt="Дмитрий П." class="review-avatar">
+            <div class="review-user-info">
+              <b id="dynamic-review-3-author">Дмитрий П.</b>
+              <small id="dynamic-review-3-niche">Электроника</small>
+            </div>
+          </div>
           <div class="review-stars">★★★★★</div>
-          <p id="dynamic-review-3-text">«Отличный подход. Не нужно платить 50 тысяч вперед за дизайн. Ребята сами разработали инфографику, написали SEO. Продажи выросли на 30% через две недели после публикации.»</p>
-          <div class="review-author" id="dynamic-review-3-author">Артем М. (Ниша: Дом и кухня)</div>
+          <p id="dynamic-review-3-text">Понравился системный подход и внимание к деталям. Карточки выглядят аккуратно, информация структурирована. Особенно ценно, что можно согласовать всё заранее и внести правки до публикации.</p>
+          <div class="review-tag">
+            <span class="review-tag-check">✓</span>
+            <span id="dynamic-review-3-tagtext">Тест на 1–3 карточках</span>
+          </div>
         </article>
+
+        <!-- Card 4 -->
+        <article class="review-card reveal">
+          <div class="review-header">
+            <img id="dynamic-review-4-img" src="assets/ekaterina_avatar.png" alt="Екатерина Л." class="review-avatar">
+            <div class="review-user-info">
+              <b id="dynamic-review-4-author">Екатерина Л.</b>
+              <small id="dynamic-review-4-niche">Дом и интерьер</small>
+            </div>
+          </div>
+          <div class="review-stars">★★★★★</div>
+          <p id="dynamic-review-4-text">Сервис экономит нам кучу времени. Больше не нужно собирать информацию и думать, как оформить — всё делают за нас и показывают результат до публикации. Очень удобно и безопасно.</p>
+          <div class="review-tag">
+            <span class="review-tag-check">✓</span>
+            <span id="dynamic-review-4-tagtext">Безопасный доступ</span>
+          </div>
+        </article>
+      </div>
+
+      <!-- Trust features row below reviews -->
+      <div class="trust-features reveal-stagger">
+        <div class="trust-feature-item reveal">
+          <div class="trust-feature-icon gold-border">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="M9 11l2 2 4-4" stroke="#FFAA00"/>
+            </svg>
+          </div>
+          <div class="trust-feature-text">
+            <b id="dynamic-trust-1-title">Работаем по согласованию</b>
+            <p id="dynamic-trust-1-desc">Все материалы согласуются перед публикацией</p>
+          </div>
+        </div>
+        <div class="trust-feature-item reveal">
+          <div class="trust-feature-icon purple-border">
+            <span class="badge-num-icon">1-3</span>
+          </div>
+          <div class="trust-feature-text">
+            <b id="dynamic-trust-2-title">Тест на 1–3 карточках</b>
+            <p id="dynamic-trust-2-desc">Покажем результат на небольших карточках перед стартом</p>
+          </div>
+        </div>
+        <div class="trust-feature-item reveal">
+          <div class="trust-feature-icon gold-border">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+          </div>
+          <div class="trust-feature-text">
+            <b id="dynamic-trust-3-title">Безопасный доступ</b>
+            <p id="dynamic-trust-3-desc">Доступ к кабинету только с вашего разрешения</p>
+          </div>
+        </div>
+        <div class="trust-feature-item reveal">
+          <div class="trust-feature-icon purple-border">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="7" height="7"/>
+              <rect x="14" y="3" width="7" height="7"/>
+              <rect x="14" y="14" width="7" height="7"/>
+              <rect x="3" y="14" width="7" height="7"/>
+            </svg>
+          </div>
+          <div class="trust-feature-text">
+            <b id="dynamic-trust-4-title">Подходит для больших каталогов</b>
+            <p id="dynamic-trust-4-desc">Работаем с каталогами от 500 карточек и более</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -430,7 +561,26 @@
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <span class="logo-mark logo-mark-sm" aria-hidden="true">TK</span>
+        <span class="logo-mark logo-mark-sm" aria-hidden="true">
+          <svg class="logo-svg" viewBox="0 0 100 100" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="gold-grad-footer" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#D4AF37"/>
+                <stop offset="50%" stop-color="#F7D77A"/>
+                <stop offset="100%" stop-color="#D4AF37"/>
+              </linearGradient>
+              <linearGradient id="purple-grad-footer" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#8B41FF"/>
+                <stop offset="100%" stop-color="#5C16C5"/>
+              </linearGradient>
+            </defs>
+            <path d="M 35,65 C 20,65 20,35 35,35 C 50,35 50,65 65,65 C 80,65 80,35 65,35 C 57,35 52,48 45,55" stroke="url(#gold-grad-footer)" stroke-width="8" stroke-linecap="round" fill="none"/>
+            <path d="M 68,52 L 85,30 M 85,30 L 74,30 M 85,30 L 85,41" stroke="url(#gold-grad-footer)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <rect x="25" y="48" width="5" height="10" rx="1.5" fill="url(#purple-grad-footer)"/>
+            <rect x="33" y="43" width="5" height="15" rx="1.5" fill="url(#purple-grad-footer)"/>
+            <rect x="41" y="38" width="5" height="20" rx="1.5" fill="url(#purple-grad-footer)"/>
+          </svg>
+        </span>
         <div>
           <b>TKtorg</b>
           <small>Продаём образы, которые покупают</small>
@@ -698,21 +848,38 @@
     }
 
     // 10.5. Блок "Отзывы клиентов"
-    const reviewsEyebrow = document.querySelector('#reviews .section-eyebrow');
+    const reviewsEyebrow = document.querySelector('#reviews #dynamic-reviews-eyebrow');
     if (reviewsEyebrow && SITE_SETTINGS.reviewsEyebrow) reviewsEyebrow.innerHTML = SITE_SETTINGS.reviewsEyebrow;
 
-    const reviewsTitle = document.querySelector('#reviews h2');
+    const reviewsTitle = document.querySelector('#reviews #dynamic-reviews-title');
     if (reviewsTitle && SITE_SETTINGS.reviewsTitle) reviewsTitle.innerHTML = SITE_SETTINGS.reviewsTitle;
 
-    for (let i = 1; i <= 3; i++) {
-      const reviewText = document.getElementById('dynamic-review-' + i + '-text');
-      if (reviewText && SITE_SETTINGS['review' + i + '_text']) {
-        reviewText.innerHTML = SITE_SETTINGS['review' + i + '_text'];
-      }
-      const reviewAuthor = document.getElementById('dynamic-review-' + i + '-author');
-      if (reviewAuthor && SITE_SETTINGS['review' + i + '_author']) {
-        reviewAuthor.innerHTML = SITE_SETTINGS['review' + i + '_author'];
-      }
+    const reviewsSubtitle = document.querySelector('#reviews #dynamic-reviews-subtitle');
+    if (reviewsSubtitle && SITE_SETTINGS.reviewsSubtitle) reviewsSubtitle.innerHTML = SITE_SETTINGS.reviewsSubtitle;
+
+    for (let i = 1; i <= 4; i++) {
+      const img = document.getElementById('dynamic-review-' + i + '-img');
+      if (img && SITE_SETTINGS['review' + i + '_img']) img.src = SITE_SETTINGS['review' + i + '_img'];
+
+      const author = document.getElementById('dynamic-review-' + i + '-author');
+      if (author && SITE_SETTINGS['review' + i + '_author']) author.innerHTML = SITE_SETTINGS['review' + i + '_author'];
+
+      const niche = document.getElementById('dynamic-review-' + i + '-niche');
+      if (niche && SITE_SETTINGS['review' + i + '_niche']) niche.innerHTML = SITE_SETTINGS['review' + i + '_niche'];
+
+      const text = document.getElementById('dynamic-review-' + i + '-text');
+      if (text && SITE_SETTINGS['review' + i + '_text']) text.innerHTML = SITE_SETTINGS['review' + i + '_text'];
+
+      const tagText = document.getElementById('dynamic-review-' + i + '-tagtext');
+      if (tagText && SITE_SETTINGS['review' + i + '_tagtext']) tagText.innerHTML = SITE_SETTINGS['review' + i + '_tagtext'];
+    }
+
+    for (let i = 1; i <= 4; i++) {
+      const title = document.getElementById('dynamic-trust-' + i + '-title');
+      if (title && SITE_SETTINGS['trust' + i + '_title']) title.innerHTML = SITE_SETTINGS['trust' + i + '_title'];
+
+      const desc = document.getElementById('dynamic-trust-' + i + '-desc');
+      if (desc && SITE_SETTINGS['trust' + i + '_desc']) desc.innerHTML = SITE_SETTINGS['trust' + i + '_desc'];
     }
 
     // 11. Блок CTA (Оставить заявку)

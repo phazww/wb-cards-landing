@@ -298,31 +298,41 @@
         <div class="audience-icon">
           <img src="assets/Screenshot_17.png" alt="" style="width: 100%; height: 100%; object-fit: contain; transform: scale(1.3);">
         </div>
-        <b>От 500 карточек</b><br>в одном магазине
+        <div class="audience-text">
+          <b>От 500 карточек</b><br>в одном магазине
+        </div>
       </div>
       <div class="audience-item reveal">
         <div class="audience-icon">
           <img src="assets/Screenshot_18.png" alt="" style="width: 100%; height: 100%; object-fit: contain; transform: scale(1.3) translate(-5px, 10px);">
         </div>
-        <b>Есть товары</b><br>с регулярными продажами
+        <div class="audience-text">
+          <b>Есть товары</b><br>с регулярными продажами
+        </div>
       </div>
       <div class="audience-item reveal">
         <div class="audience-icon">
           <img src="assets/Screenshot_19.png" alt="" style="width: 100%; height: 100%; object-fit: contain; transform: scale(1.3);">
         </div>
-        <b>Карточки визуально</b><br>устарели
+        <div class="audience-text">
+          <b>Карточки визуально</b><br>устарели
+        </div>
       </div>
       <div class="audience-item reveal">
         <div class="audience-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         </div>
-        <b>Нет времени обновлять</b><br>каждую карточку
+        <div class="audience-text">
+          <b>Нет времени обновлять</b><br>каждую карточку
+        </div>
       </div>
       <div class="audience-item reveal">
         <div class="audience-icon">
           <img src="assets/Screenshot_20.png" alt="" style="width: 100%; height: 100%; object-fit: contain; transform: scale(1.15);">
         </div>
-        <b>Нужен партнёр</b><br>на долгий срок
+        <div class="audience-text">
+          <b>Нужен партнёр</b><br>на долгий срок
+        </div>
       </div>
     </div>
     <div class="audience-note reveal">
@@ -632,11 +642,14 @@
           if (icon) {
             textNode.innerHTML = '';
             textNode.appendChild(icon);
+            const wrapper = document.createElement('div');
+            wrapper.className = 'audience-text';
             const temp = document.createElement('div');
             temp.innerHTML = ' ' + SITE_SETTINGS['audience_item' + i];
             while (temp.firstChild) {
-              textNode.appendChild(temp.firstChild);
+              wrapper.appendChild(temp.firstChild);
             }
+            textNode.appendChild(wrapper);
           } else {
             textNode.innerHTML = SITE_SETTINGS['audience_item' + i];
           }

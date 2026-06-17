@@ -426,6 +426,10 @@ section { padding: 90px 48px; }
 .reveal-stagger > .reveal:nth-child(4) { transition-delay: 0.24s; }
 .reveal-stagger > .reveal:nth-child(5) { transition-delay: 0.32s; }
 .reveal-stagger > .reveal:nth-child(6) { transition-delay: 0.40s; }
+.reveal-stagger > .reveal:nth-child(7) { transition-delay: 0.48s; }
+.reveal-stagger > .reveal:nth-child(8) { transition-delay: 0.56s; }
+.reveal-stagger > .reveal:nth-child(9) { transition-delay: 0.64s; }
+.reveal-stagger > .reveal:nth-child(10) { transition-delay: 0.72s; }
 
 /* Slide from left variant */
 .reveal-left {

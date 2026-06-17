@@ -419,9 +419,11 @@
     if (metaDesc && SITE_SETTINGS.pageMetaDesc) metaDesc.content = SITE_SETTINGS.pageMetaDesc;
 
     // 1. Ссылка во всех href
-    document.querySelectorAll('a[href^="https://t.me/"]').forEach(link => {
-      link.href = SITE_SETTINGS.telegramLink;
-    });
+    if (SITE_SETTINGS.telegramLink) {
+      document.querySelectorAll('a[href^="https://t.me/"]').forEach(link => {
+        link.href = SITE_SETTINGS.telegramLink;
+      });
+    }
 
     // 2. Шапка (Логотип и Меню)
     const logoMark = document.querySelector('#header-logo .logo-mark');

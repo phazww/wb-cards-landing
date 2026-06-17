@@ -509,6 +509,24 @@ section { padding: 90px 48px; }
   }
 }
 
+/* Prevent hover on elements that haven't revealed yet */
+.reveal:not(.visible),
+.reveal-left:not(.visible),
+.reveal-right:not(.visible) {
+  pointer-events: none;
+}
+
+/* Ensure hover effects override reveal transforms on revealed elements */
+.include-card.reveal.visible:hover,
+.price-card.reveal.visible:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+.price-card-featured.reveal.visible:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(251, 191, 36, 0.15);
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1150px) {
   section { padding: 80px 32px; }

@@ -42,10 +42,10 @@
   <!-- HERO -->
   <section class="hero" id="hero" aria-label="Главный экран">
     <div class="hero-inner">
-      <div class="hero-content">
+      <div class="hero-content reveal-left">
         <span class="hero-tag">ДЛЯ СЕЛЛЕРОВ С АССОРТИМЕНТОМ</span>
-        <h1>Обновим карточки <span class="text-purple">Wildberries</span> без большой предоплаты</h1>
-        <p class="hero-desc">Создадим новое главное фото, комплект из 5 фото, продающее описание и SEO-наименование.<br>Оплата — <strong class="text-yellow">10 ₽ с выкупленного товара</strong> после обновления карточки в течение <strong class="text-yellow">12 месяцев</strong>.</p>
+        <h1 id="dynamic-hero-title">Обновим карточки <span class="text-purple">Wildberries</span> без большой предоплаты</h1>
+        <p id="dynamic-hero-desc" class="hero-desc">Создадим новое главное фото, комплект из 5 фото, продающее описание и SEO-наименование.<br>Оплата — <strong class="text-yellow">10 ₽ с выкупленного товара</strong> после обновления карточки в течение <strong class="text-yellow">12 месяцев</strong>.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="https://t.me/cardssellers" target="_blank" rel="noopener">Получить тест на 1–3 карточки</a>
           <a class="btn btn-outline-light" href="https://t.me/cardssellers" target="_blank" rel="noopener">Обсудить артикулы <img src="assets/Screenshot_27.png" alt="" class="btn-star"></a>
@@ -56,10 +56,10 @@
         </p>
       </div>
       
-      <div class="hero-visual">
+      <div class="hero-visual reveal-right">
         <div class="hero-card hero-card-before">
           <span class="hero-tag-red">БЫЛО</span>
-          <img src="assets/headphones_before.png" alt="До обновления" class="card-img-before">
+          <img id="dynamic-img-before" src="assets/headphones_before.png" alt="До обновления" class="card-img-before">
           <div class="before-card-stats">
             <div class="stars stars-bad">
               <div class="stars-icons"><span class="star-active">★</span><span class="star-inactive">★★★★</span></div>
@@ -73,7 +73,7 @@
         <div class="hero-card hero-card-after">
           <span class="hero-tag-green">СТАЛО</span>
           <div class="after-card-inner">
-             <img src="assets/headphones_after.jpg" alt="После обновления" class="card-img-after">
+             <img id="dynamic-img-after" src="assets/headphones_after.jpg" alt="После обновления" class="card-img-after">
              <div class="after-card-info">
                <div class="after-card-stats">
                   <div class="stars">★★★★★ <span>312 отзывов</span></div>
@@ -92,10 +92,10 @@
 
   <!-- ПРЕИМУЩЕСТВА -->
   <section class="benefits" id="benefits">
-    <span class="section-eyebrow">ПОЧЕМУ ЭТО ВЫГОДНО СЕЛЛЕРУ</span>
-    <h2>Не платите десятки тысяч заранее — оплачивайте обновление карточки с продаж</h2>
-    <div class="benefits-grid">
-      <article class="benefit-item">
+    <span class="section-eyebrow reveal">ПОЧЕМУ ЭТО ВЫГОДНО СЕЛЛЕРУ</span>
+    <h2 class="reveal">Не платите десятки тысяч заранее — оплачивайте обновление карточки с продаж</h2>
+    <div class="benefits-grid reveal-stagger">
+      <article class="benefit-item reveal">
         <div class="benefit-icon">
           <img src="assets/Screenshot_3.png" alt="Нет большой предоплаты" style="width: 100%; height: 100%; object-fit: contain; transform: scale(1.4) translate(2px, 1px);">
         </div>
@@ -142,10 +142,10 @@
 
   <!-- ЧТО ВХОДИТ -->
   <section class="includes" id="includes">
-    <span class="section-eyebrow">ЧТО ВХОДИТ В ОБНОВЛЕНИЕ КАРТОЧКИ</span>
+    <span class="section-eyebrow reveal">ЧТО ВХОДИТ В ОБНОВЛЕНИЕ КАРТОЧКИ</span>
     <h2 class="sr-only">Что входит в обновление карточки</h2>
-    <div class="includes-grid">
-      <article class="include-card">
+    <div class="includes-grid reveal-stagger">
+      <article class="include-card reveal">
         <span class="include-num">1</span>
         <div class="include-img-wrap"><img src="assets/update_1.png" alt="Новое главное фото товара" class="include-img"></div>
         <h3>Новое главное фото</h3>
@@ -181,10 +181,10 @@
   <!-- КАК РАБОТАЕТ -->
   <section class="how-works" id="how-works">
     <div class="how-inner">
-      <span class="section-eyebrow section-eyebrow-light">КАК РАБОТАЕТ ОПЛАТА 10 ₽ С ВЫКУПА</span>
+      <span class="section-eyebrow section-eyebrow-light reveal">КАК РАБОТАЕТ ОПЛАТА 10 ₽ С ВЫКУПА</span>
       <h2 class="sr-only">Как работает оплата</h2>
-      <div class="steps-grid">
-        <article class="step-item">
+      <div class="steps-grid reveal-stagger">
+        <article class="step-item reveal">
           <div class="step-circle">1</div>
           <div class="step-icon">
             <img src="assets/Screenshot_12.png" alt="" style="width: 100%; height: 100%; object-fit: contain; transform: scale(1.4);">
@@ -240,15 +240,16 @@
 
   <!-- ФОРМАТЫ РАБОТЫ -->
   <section class="pricing" id="pricing">
-    <span class="section-eyebrow">ФОРМАТЫ РАБОТЫ</span>
+    <span class="section-eyebrow reveal">ФОРМАТЫ РАБОТЫ</span>
     <h2 class="sr-only">Форматы работы</h2>
-    <div class="pricing-grid">
-      <article class="price-card">
+    <div class="pricing-grid reveal-stagger">
+      <article class="price-card reveal">
         <div class="price-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
         </div>
-        <h3>1. Фиксированная оплата</h3>
-        <p class="price-desc">Для тех, кто хочет оплатить работу один раз и получить готовую карточку.</p>
+        <h3 class="price-title">СТАРТ</h3>
+        <div id="dynamic-price-start" class="price-value">15 000 ₽</div>
+        <p class="price-desc">Базовое обновление для 1–3 артикулов.</p>
         <ul>
           <li>Фото, 5 фото, описание, SEO</li>
           <li>Цена зависит от объёма</li>
@@ -256,12 +257,13 @@
         </ul>
         <a class="btn btn-primary" href="https://t.me/cardssellers" target="_blank" rel="noopener">Узнать стоимость</a>
       </article>
-      <article class="price-card price-card-featured">
+      <article class="price-card price-card-featured reveal">
         <div class="price-popular">Популярно</div>
         <div class="price-icon price-icon-gold">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
         </div>
-        <h3>2. Оплата с выкупов</h3>
+        <h3 class="price-title">ПРО</h3>
+        <div id="dynamic-price-pro" class="price-value">10 ₽ / выкуп</div>
         <p class="price-desc">Партнёрская модель для селлеров с большим ассортиментом.</p>
         <ul>
           <li>10 ₽ с каждого выкупленного товара</li>
@@ -274,7 +276,8 @@
         <div class="price-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
         </div>
-        <h3>3. Индивидуально для больших объёмов</h3>
+        <h3 class="price-title">МАКСИМУМ</h3>
+        <div id="dynamic-price-max" class="price-value">40 000 ₽</div>
         <p class="price-desc">Для магазинов от 1000+ карточек.</p>
         <ul>
           <li>Индивидуальные условия</li>
@@ -288,10 +291,10 @@
 
   <!-- КАКИМ СЕЛЛЕРАМ ПОДХОДИТ -->
   <section class="audience" id="audience">
-    <span class="section-eyebrow">КАКИМ СЕЛЛЕРАМ ПОДХОДИТ</span>
+    <span class="section-eyebrow reveal">КАКИМ СЕЛЛЕРАМ ПОДХОДИТ</span>
     <h2 class="sr-only">Каким селлерам подходит</h2>
-    <div class="audience-grid">
-      <div class="audience-item">
+    <div class="audience-grid reveal-stagger">
+      <div class="audience-item reveal">
         <div class="audience-icon">
           <img src="assets/Screenshot_17.png" alt="" style="width: 100%; height: 100%; object-fit: contain; transform: scale(1.3);">
         </div>
@@ -322,7 +325,7 @@
         <b>Нужен партнёр</b><br>на долгий срок
       </div>
     </div>
-    <div class="audience-note">
+    <div class="audience-note reveal">
       <p>Партнёрская модель 10 ₽ с выкупа доступна для селлеров Wildberries с ассортиментом от <strong>500 карточек</strong> в одном магазине.<br>Для меньших объёмов работаем по фиксированной стоимости.</p>
     </div>
   </section>
@@ -330,10 +333,10 @@
   <!-- БЕЗОПАСНОСТЬ -->
   <section class="security" id="security">
     <div class="security-inner">
-      <span class="section-eyebrow section-eyebrow-light">БЕЗОПАСНОСТЬ И КОНТРОЛЬ</span>
+      <span class="section-eyebrow section-eyebrow-light reveal">БЕЗОПАСНОСТЬ И КОНТРОЛЬ</span>
       <h2 class="sr-only">Безопасность и контроль</h2>
-      <div class="security-grid">
-        <div class="security-item">
+      <div class="security-grid reveal-stagger">
+        <div class="security-item reveal">
           <div class="security-icon">
             <img src="assets/Screenshot_21.png" alt="" style="width: 100%; height: 100%; object-fit: contain; transform: scale(1.55) translate(0.9px, 0.2px);">
           </div>
@@ -376,7 +379,7 @@
 
   <!-- CTA + КОНТАКТЫ -->
   <section class="cta-section" id="contact" aria-label="Обратная связь">
-    <div class="cta-inner">
+    <div class="cta-inner reveal">
       <h2>Готовы обновить карточки и платить с результата?</h2>
       <p>Оставьте контакты — обсудим ваш ассортимент и покажем тест на 1–3 карточках бесплатно.</p>
       <div class="cta-form">
@@ -406,6 +409,291 @@
 
 </div>
 
+<script src="settings.js"></script>
+<script>
+  // Применяем настройки из файла settings.js
+  if (typeof SITE_SETTINGS !== 'undefined') {
+    // 0. SEO / Meta
+    if (SITE_SETTINGS.pageTitle) document.title = SITE_SETTINGS.pageTitle;
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc && SITE_SETTINGS.pageMetaDesc) metaDesc.content = SITE_SETTINGS.pageMetaDesc;
+
+    // 1. Ссылка во всех href
+    document.querySelectorAll('a[href^="https://t.me/"]').forEach(link => {
+      link.href = SITE_SETTINGS.telegramLink;
+    });
+
+    // 2. Шапка (Логотип и Меню)
+    const logoMark = document.querySelector('#header-logo .logo-mark');
+    if (logoMark && SITE_SETTINGS.logoMark) logoMark.innerHTML = SITE_SETTINGS.logoMark;
+
+    const logoTextBold = document.querySelector('#header-logo .logo-text b');
+    if (logoTextBold && SITE_SETTINGS.logoTextBold) logoTextBold.innerHTML = SITE_SETTINGS.logoTextBold;
+
+    const logoTextSmall = document.querySelector('#header-logo .logo-text small');
+    if (logoTextSmall && SITE_SETTINGS.logoTextSmall) logoTextSmall.innerHTML = SITE_SETTINGS.logoTextSmall;
+
+    const navLinks = document.querySelectorAll('#nav > a:not(.nav-cta-mobile)');
+    if (navLinks.length >= 5) {
+      if (SITE_SETTINGS.navBenefits) navLinks[0].innerHTML = SITE_SETTINGS.navBenefits;
+      if (SITE_SETTINGS.navCases) navLinks[1].innerHTML = SITE_SETTINGS.navCases;
+      if (SITE_SETTINGS.navHowWorks) navLinks[2].innerHTML = SITE_SETTINGS.navHowWorks;
+      if (SITE_SETTINGS.navFormats) navLinks[3].innerHTML = SITE_SETTINGS.navFormats;
+      if (SITE_SETTINGS.navContacts) navLinks[4].innerHTML = SITE_SETTINGS.navContacts;
+    }
+
+    const navCtaMobile = document.querySelector('.nav-cta-mobile');
+    if (navCtaMobile && SITE_SETTINGS.navCtaBtn) {
+      navCtaMobile.innerHTML = `${SITE_SETTINGS.navCtaBtn} <img src="assets/Screenshot_27.png" alt="" class="btn-star">`;
+    }
+
+    const headerCta = document.querySelector('.header-cta');
+    if (headerCta && SITE_SETTINGS.navCtaBtn) {
+      headerCta.innerHTML = `${SITE_SETTINGS.navCtaBtn} <img src="assets/Screenshot_27.png" alt="" class="btn-star">`;
+    }
+
+    // 3. Главный экран (Hero)
+    const heroTag = document.querySelector('.hero-tag');
+    if (heroTag && SITE_SETTINGS.heroTag) heroTag.innerHTML = SITE_SETTINGS.heroTag;
+
+    const hTitle = document.querySelector('#dynamic-hero-title');
+    if (hTitle && SITE_SETTINGS.heroTitle) hTitle.innerHTML = SITE_SETTINGS.heroTitle;
+
+    const hDesc = document.querySelector('#dynamic-hero-desc');
+    if (hDesc && SITE_SETTINGS.heroDesc) hDesc.innerHTML = SITE_SETTINGS.heroDesc;
+
+    const heroBtnPrimary = document.querySelector('.hero-actions .btn-primary');
+    if (heroBtnPrimary && SITE_SETTINGS.heroBtnTest) heroBtnPrimary.innerHTML = SITE_SETTINGS.heroBtnTest;
+
+    const heroBtnOutline = document.querySelector('.hero-actions .btn-outline-light');
+    if (heroBtnOutline && SITE_SETTINGS.heroBtnCta) {
+      heroBtnOutline.innerHTML = `${SITE_SETTINGS.heroBtnCta} <img src="assets/Screenshot_27.png" alt="" class="btn-star">`;
+    }
+
+    const heroTrust = document.querySelector('.hero-trust');
+    if (heroTrust && SITE_SETTINGS.heroTrustText) {
+      const icon = heroTrust.querySelector('svg');
+      if (icon) {
+        heroTrust.innerHTML = '';
+        heroTrust.appendChild(icon);
+        heroTrust.appendChild(document.createTextNode(' ' + SITE_SETTINGS.heroTrustText));
+      } else {
+        heroTrust.innerHTML = SITE_SETTINGS.heroTrustText;
+      }
+    }
+
+    // 4. Сравнение ДО/ПОСЛЕ (Hero)
+    const tagBefore = document.querySelector('.hero-tag-red');
+    if (tagBefore && SITE_SETTINGS.beforeTag) tagBefore.innerHTML = SITE_SETTINGS.beforeTag;
+
+    const imgBefore = document.querySelector('#dynamic-img-before');
+    if (imgBefore && SITE_SETTINGS.beforeImage) imgBefore.src = SITE_SETTINGS.beforeImage;
+
+    const beforeReviews = document.querySelector('.before-card-stats .stars span');
+    if (beforeReviews && SITE_SETTINGS.beforeReviews) beforeReviews.innerHTML = SITE_SETTINGS.beforeReviews;
+
+    const tagAfter = document.querySelector('.hero-tag-green');
+    if (tagAfter && SITE_SETTINGS.afterTag) tagAfter.innerHTML = SITE_SETTINGS.afterTag;
+
+    const imgAfter = document.querySelector('#dynamic-img-after');
+    if (imgAfter && SITE_SETTINGS.afterImage) imgAfter.src = SITE_SETTINGS.afterImage;
+
+    const afterReviews = document.querySelector('.after-card-stats .stars span');
+    if (afterReviews && SITE_SETTINGS.afterReviews) afterReviews.innerHTML = SITE_SETTINGS.afterReviews;
+
+    const afterGuarantee = document.querySelector('.hero-badge-guarantee');
+    if (afterGuarantee && SITE_SETTINGS.afterGuarantee) afterGuarantee.innerHTML = SITE_SETTINGS.afterGuarantee;
+
+    const afterPriceAmount = document.querySelector('.hero-badge-price .badge-amount');
+    if (afterPriceAmount && SITE_SETTINGS.afterPriceValue) afterPriceAmount.innerHTML = SITE_SETTINGS.afterPriceValue;
+
+    const afterPriceLabel = document.querySelector('.hero-badge-price .badge-label');
+    if (afterPriceLabel && SITE_SETTINGS.afterPriceLabel) afterPriceLabel.innerHTML = SITE_SETTINGS.afterPriceLabel;
+
+    // 5. Блок "Почему это выгодно" (Преимущества)
+    const benefitsEyebrow = document.querySelector('#benefits .section-eyebrow');
+    if (benefitsEyebrow && SITE_SETTINGS.benefitsEyebrow) benefitsEyebrow.innerHTML = SITE_SETTINGS.benefitsEyebrow;
+
+    const benefitsTitle = document.querySelector('#benefits h2');
+    if (benefitsTitle && SITE_SETTINGS.benefitsTitle) benefitsTitle.innerHTML = SITE_SETTINGS.benefitsTitle;
+
+    const benefits = document.querySelectorAll('.benefit-item');
+    if (benefits.length >= 6) {
+      for (let i = 1; i <= 6; i++) {
+        const title = benefits[i-1].querySelector('h3');
+        const desc = benefits[i-1].querySelector('p');
+        if (title && SITE_SETTINGS['benefit' + i + '_title']) title.innerHTML = SITE_SETTINGS['benefit' + i + '_title'];
+        if (desc && SITE_SETTINGS['benefit' + i + '_desc']) desc.innerHTML = SITE_SETTINGS['benefit' + i + '_desc'];
+      }
+    }
+
+    // 6. Блок "Что входит в обновление"
+    const includesEyebrow = document.querySelector('#includes .section-eyebrow');
+    if (includesEyebrow && SITE_SETTINGS.includesEyebrow) includesEyebrow.innerHTML = SITE_SETTINGS.includesEyebrow;
+
+    const includes = document.querySelectorAll('.include-card');
+    if (includes.length >= 5) {
+      for (let i = 1; i <= 5; i++) {
+        const img = includes[i-1].querySelector('img');
+        const title = includes[i-1].querySelector('h3');
+        const desc = includes[i-1].querySelector('p');
+        if (img && SITE_SETTINGS['include' + i + '_img']) img.src = SITE_SETTINGS['include' + i + '_img'];
+        if (title && SITE_SETTINGS['include' + i + '_title']) title.innerHTML = SITE_SETTINGS['include' + i + '_title'];
+        if (desc && SITE_SETTINGS['include' + i + '_desc']) desc.innerHTML = SITE_SETTINGS['include' + i + '_desc'];
+      }
+    }
+
+    // 7. Блок "Как работает" (Шаги)
+    const howWorksEyebrow = document.querySelector('#how-works .section-eyebrow');
+    if (howWorksEyebrow && SITE_SETTINGS.howWorksEyebrow) howWorksEyebrow.innerHTML = SITE_SETTINGS.howWorksEyebrow;
+
+    const steps = document.querySelectorAll('.step-item');
+    if (steps.length >= 5) {
+      for (let i = 1; i <= 5; i++) {
+        const title = steps[i-1].querySelector('h3');
+        const desc = steps[i-1].querySelector('p');
+        if (title && SITE_SETTINGS['step' + i + '_title']) title.innerHTML = SITE_SETTINGS['step' + i + '_title'];
+        if (desc && SITE_SETTINGS['step' + i + '_desc']) desc.innerHTML = SITE_SETTINGS['step' + i + '_desc'];
+      }
+    }
+
+    const howWorksNotice = document.querySelector('.how-notice p');
+    if (howWorksNotice && SITE_SETTINGS.howWorksNotice) howWorksNotice.innerHTML = SITE_SETTINGS.howWorksNotice;
+
+    // 8. Блок "Форматы работы" (Тарифы)
+    const pricingEyebrow = document.querySelector('#pricing .section-eyebrow');
+    if (pricingEyebrow && SITE_SETTINGS.pricingEyebrow) pricingEyebrow.innerHTML = SITE_SETTINGS.pricingEyebrow;
+
+    const priceCards = document.querySelectorAll('.price-card');
+    if (priceCards.length >= 3) {
+      // СТАРТ (Card 0)
+      const pStartTitle = priceCards[0].querySelector('.price-title');
+      if (pStartTitle && SITE_SETTINGS.priceStart_title) pStartTitle.innerHTML = SITE_SETTINGS.priceStart_title;
+      const pStartVal = priceCards[0].querySelector('.price-value');
+      if (pStartVal && SITE_SETTINGS.priceStart_val) pStartVal.innerHTML = SITE_SETTINGS.priceStart_val;
+      const pStartDesc = priceCards[0].querySelector('.price-desc');
+      if (pStartDesc && SITE_SETTINGS.priceStart_desc) pStartDesc.innerHTML = SITE_SETTINGS.priceStart_desc;
+      const pStartFeatures = priceCards[0].querySelectorAll('ul li');
+      if (pStartFeatures.length >= 3) {
+        if (SITE_SETTINGS.priceStart_feature1) pStartFeatures[0].innerHTML = SITE_SETTINGS.priceStart_feature1;
+        if (SITE_SETTINGS.priceStart_feature2) pStartFeatures[1].innerHTML = SITE_SETTINGS.priceStart_feature2;
+        if (SITE_SETTINGS.priceStart_feature3) pStartFeatures[2].innerHTML = SITE_SETTINGS.priceStart_feature3;
+      }
+      const pStartBtn = priceCards[0].querySelector('.btn');
+      if (pStartBtn && SITE_SETTINGS.priceStart_btn) pStartBtn.innerHTML = SITE_SETTINGS.priceStart_btn;
+
+      // ПРО (Card 1)
+      const pProPopular = priceCards[1].querySelector('.price-popular');
+      if (pProPopular && SITE_SETTINGS.pricePro_popular) pProPopular.innerHTML = SITE_SETTINGS.pricePro_popular;
+      const pProTitle = priceCards[1].querySelector('.price-title');
+      if (pProTitle && SITE_SETTINGS.pricePro_title) pProTitle.innerHTML = SITE_SETTINGS.pricePro_title;
+      const pProVal = priceCards[1].querySelector('.price-value');
+      if (pProVal && SITE_SETTINGS.pricePro_val) pProVal.innerHTML = SITE_SETTINGS.pricePro_val;
+      const pProDesc = priceCards[1].querySelector('.price-desc');
+      if (pProDesc && SITE_SETTINGS.pricePro_desc) pProDesc.innerHTML = SITE_SETTINGS.pricePro_desc;
+      const pProFeatures = priceCards[1].querySelectorAll('ul li');
+      if (pProFeatures.length >= 3) {
+        if (SITE_SETTINGS.pricePro_feature1) pProFeatures[0].innerHTML = SITE_SETTINGS.pricePro_feature1;
+        if (SITE_SETTINGS.pricePro_feature2) pProFeatures[1].innerHTML = SITE_SETTINGS.pricePro_feature2;
+        if (SITE_SETTINGS.pricePro_feature3) pProFeatures[2].innerHTML = SITE_SETTINGS.pricePro_feature3;
+      }
+      const pProBtn = priceCards[1].querySelector('.btn');
+      if (pProBtn && SITE_SETTINGS.pricePro_btn) pProBtn.innerHTML = SITE_SETTINGS.pricePro_btn;
+
+      // МАКСИМУМ (Card 2)
+      const pMaxTitle = priceCards[2].querySelector('.price-title');
+      if (pMaxTitle && SITE_SETTINGS.priceMax_title) pMaxTitle.innerHTML = SITE_SETTINGS.priceMax_title;
+      const pMaxVal = priceCards[2].querySelector('.price-value');
+      if (pMaxVal && SITE_SETTINGS.priceMax_val) pMaxVal.innerHTML = SITE_SETTINGS.priceMax_val;
+      const pMaxDesc = priceCards[2].querySelector('.price-desc');
+      if (pMaxDesc && SITE_SETTINGS.priceMax_desc) pMaxDesc.innerHTML = SITE_SETTINGS.priceMax_desc;
+      const pMaxFeatures = priceCards[2].querySelectorAll('ul li');
+      if (pMaxFeatures.length >= 3) {
+        if (SITE_SETTINGS.priceMax_feature1) pMaxFeatures[0].innerHTML = SITE_SETTINGS.priceMax_feature1;
+        if (SITE_SETTINGS.priceMax_feature2) pMaxFeatures[1].innerHTML = SITE_SETTINGS.priceMax_feature2;
+        if (SITE_SETTINGS.priceMax_feature3) pMaxFeatures[2].innerHTML = SITE_SETTINGS.priceMax_feature3;
+      }
+      const pMaxBtn = priceCards[2].querySelector('.btn');
+      if (pMaxBtn && SITE_SETTINGS.priceMax_btn) pMaxBtn.innerHTML = SITE_SETTINGS.priceMax_btn;
+    }
+
+    // 9. Блок "Каким селлерам подходит"
+    const audienceEyebrow = document.querySelector('#audience .section-eyebrow');
+    if (audienceEyebrow && SITE_SETTINGS.audienceEyebrow) audienceEyebrow.innerHTML = SITE_SETTINGS.audienceEyebrow;
+
+    const audienceItems = document.querySelectorAll('.audience-item');
+    if (audienceItems.length >= 5) {
+      for (let i = 1; i <= 5; i++) {
+        const textNode = audienceItems[i-1];
+        if (textNode && SITE_SETTINGS['audience_item' + i]) {
+          const icon = textNode.firstElementChild;
+          if (icon) {
+            textNode.innerHTML = '';
+            textNode.appendChild(icon);
+            const temp = document.createElement('div');
+            temp.innerHTML = ' ' + SITE_SETTINGS['audience_item' + i];
+            while (temp.firstChild) {
+              textNode.appendChild(temp.firstChild);
+            }
+          } else {
+            textNode.innerHTML = SITE_SETTINGS['audience_item' + i];
+          }
+        }
+      }
+    }
+
+    const audienceNote = document.querySelector('.audience-note p');
+    if (audienceNote && SITE_SETTINGS.audienceNote) audienceNote.innerHTML = SITE_SETTINGS.audienceNote;
+
+    // 10. Блок "Безопасность и контроль"
+    const securityEyebrow = document.querySelector('#security .section-eyebrow');
+    if (securityEyebrow && SITE_SETTINGS.securityEyebrow) securityEyebrow.innerHTML = SITE_SETTINGS.securityEyebrow;
+
+    const securityItems = document.querySelectorAll('.security-item');
+    if (securityItems.length >= 6) {
+      for (let i = 1; i <= 6; i++) {
+        const pNode = securityItems[i-1].querySelector('p');
+        if (pNode && SITE_SETTINGS['security_item' + i]) {
+          pNode.innerHTML = SITE_SETTINGS['security_item' + i];
+        }
+      }
+    }
+
+    // 11. Блок CTA (Оставить заявку)
+    const ctaTitle = document.querySelector('.cta-section h2');
+    if (ctaTitle && SITE_SETTINGS.ctaTitle) ctaTitle.innerHTML = SITE_SETTINGS.ctaTitle;
+
+    const ctaDesc = document.querySelector('.cta-section > p');
+    if (ctaDesc && SITE_SETTINGS.ctaDesc) ctaDesc.innerHTML = SITE_SETTINGS.ctaDesc;
+
+    const ctaInputName = document.getElementById('cta-name');
+    if (ctaInputName && SITE_SETTINGS.ctaPlaceholderName) ctaInputName.placeholder = SITE_SETTINGS.ctaPlaceholderName;
+
+    const ctaInputContact = document.getElementById('cta-contact');
+    if (ctaInputContact && SITE_SETTINGS.ctaPlaceholderContact) ctaInputContact.placeholder = SITE_SETTINGS.ctaPlaceholderContact;
+
+    const ctaSubmit = document.getElementById('cta-submit');
+    if (ctaSubmit && SITE_SETTINGS.ctaSubmitBtn) {
+      ctaSubmit.innerHTML = `${SITE_SETTINGS.ctaSubmitBtn} <img src="assets/Screenshot_27.png" alt="" class="btn-star">`;
+    }
+
+    const ctaPrivacy = document.querySelector('.cta-privacy');
+    if (ctaPrivacy && SITE_SETTINGS.ctaPrivacy) ctaPrivacy.innerHTML = SITE_SETTINGS.ctaPrivacy;
+
+    // 12. Подвал (Footer)
+    const footerLogoMark = document.querySelector('.footer .logo-mark');
+    if (footerLogoMark && SITE_SETTINGS.logoMark) footerLogoMark.innerHTML = SITE_SETTINGS.logoMark;
+
+    const footerLogoBold = document.querySelector('.footer-brand b');
+    if (footerLogoBold && SITE_SETTINGS.footerLogoTextBold) footerLogoBold.innerHTML = SITE_SETTINGS.footerLogoTextBold;
+
+    const footerLogoSmall = document.querySelector('.footer-brand small');
+    if (footerLogoSmall && SITE_SETTINGS.footerLogoTextSmall) footerLogoSmall.innerHTML = SITE_SETTINGS.footerLogoTextSmall;
+
+    const footerCopy = document.querySelector('.footer-copy');
+    if (footerCopy && SITE_SETTINGS.footerCopy) footerCopy.innerHTML = SITE_SETTINGS.footerCopy;
+  }
+</script>
 <script src="script.js"></script>
 </body>
 </html>

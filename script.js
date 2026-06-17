@@ -37,6 +37,30 @@
     });
   });
 
+  // ===== SCROLL REVEAL ANIMATIONS =====
+  // IntersectionObserver for .reveal, .reveal-left, .reveal-right, .reveal-scale
+  const revealSelectors = '.reveal, .reveal-left, .reveal-right, .reveal-scale';
+  const revealEls = document.querySelectorAll(revealSelectors);
+
+  if (revealEls.length > 0 && 'IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    revealEls.forEach(el => revealObserver.observe(el));
+  } else {
+    // Fallback: make everything visible if no IntersectionObserver
+    revealEls.forEach(el => el.classList.add('visible'));
+  }
+
 
   // CTA form submit (Telegram redirect)
   const ctaSubmit = document.getElementById('cta-submit');
@@ -49,7 +73,9 @@
         (name ? `Имя: ${name}\n` : '') +
         (contact ? `Контакт: ${contact}` : '')
       );
-      window.open(`https://t.me/cardssellers?text=${msg}`, '_blank');
+      const tgLink = (typeof SITE_SETTINGS !== 'undefined' && SITE_SETTINGS.telegramLink) || 'https://t.me/cardssellers';
+      const separator = tgLink.includes('?') ? '&' : '?';
+      window.open(`${tgLink}${separator}text=${msg}`, '_blank');
     });
   }
 })();

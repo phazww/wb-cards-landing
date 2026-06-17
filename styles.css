@@ -114,6 +114,7 @@ a:focus, button:focus { outline: none; }
   width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
 }
 .logo-mark-sm { width: 32px; height: 32px; }
+.logo-img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .logo-text b { display: block; font-size: 17px; font-weight: 800; color: var(--white); letter-spacing: 0.5px; }
 .logo-gold-text {
   background: linear-gradient(135deg, #D4AF37 0%, #F7D77A 50%, #D4AF37 100%);

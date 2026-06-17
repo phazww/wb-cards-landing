@@ -1,0 +1,20 @@
+# Python scripts
+*.py
+
+# Raw design directories and drafts
+client_files/
+нужно/
+нужно_готовые/
+оригиналы/
+оригиналы_без_текста/
+
+# Temporary / auxiliary files
+grid.png
+.git/
+.github/
+.vscode/
+.idea/
+.gemini/
+venv/
+env/
+node_modules/

@@ -489,7 +489,7 @@
     const imgBefore = document.querySelector('#dynamic-img-before');
     if (imgBefore && SITE_SETTINGS.beforeImage) imgBefore.src = SITE_SETTINGS.beforeImage;
 
-    const beforeReviews = document.querySelector('.before-card-stats .stars span');
+    const beforeReviews = document.querySelector('.before-card-stats .stars > span');
     if (beforeReviews && SITE_SETTINGS.beforeReviews) beforeReviews.innerHTML = SITE_SETTINGS.beforeReviews;
 
     const tagAfter = document.querySelector('.hero-tag-green');

@@ -12,7 +12,7 @@ const SITE_SETTINGS = {
     // 1. Контакты
     telegramLink: "https://t.me/tktorg",
     whatsappLink: "https://wa.me/79528771718",
-    maxLink: "https://max.ru", // Ссылка на профиль МаКС (скопируйте в приложении: Профиль -> Поделиться профилем)
+    maxLink: "https://max.ru/42726684", // Ссылка на профиль МаКС
     phoneVal: "+7 (952) 877-17-18",
     phoneLink: "tel:+79528771718",
 

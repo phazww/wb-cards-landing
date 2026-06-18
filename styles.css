@@ -39,13 +39,14 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; width: 100%; }
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   background: var(--white);
   color: var(--text-dark);
   line-height: 1.6;
   overflow-x: hidden;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -781,12 +782,59 @@ section { padding: 90px 48px; }
 @media (max-width: 480px) {
   .hero h1 { font-size: 24px; }
   .hero-desc { font-size: 13px; }
-  .hero-card-before { width: 120px; min-width: 120px; }
-  .hero-card-after { width: 170px; min-width: 170px; }
-  .hero-badge-price { width: 64px; height: 64px; right: -8px; bottom: -8px; }
-  .badge-amount { font-size: 18px; }
-  .badge-label { font-size: 7px; }
-  .hero-badge-guarantee { font-size: 8px; padding: 3px 6px; }
+  
+  /* Prevent hero overflow on small mobile screens */
+  .hero-visual {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    gap: 6px;
+  }
+  .hero-card-before {
+    width: 95px;
+    min-width: 95px;
+    padding: 6px;
+    transform: scale(0.9) translateX(4px);
+  }
+  .hero-arrow {
+    width: 16px;
+    height: 16px;
+  }
+  .hero-card-after {
+    width: 140px;
+    min-width: 140px;
+  }
+  .after-card-info {
+    padding: 8px 10px 10px;
+  }
+  .after-card-stats .stars {
+    font-size: 10px;
+    gap: 3px;
+    justify-content: center;
+  }
+  .after-card-stats .stars span {
+    font-size: 8.5px;
+  }
+  .hero-badge-price {
+    width: 52px;
+    height: 52px;
+    right: -6px;
+    bottom: -6px;
+  }
+  .badge-amount {
+    font-size: 15px;
+  }
+  .badge-label {
+    font-size: 6px;
+    line-height: 1;
+  }
+  .hero-badge-guarantee {
+    font-size: 7px;
+    padding: 2px 5px;
+    right: -4px;
+    top: 24px;
+    line-height: 1.1;
+  }
 
   .benefits-grid, .security-grid { grid-template-columns: 1fr; }
   .includes-grid { grid-template-columns: 1fr; }

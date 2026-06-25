@@ -237,4 +237,313 @@
       }
     });
   }
+
+  // ===== DRAGGABLE BEFORE/AFTER SLIDER =====
+  const slider = document.getElementById('hero-slider');
+  const handle = document.getElementById('hero-slider-handle');
+
+  if (slider && handle) {
+    let isDragging = false;
+
+    function setSlidePercent(percent) {
+      percent = Math.max(0, Math.min(100, percent));
+      slider.style.setProperty('--slide-percent', `${percent}%`);
+      handle.setAttribute('aria-valuenow', Math.round(percent));
+    }
+
+    function handleMove(clientX) {
+      const rect = slider.getBoundingClientRect();
+      const x = clientX - rect.left;
+      const percent = (x / rect.width) * 100;
+      setSlidePercent(percent);
+    }
+
+    // Touch events
+    slider.addEventListener('touchstart', (e) => {
+      isDragging = true;
+      handleMove(e.touches[0].clientX);
+    }, { passive: true });
+
+    window.addEventListener('touchmove', (e) => {
+      if (!isDragging) return;
+      handleMove(e.touches[0].clientX);
+    });
+
+    window.addEventListener('touchend', () => {
+      isDragging = false;
+    });
+
+    // Mouse events
+    handle.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      e.preventDefault();
+    });
+
+    slider.addEventListener('click', (e) => {
+      if (e.target.closest('.slider-handle-button')) return;
+      handleMove(e.clientX);
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      handleMove(e.clientX);
+    });
+
+    window.addEventListener('mouseup', () => {
+      isDragging = false;
+    });
+
+    // Keyboard events
+    handle.addEventListener('keydown', (e) => {
+      const currentPercent = parseFloat(slider.style.getPropertyValue('--slide-percent') || '50%');
+      if (e.key === 'ArrowLeft') {
+        setSlidePercent(currentPercent - 5);
+        e.preventDefault();
+      } else if (e.key === 'ArrowRight') {
+        setSlidePercent(currentPercent + 5);
+        e.preventDefault();
+      } else if (e.key === 'Home') {
+        setSlidePercent(0);
+        e.preventDefault();
+      } else if (e.key === 'End') {
+        setSlidePercent(100);
+        e.preventDefault();
+      }
+    });
+  }
+
+  // ===== INTERACTIVE AUDIT SANDBOX LOGIC =====
+  const sandboxStartBtn = document.getElementById('sandbox-start-btn');
+  const sandboxDemoBtn = document.getElementById('sandbox-demo-btn');
+  const sandboxResetBtn = document.getElementById('sandbox-reset-btn');
+  const sandboxSkuInput = document.getElementById('sandbox-sku-input');
+  
+  const screenInput = document.getElementById('sandbox-screen-input');
+  const screenLoading = document.getElementById('sandbox-screen-loading');
+  const screenResult = document.getElementById('sandbox-screen-result');
+  
+  const loadingStatus = document.getElementById('sandbox-loading-status');
+  const loadingProgress = document.getElementById('sandbox-loading-progress');
+  const skuDisplay = document.getElementById('sandbox-sku-display');
+
+  if (screenInput && screenLoading && screenResult) {
+    
+    function runSimulation(sku) {
+      // Подготовка
+      sku = sku.trim() || '195384029';
+      skuDisplay.innerText = `арт. ${sku}`;
+      
+      // Переход на экран загрузки
+      screenInput.classList.remove('active');
+      screenLoading.classList.add('active');
+      
+      let progress = 0;
+      loadingProgress.style.width = '0%';
+      
+      const statuses = [
+        { limit: 30, text: `Анализ артикула ${sku}...` },
+        { limit: 60, text: 'Сканирование главного фото...' },
+        { limit: 85, text: 'Проверка SEO и ключевых слов...' },
+        { limit: 100, text: 'Сборка отчёта об ошибках...' }
+      ];
+
+      const interval = setInterval(() => {
+        progress += 4;
+        if (progress > 100) progress = 100;
+        
+        loadingProgress.style.width = `${progress}%`;
+        
+        const currentStatus = statuses.find(s => progress <= s.limit);
+        if (currentStatus && loadingStatus) {
+          loadingStatus.innerText = currentStatus.text;
+        }
+
+        if (progress >= 100) {
+          clearInterval(interval);
+          setTimeout(() => {
+            screenLoading.classList.remove('active');
+            screenResult.classList.add('active');
+            
+            // Сброс хотспотов в исходное состояние
+            resetHotspots();
+          }, 300);
+        }
+      }, 80);
+    }
+
+    if (sandboxStartBtn) {
+      sandboxStartBtn.addEventListener('click', () => {
+        const sku = sandboxSkuInput ? sandboxSkuInput.value : '195384029';
+        runSimulation(sku);
+      });
+    }
+
+    if (sandboxDemoBtn) {
+      sandboxDemoBtn.addEventListener('click', () => {
+        runSimulation('195384029');
+      });
+    }
+
+    if (sandboxResetBtn) {
+      sandboxResetBtn.addEventListener('click', () => {
+        screenResult.classList.remove('active');
+        screenInput.classList.add('active');
+        if (sandboxSkuInput) sandboxSkuInput.value = '195384029';
+      });
+    }
+
+    // Хотспоты
+    const hotspots = document.querySelectorAll('.hotspot');
+    const placeholder = document.getElementById('sandbox-info-placeholder');
+    const panels = document.querySelectorAll('.sandbox-info-panel');
+
+    function resetHotspots() {
+      hotspots.forEach(h => {
+        h.classList.remove('active');
+        h.setAttribute('aria-expanded', 'false');
+      });
+      if (placeholder) placeholder.style.display = 'flex';
+      panels.forEach(p => p.classList.remove('active'));
+    }
+
+    hotspots.forEach(hotspot => {
+      hotspot.addEventListener('click', () => {
+        const targetId = hotspot.getAttribute('data-target');
+        const targetPanel = document.getElementById(targetId);
+
+        if (targetPanel) {
+          const isActive = hotspot.classList.contains('active');
+          
+          resetHotspots();
+
+          if (!isActive) {
+            hotspot.classList.add('active');
+            hotspot.setAttribute('aria-expanded', 'true');
+            if (placeholder) placeholder.style.display = 'none';
+            targetPanel.classList.add('active');
+          }
+        }
+      });
+    });
+  }
+
+  // ===== INTERACTIVE PRICING CALCULATOR LOGIC =====
+  const calcRange = document.getElementById('calc-cards-range');
+  const calcValDisplay = document.getElementById('calc-cards-val');
+  
+  const cbMain = document.getElementById('calc-service-main');
+  const cbFull = document.getElementById('calc-service-full');
+  const cbSeo = document.getElementById('calc-service-seo');
+  const cbWhite = document.getElementById('calc-service-white');
+  
+  const summaryTariff = document.getElementById('summary-tariff-name');
+  const summaryDiscount = document.getElementById('summary-discount');
+  const summaryTotal = document.getElementById('summary-total-cost');
+  const summaryPerCard = document.getElementById('summary-per-card-cost');
+  const calcPartnerNote = document.getElementById('calc-partner-note');
+  const calcSubmitBtn = document.getElementById('calc-submit-btn');
+
+  if (calcRange) {
+    const prices = {
+      main: 500,
+      full: 3000,
+      seo: 1500,
+      white: 150
+    };
+
+    function calculateCost() {
+      const N = parseInt(calcRange.value);
+      if (calcValDisplay) calcValDisplay.innerText = N >= 1000 ? '1000+' : N;
+
+      // Получаем сумму выбранных услуг
+      let unitCost = 0;
+      if (cbMain && cbMain.checked) unitCost += prices.main;
+      if (cbFull && cbFull.checked) unitCost += prices.full;
+      if (cbSeo && cbSeo.checked) unitCost += prices.seo;
+      if (cbWhite && cbWhite.checked) unitCost += prices.white;
+
+      // Определение скидки и названия тарифа
+      let discount = 0;
+      let tariffName = 'Для 1–50 карточек';
+      
+      if (N <= 50) {
+        discount = 0;
+        tariffName = 'Для 1–50 карточек';
+      } else if (N <= 499) {
+        discount = 15;
+        tariffName = 'Для 51–999 карточек';
+      } else if (N <= 999) {
+        discount = 30;
+        tariffName = 'Для селлеров от 500+';
+      } else {
+        discount = 35;
+        tariffName = 'Для 1000+ карточек';
+      }
+
+      // Партнерская плашка
+      if (N >= 500) {
+        if (calcPartnerNote) calcPartnerNote.classList.add('active');
+      } else {
+        if (calcPartnerNote) calcPartnerNote.classList.remove('active');
+      }
+
+      // Расчет стоимости
+      const discountMult = 1 - (discount / 100);
+      const perCardCost = Math.round(unitCost * discountMult);
+      const totalCost = Math.round(N * unitCost * discountMult);
+
+      // Вывод результатов
+      if (summaryTariff) summaryTariff.innerText = tariffName;
+      if (summaryDiscount) summaryDiscount.innerText = `${discount}%`;
+      if (summaryTotal) summaryTotal.innerText = `${totalCost.toLocaleString('ru-RU')} ₽`;
+      if (summaryPerCard) summaryPerCard.innerText = `${perCardCost.toLocaleString('ru-RU')} ₽ / карточка`;
+    }
+
+    // Слушатели событий
+    calcRange.addEventListener('input', calculateCost);
+    [cbMain, cbFull, cbSeo, cbWhite].forEach(cb => {
+      if (cb) cb.addEventListener('change', calculateCost);
+    });
+
+    // Инициализация при загрузке
+    calculateCost();
+
+    // Отправка в форму
+    if (calcSubmitBtn) {
+      calcSubmitBtn.addEventListener('click', () => {
+        const N = parseInt(calcRange.value);
+        
+        // Находим форму и селекторы
+        const leadFormAnchor = document.getElementById('hero-form-anchor');
+        const selectorBtns = document.querySelectorAll('.selector-btn');
+        const hiddenCountInput = document.getElementById('hidden-cards-count');
+        const nameInput = document.getElementById('form-name');
+        
+        let targetValue = '1-50';
+        if (N <= 50) targetValue = '1-50';
+        else if (N <= 499) targetValue = '51-999';
+        else if (N <= 999) targetValue = '500+';
+        else targetValue = '1000+';
+
+        // Активируем кнопку в форме
+        if (selectorBtns.length > 0) {
+          selectorBtns.forEach(btn => {
+            btn.classList.remove('active');
+            if (btn.getAttribute('data-value') === targetValue) {
+              btn.classList.add('active');
+            }
+          });
+        }
+        if (hiddenCountInput) hiddenCountInput.value = targetValue;
+
+        // Плавный скролл к форме
+        if (leadFormAnchor) {
+          leadFormAnchor.scrollIntoView({ behavior: 'smooth' });
+          setTimeout(() => {
+            if (nameInput) nameInput.focus();
+          }, 600);
+        }
+      });
+    }
+  }
 })();

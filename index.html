@@ -7,7 +7,7 @@
     <meta name="description" content="Обновим карточки на Wildberries без большой предоплаты. Новые фото, описания, SEO-наименования. Оплата с результата.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@500;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css?v=3.0">
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <!-- Lucide Icons -->
@@ -91,24 +91,30 @@
 
       <!-- Колонка 2: ДО/ПОСЛЕ -->
       <div class="hero-media reveal">
-        <div class="hero-split-preview">
-          <div class="split-before">
+        <div class="before-after-slider" id="hero-slider" aria-label="Сравнение карточки товара до и после обновления">
+          <!-- Слой ДО -->
+          <div class="slider-layer slider-layer--before">
+            <img src="assets/headphones_before.webp" alt="Карточка товара до обновления: стандартное фото без дизайна">
             <span class="split-label">до</span>
-            <img src="assets/headphones_before.webp" alt="Карточка до обновления — низкое качество фото">
             <div class="split-rating">
               <span class="rating-stars">3.0 ★★★☆☆</span>
               <span class="rating-count">116 отзывов</span>
             </div>
           </div>
-          <div class="split-divider">
-            <i data-lucide="chevron-right"></i>
-          </div>
-          <div class="split-after">
+          <!-- Слой ПОСЛЕ -->
+          <div class="slider-layer slider-layer--after">
+            <img src="assets/headphones_after.webp" alt="Карточка товара после обновления: профессиональная инфографика">
             <span class="split-label split-label--after">после</span>
-            <img src="assets/headphones_after.webp" alt="Карточка после обновления — профессиональное фото с инфографикой">
             <div class="split-rating split-rating--after">
               <span class="rating-stars">4.8 ★★★★★</span>
               <span class="rating-count">1248 отзывов</span>
+            </div>
+          </div>
+          <!-- Ползунок управления -->
+          <div class="slider-handle" id="hero-slider-handle" role="slider" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" aria-label="Перетащите для сравнения" tabindex="0">
+            <div class="slider-handle-line"></div>
+            <div class="slider-handle-button">
+              <i data-lucide="chevrons-left-right"></i>
             </div>
           </div>
         </div>
@@ -118,12 +124,12 @@
           <svg class="hero-chart-svg" viewBox="0 0 400 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <defs>
               <linearGradient id="chartGrad" x1="0" y1="0" x2="400" y2="0" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#7C3AED"/>
-                <stop offset="100%" stop-color="#F59E0B"/>
+                <stop offset="0%" stop-color="#D91F8B"/>
+                <stop offset="100%" stop-color="#E5A93C"/>
               </linearGradient>
               <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="100" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.18"/>
-                <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.01"/>
+                <stop offset="0%" stop-color="#D91F8B" stop-opacity="0.18"/>
+                <stop offset="100%" stop-color="#E5A93C" stop-opacity="0.01"/>
               </linearGradient>
             </defs>
             <path d="M0 85 C40 82, 80 78, 120 65 C160 52, 200 40, 240 30 C280 20, 320 14, 360 10 L400 8 L400 100 L0 100Z" fill="url(#chartFill)"/>
@@ -188,22 +194,197 @@
   <section class="section section--gray" id="what-you-get" aria-label="Что вы получите после разбора">
     <div class="container">
       <h2 class="section-title reveal" data-text="whatYouGetTitle">Что вы получите после разбора</h2>
-      <div class="get-grid reveal-stagger">
-        <div class="get-card">
-          <img src="assets/get-target.webp" alt="Анализ карточки" class="icon-3d" loading="lazy">
-          <p>Поймёте, что мешает клиентам и выкупам</p>
+      
+      <div class="audit-section-split">
+        <!-- Левая часть: список результатов -->
+        <div class="audit-results-list reveal-left">
+          <div class="get-card-vertical">
+            <img src="assets/get-target.webp" alt="Иконка: анализ слабых мест карточки" class="icon-3d" loading="lazy">
+            <div>
+              <h4>Анализ слабых мест</h4>
+              <p>Поймёте, что именно мешает клиентам выкупать ваш товар прямо сейчас.</p>
+            </div>
+          </div>
+          <div class="get-card-vertical">
+            <img src="assets/get-clipboard.webp" alt="Иконка: список ошибок и точек роста" class="icon-3d" loading="lazy">
+            <div>
+              <h4>Список ошибок и точек роста</h4>
+              <p>Получите готовый чек-лист с конкретными исправлениями для вашего товара.</p>
+            </div>
+          </div>
+          <div class="get-card-vertical">
+            <img src="assets/get-user.webp" alt="Иконка: определение оптимального формата работы" class="icon-3d" loading="lazy">
+            <div>
+              <h4>Оптимальный формат работы</h4>
+              <p>Узнаете, какой формат работы (разовый, пакетный или партнёрский) выгоднее для вас.</p>
+            </div>
+          </div>
+          <div class="get-card-vertical">
+            <img src="assets/get-rocket.webp" alt="Иконка: запуск бесплатного теста на карточках" class="icon-3d" loading="lazy">
+            <div>
+              <h4>Быстрый тест на 1-3 карточках</h4>
+              <p>Сможете оценить качество нашей работы на бесплатном тесте перед масштабированием.</p>
+            </div>
+          </div>
         </div>
-        <div class="get-card">
-          <img src="assets/get-clipboard.webp" alt="Список ошибок" class="icon-3d" loading="lazy">
-          <p>Получите список ошибок и точек роста</p>
-        </div>
-        <div class="get-card">
-          <img src="assets/get-user.webp" alt="Формат работы" class="icon-3d" loading="lazy">
-          <p>Узнаете, какой формат работы подойдет именно вам</p>
-        </div>
-        <div class="get-card">
-          <img src="assets/get-rocket.webp" alt="Тест на карточках" class="icon-3d" loading="lazy">
-          <p>Сможете начать с теста на 1–3 карточках</p>
+
+        <!-- Правая часть: интерактивный симулятор аудита -->
+        <div class="audit-sandbox reveal-right" id="audit-sandbox">
+          <div class="sandbox-phone-frame">
+            <div class="phone-screen">
+              
+              <!-- Экран 1: Ввод артикула -->
+              <div class="sandbox-screen active" id="sandbox-screen-input">
+                <div class="sandbox-screen-header">
+                  <div class="phone-time">12:00</div>
+                  <div class="phone-icons">
+                    <i data-lucide="wifi" aria-hidden="true"></i>
+                    <i data-lucide="battery" aria-hidden="true"></i>
+                  </div>
+                </div>
+                <div class="sandbox-screen-body">
+                  <div class="sandbox-logo-wrap">
+                    <img src="assets/logo_icon.webp" alt="Логотип IdealPick" class="sandbox-logo-icon">
+                    <span class="sandbox-logo-text">IdealPick <span class="badge-mini">audit v2.0</span></span>
+                  </div>
+                  <h3>Протестируйте аудит карточки в реальном времени</h3>
+                  <p class="sandbox-intro-text">Введите любой тестовый артикул WB ниже или нажмите кнопку демо-анализа, чтобы увидеть симуляцию разбора.</p>
+                  
+                  <div class="sandbox-input-group">
+                    <label for="sandbox-sku-input" class="sr-only">Артикул WB</label>
+                    <input type="text" id="sandbox-sku-input" value="195384029" placeholder="Введите артикул WB..." aria-label="Артикул Wildberries">
+                    <button type="button" class="btn btn-primary w-100" id="sandbox-start-btn">Запустить аудит карточки</button>
+                  </div>
+                  <button type="button" class="sandbox-demo-link" id="sandbox-demo-btn">Попробовать с демо-артикулом</button>
+                </div>
+              </div>
+
+              <!-- Экран 2: Загрузка -->
+              <div class="sandbox-screen" id="sandbox-screen-loading">
+                <div class="sandbox-screen-header">
+                  <div class="phone-time">12:00</div>
+                  <div class="phone-icons">
+                    <i data-lucide="wifi" aria-hidden="true"></i>
+                    <i data-lucide="battery" aria-hidden="true"></i>
+                  </div>
+                </div>
+                <div class="sandbox-loading-body">
+                  <div class="spinner"></div>
+                  <h4 id="sandbox-loading-status">Получение данных по артикулу...</h4>
+                  <div class="loading-progress-bar">
+                    <div class="loading-progress-fill" id="sandbox-loading-progress"></div>
+                  </div>
+                  <p class="sandbox-loading-note">Подключаемся к открытому API Wildberries...</p>
+                </div>
+              </div>
+
+              <!-- Экран 3: Интерактивный разбор -->
+              <div class="sandbox-screen" id="sandbox-screen-result">
+                <div class="sandbox-screen-header">
+                  <div class="phone-time">12:00</div>
+                  <div class="phone-icons">
+                    <i data-lucide="wifi" aria-hidden="true"></i>
+                    <i data-lucide="battery" aria-hidden="true"></i>
+                  </div>
+                </div>
+                <div class="sandbox-result-header">
+                  <button type="button" class="sandbox-back-btn" id="sandbox-reset-btn"><i data-lucide="chevron-left" aria-hidden="true"></i> Назад</button>
+                  <span>Результат разбора</span>
+                  <span class="sandbox-sku-badge" id="sandbox-sku-display">арт. 195384029</span>
+                </div>
+                
+                <div class="sandbox-result-body">
+                  <!-- Карточка товара в симуляторе -->
+                  <div class="sandbox-product-card">
+                    <div class="sandbox-product-img-wrap">
+                      <img src="assets/headphones_before.webp" alt="Товар до оптимизации" id="sandbox-product-img">
+                      
+                      <!-- Горячие точки (Hotspots) -->
+                      <button type="button" id="hotspot-photo-btn" class="hotspot hotspot-photo" data-target="info-photo" aria-label="Анализ фото" aria-expanded="false">
+                        <span class="hotspot-pulse"></span>
+                        <span class="hotspot-number">1</span>
+                      </button>
+                      <button type="button" id="hotspot-title-btn" class="hotspot hotspot-title" data-target="info-title" aria-label="Анализ названия" aria-expanded="false">
+                        <span class="hotspot-pulse"></span>
+                        <span class="hotspot-number">2</span>
+                      </button>
+                      <button type="button" id="hotspot-details-btn" class="hotspot hotspot-details" data-target="info-details" aria-label="Анализ характеристик" aria-expanded="false">
+                        <span class="hotspot-pulse"></span>
+                        <span class="hotspot-number">3</span>
+                      </button>
+                    </div>
+
+                    <div class="sandbox-product-info">
+                      <h4 id="sandbox-product-title">Беспроводные наушники</h4>
+                      <div class="sandbox-rating-row">
+                        <span class="stars-gold">★★★☆☆</span>
+                        <span>116 отзывов</span>
+                      </div>
+                      <div class="sandbox-price-row">
+                        <span class="sandbox-price-new">2 490 ₽</span>
+                        <span class="sandbox-price-old">5 000 ₽</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Информационные панели для хотспотов -->
+                  <div class="sandbox-hotspot-info-container">
+                    <div class="sandbox-hotspot-placeholder" id="sandbox-info-placeholder">
+                      <i data-lucide="hand" aria-hidden="true"></i>
+                      <span>Нажмите на любую цифру на фото, чтобы увидеть слабые места</span>
+                    </div>
+
+                    <!-- Панель 1: Фото -->
+                    <div class="sandbox-info-panel" id="info-photo" role="region" aria-live="polite">
+                      <div class="info-panel-title">
+                        <span class="badge-error">Ошибка 1</span>
+                        <h5>Слабый CTR главного фото</h5>
+                      </div>
+                      <div class="info-panel-content">
+                        <p class="text-danger">❌ Наушники сливаются с фоном, преимущества не показаны. CTR ~2.1%.</p>
+                        <p class="text-success">💡 <strong>Решение:</strong> Новое фото с инфографикой, акцентом на влагозащиту и 30ч работы повысит CTR до 5.8% (+176% переходов).</p>
+                      </div>
+                    </div>
+
+                    <!-- Панель 2: Название -->
+                    <div class="sandbox-info-panel" id="info-title" role="region" aria-live="polite">
+                      <div class="info-panel-title">
+                        <span class="badge-error">Ошибка 2</span>
+                        <h5>Слабое SEO-наименование</h5>
+                      </div>
+                      <div class="info-panel-content">
+                        <p class="text-danger">❌ Название "Беспроводные наушники" упускает 15+ ключевых запросов. Потеря 65% поискового охвата.</p>
+                        <p class="text-success">💡 <strong>Решение:</strong> Расширить название до "Беспроводные наушники Bluetooth с микрофоном для телефона детские спортивные", повысив охват на 240%.</p>
+                      </div>
+                    </div>
+
+                    <!-- Панель 3: Характеристики -->
+                    <div class="sandbox-info-panel" id="info-details" role="region" aria-live="polite">
+                      <div class="info-panel-title">
+                        <span class="badge-error">Ошибка 3</span>
+                        <h5>Заполнено лишь 35% характеристик</h5>
+                      </div>
+                      <div class="info-panel-content">
+                        <p class="text-danger">❌ Не заполнены параметры "время зарядки", "совместимость", "тип разъема". Карточка скрыта в фильтрах.</p>
+                        <p class="text-success">💡 <strong>Решение:</strong> Заполнение всех 12 характеристик выведет карточку в 6 дополнительных категорий поиска Wildberries.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Общая оценка карточки -->
+                  <div class="sandbox-score-card">
+                    <div class="sandbox-score-text">
+                      <span>Итоговая оценка карточки:</span>
+                      <strong class="text-danger">3.5 / 10</strong>
+                    </div>
+                    <a href="#hero-form-anchor" class="btn btn-purple btn-sm w-100" id="sandbox-action-btn">Улучшить карточку до 10/10</a>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -355,6 +536,112 @@
           <a href="#hero-form-anchor" class="btn btn-purple">Запросить условия</a>
         </div>
 
+      </div>
+
+      <!-- Интерактивный калькулятор стоимости -->
+      <div class="pricing-calculator reveal">
+        <h3>Рассчитайте индивидуальную стоимость под ваш объём</h3>
+        
+        <div class="calc-grid">
+          <!-- Левая колонка: настройки -->
+          <div class="calc-controls">
+            
+            <div class="calc-group">
+              <div class="calc-label-row">
+                <label for="calc-cards-range">Количество карточек в магазине:</label>
+                <span class="calc-val-display" id="calc-cards-val">10</span>
+              </div>
+              <input type="range" id="calc-cards-range" min="1" max="1000" value="10" step="1" aria-valuemin="1" aria-valuemax="1000" aria-valuenow="10">
+              <div class="range-labels">
+                <span>1</span>
+                <span>100</span>
+                <span>300</span>
+                <span>500</span>
+                <span>1000+</span>
+              </div>
+            </div>
+
+            <div class="calc-group">
+              <span class="calc-group-title">Какие услуги вам требуются?</span>
+              <div class="calc-checkboxes">
+                
+                <label class="calc-cb-label">
+                  <input type="checkbox" id="calc-service-main">
+                  <span class="cb-custom"></span>
+                  <span class="cb-text">
+                    <strong>Дизайн главного фото</strong>
+                    <small>CTR-дизайн, повышающий переходы</small>
+                  </span>
+                  <span class="cb-price">500 ₽</span>
+                </label>
+
+                <label class="calc-cb-label">
+                  <input type="checkbox" id="calc-service-full" checked>
+                  <span class="cb-custom"></span>
+                  <span class="cb-text">
+                    <strong>Полный пак (5 фото)</strong>
+                    <small>Инфографика, преимущества, детали</small>
+                  </span>
+                  <span class="cb-price">3 000 ₽</span>
+                </label>
+
+                <label class="calc-cb-label">
+                  <input type="checkbox" id="calc-service-seo">
+                  <span class="cb-custom"></span>
+                  <span class="cb-text">
+                    <strong>SEO-оптимизация и описание</strong>
+                    <small>Запросы, характеристики, текст</small>
+                  </span>
+                  <span class="cb-price">1 500 ₽</span>
+                </label>
+
+                <label class="calc-cb-label">
+                  <input type="checkbox" id="calc-service-white">
+                  <span class="cb-custom"></span>
+                  <span class="cb-text">
+                    <strong>Фото на белом фоне</strong>
+                    <small>Для международной выдачи WB</small>
+                  </span>
+                  <span class="cb-price">150 ₽</span>
+                </label>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Правая колонка: результат расчёта -->
+          <div class="calc-summary">
+            <div class="summary-card">
+              <span class="summary-title">Предварительный расчет:</span>
+              
+              <div class="summary-row">
+                <span>Тарифный план:</span>
+                <strong id="summary-tariff-name">Для 1–50 карточек</strong>
+              </div>
+
+              <div class="summary-row">
+                <span>Скидка за объём:</span>
+                <strong class="discount-badge" id="summary-discount">0%</strong>
+              </div>
+
+              <div class="summary-divider"></div>
+
+              <div class="summary-cost-box">
+                <span class="cost-label">Итоговая стоимость:</span>
+                <span class="cost-value" id="summary-total-cost">30 000 ₽</span>
+                <span class="cost-per-card" id="summary-per-card-cost">3 000 ₽ / карточка</span>
+              </div>
+
+              <button type="button" class="btn btn-primary w-100" id="calc-submit-btn">Оформить заказ со скидкой</button>
+              
+              <div class="calc-partner-note" id="calc-partner-note">
+                <i data-lucide="sparkles" class="text-gold" aria-hidden="true"></i>
+                <span>При объеме от 500 карточек доступна <strong>партнерская модель (10 ₽ с выкупа)</strong> без предоплаты!</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Тариф 4 — Featured Banner -->

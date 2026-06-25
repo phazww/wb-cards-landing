@@ -21,7 +21,8 @@
   --bg-section: #F7F5FF;
   --bg-gray: #F9FAFB;
   --bg-dark: #1E1B4B;
-  --bg-purple-gradient: linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%);
+  --bg-purple-gradient: linear-gradient(135deg, #7C3AED 0%, #4C1D95 100%);
+  --gold-gradient: linear-gradient(135deg, #FDE68A 0%, #F59E0B 50%, #B45309 100%);
 
   --text-dark: #1E1B4B;
   --text-heading: #111827;
@@ -37,17 +38,17 @@
   --radius-xs: 8px;
   --radius-pill: 999px;
 
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
-  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.04);
-  --shadow-lg: 0 10px 25px -3px rgba(0,0,0,0.08), 0 4px 10px rgba(0,0,0,0.04);
-  --shadow-xl: 0 20px 40px -8px rgba(0,0,0,0.1);
-  --shadow-purple: 0 4px 14px rgba(124, 58, 237, 0.25);
-  --shadow-orange: 0 4px 14px rgba(249, 115, 22, 0.25);
-  --shadow-card: 0 2px 8px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.06);
+  --shadow-sm: 0 2px 4px rgba(124, 58, 237, 0.04);
+  --shadow-md: 0 8px 16px rgba(124, 58, 237, 0.06);
+  --shadow-lg: 0 16px 32px rgba(124, 58, 237, 0.08), 0 4px 12px rgba(124, 58, 237, 0.04);
+  --shadow-xl: 0 32px 64px rgba(124, 58, 237, 0.12), 0 16px 32px rgba(124, 58, 237, 0.06);
+  --shadow-purple: 0 12px 32px rgba(124, 58, 237, 0.25), 0 4px 12px rgba(124, 58, 237, 0.15);
+  --shadow-orange: 0 12px 32px rgba(249, 115, 22, 0.25);
+  --shadow-card: 0 4px 16px rgba(124, 58, 237, 0.04), 0 12px 32px rgba(124, 58, 237, 0.04);
 
-  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out: cubic-bezier(0.25, 1, 0.5, 1);
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
-  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-smooth: cubic-bezier(0.65, 0, 0.35, 1);
   --header-h: 72px;
 }
 
@@ -58,7 +59,7 @@ body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   background: var(--bg-light);
   color: var(--text-body);
-  line-height: 1.65;
+  line-height: 1.75;
   overflow-x: hidden;
   width: 100%;
   -webkit-font-smoothing: antialiased;
@@ -67,6 +68,7 @@ body {
 
 h1, h2, h3, h4, h5, h6, .logo-brand-text, .price-featured__big, .price-card__val {
   font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+  letter-spacing: -0.03em;
 }
 
 section { padding: 80px 24px; position: relative; }
@@ -79,7 +81,14 @@ img { max-width: 100%; height: auto; }
 
 /* ===== UTILITY ===== */
 .text-purple { color: var(--purple); }
-.text-gold { color: var(--yellow); }
+.text-gold { color: var(--gold); }
+.text-gold-gradient {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
 .text-orange { color: var(--orange); }
 .text-green { color: var(--green); }
 .w-100 { width: 100%; }
@@ -133,8 +142,8 @@ img { max-width: 100%; height: auto; }
 }
 .btn-primary:hover {
   background: var(--purple-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.35);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 16px 32px rgba(124, 58, 237, 0.35), 0 4px 12px rgba(124, 58, 237, 0.2);
 }
 
 .btn-purple {
@@ -144,20 +153,20 @@ img { max-width: 100%; height: auto; }
 }
 .btn-purple:hover {
   background: var(--purple-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.35);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 16px 32px rgba(124, 58, 237, 0.35), 0 4px 12px rgba(124, 58, 237, 0.2);
 }
 
 .btn-gold {
-  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+  background: var(--gold-gradient);
   color: var(--white);
   font-weight: 800;
   box-shadow: var(--shadow-orange);
 }
 .btn-gold:hover {
-  background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.4);
+  background: linear-gradient(135deg, #FCD34D 0%, #D97706 100%);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 16px 32px rgba(249, 115, 22, 0.35), 0 4px 12px rgba(249, 115, 22, 0.2);
 }
 
 .btn-outline-purple {
@@ -303,8 +312,20 @@ img { max-width: 100%; height: auto; }
   overflow: hidden;
 }
 .hero--dark {
-  background: #19142C; /* Dark purple/black from reference */
+  background: var(--bg-dark); /* Dark purple/black from reference */
   color: var(--white);
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+}
+.hero--dark::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(124, 58, 237, 0.15) 0%, transparent 60%),
+              radial-gradient(circle at 80% 80%, rgba(245, 158, 11, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
 }
 
 .hero-3col {
@@ -506,7 +527,7 @@ img { max-width: 100%; height: auto; }
 .form-group textarea:focus {
   outline: none;
   border-color: var(--purple);
-  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.12);
+  box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.15), 0 0 16px rgba(124, 58, 237, 0.08);
   background: var(--white);
 }
 
@@ -582,8 +603,9 @@ section h2 {
   transition: transform 0.25s var(--ease-smooth), box-shadow 0.25s;
 }
 .get-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-card);
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--purple-light);
 }
 .get-card .icon-3d { width: 52px; height: 52px; }
 .get-card p {
@@ -609,11 +631,24 @@ section h2 {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  transition: transform 0.25s var(--ease-smooth), box-shadow 0.25s;
+  transition: transform 0.4s var(--ease-spring), box-shadow 0.4s var(--ease-out), border-color 0.3s;
 }
 .service-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-card);
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--purple-light);
+  z-index: 2;
+}
+
+@media (min-width: 769px) {
+  .services-grid .service-card:nth-child(2),
+  .services-grid .service-card:nth-child(5) {
+    transform: translateY(24px);
+  }
+  .services-grid .service-card:nth-child(2):hover,
+  .services-grid .service-card:nth-child(5):hover {
+    transform: translateY(18px) scale(1.02);
+  }
 }
 .service-icon-wrap {
   width: 80px;
@@ -660,8 +695,10 @@ section h2 {
   transition: transform 0.25s var(--ease-smooth), box-shadow 0.25s;
 }
 .price-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-card);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--purple-light);
+  z-index: 2;
 }
 .price-card__title {
   font-size: 17px;

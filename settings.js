@@ -10,7 +10,7 @@ const SITE_SETTINGS = {
 
     // 1. Контакты и мессенджеры
     telegramLink: "https://t.me/tktorg",
-    telegramHandle: "@tktorg_service",  // Telegram пока остаётся прежним
+    telegramHandle: "@tktorg",
     yandexMetrikaId: "110150404", // Замените XXXXXX на ваш 8-значный ID счетчика Метрики
     whatsappLink: "https://wa.me/79528771718",
     maxLink: "https://max.ru/u/f9LHodD0cOLCVMUuMRenlihfSWjUTIzAukA4S7nOFrYExYUI-hCK7OKTWK0",

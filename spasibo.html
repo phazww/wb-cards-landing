@@ -4,143 +4,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Спасибо за заявку! — IdealPick</title>
+    <meta name="description" content="Заявка принята. Мы подготовим бесплатный разбор карточки Wildberries и свяжемся с вами.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=2.0">
+    <link rel="stylesheet" href="styles.css?v=3.0">
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=110150404', 'ym');
+        ym(110150404, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/110150404" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
     <style>
-        body {
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
-            background: #0B0814;
-            color: #ffffff;
+        .spasibo-page {
             display: flex;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
             padding: 24px;
+            background: var(--bg-gray);
         }
         .thanks-card {
-            background: #161129;
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 24px;
-            padding: 48px 32px;
-            max-width: 480px;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 56px 40px;
+            max-width: 520px;
             width: 100%;
             text-align: center;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            box-shadow: var(--shadow-lg);
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        .logo-wrap {
-            margin-bottom: 32px;
-            display: flex;
-            justify-content: center;
-            width: 100%;
-        }
-        .thanks-card .logo-brand-text {
-            color: #ffffff !important;
+        .thanks-logo {
+            margin-bottom: 36px;
         }
         .thanks-icon {
-            width: 72px;
-            height: 72px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
-            background: rgba(139, 65, 255, 0.15);
-            border: 2px solid #8B41FF;
-            color: #8B41FF;
+            background: var(--purple-bg);
+            border: 2px solid var(--purple);
+            color: var(--purple);
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 24px;
-            box-shadow: 0 0 20px rgba(139, 65, 255, 0.3);
+            margin-bottom: 28px;
+            box-shadow: 0 0 24px rgba(108, 93, 211, 0.2);
         }
-        .thanks-icon svg,
         .thanks-icon i {
-            width: 36px !important;
-            height: 36px !important;
+            width: 40px !important;
+            height: 40px !important;
             stroke-width: 2.5px;
-            display: block;
         }
         .thanks-card h1 {
-            font-size: 28px;
+            font-size: 30px;
             font-weight: 900;
+            color: var(--text-heading);
             margin-bottom: 16px;
             letter-spacing: -0.5px;
             line-height: 1.2;
         }
-        .thanks-card p {
+        .thanks-card .thanks-desc {
             font-size: 15px;
-            color: #94A3B8;
-            line-height: 1.6;
-            margin-bottom: 32px;
+            color: var(--text-body);
+            line-height: 1.65;
+            margin-bottom: 36px;
+            max-width: 400px;
         }
         .thanks-buttons {
             display: flex;
             flex-direction: column;
             gap: 12px;
             width: 100%;
+            max-width: 320px;
         }
-        .btn-outline-telegram {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1) !important;
-            color: #ffffff !important;
-        }
-        .btn-outline-telegram:hover {
-            background: rgba(255,255,255,0.1);
-            border-color: rgba(255,255,255,0.25) !important;
-            transform: translateY(-2px);
+        @media (max-width: 480px) {
+            .thanks-card {
+                padding: 40px 24px;
+            }
+            .thanks-card h1 {
+                font-size: 24px;
+            }
         }
     </style>
 </head>
 <body>
 
-<div class="thanks-card">
-    <div class="logo-wrap">
-        <a class="logo" href="index.html">
-          <img src="assets/logo_icon.png" alt="" class="logo-icon-img" style="width:36px; height:36px;">
-          <div class="logo-text-wrap" style="text-align:left;">
-            <span class="logo-brand-text"><span class="logo-gold" style="color:#FBBF24;">ideal</span>pick</span>
-          </div>
-        </a>
+<div class="spasibo-page">
+  <div class="thanks-card">
+    <div class="thanks-logo">
+      <a class="logo" href="index.html">
+        <img src="assets/logo_icon.png" alt="Логотип IdealPick" class="logo-icon-img">
+        <div class="logo-text-wrap">
+          <span class="logo-brand-text"><span class="logo-i logo-i--purple">ı</span>dealp<span class="logo-i">ı</span>ck</span>
+        </div>
+      </a>
     </div>
     
     <div class="thanks-icon">
-        <i data-lucide="check-circle-2"></i>
+      <i data-lucide="check-circle-2"></i>
     </div>
     
     <h1>Спасибо!<br>Заявка принята!</h1>
-    <p>Мы подготовим бесплатный разбор вашей карточки Wildberries и свяжемся с вами в ближайшее время.</p>
+    <p class="thanks-desc">Мы подготовим бесплатный разбор вашей карточки Wildberries и свяжемся с вами в ближайшее время.</p>
     
     <div class="thanks-buttons">
-        <a href="index.html" class="btn btn-primary">Вернуться на главную</a>
-        <a href="https://t.me/tktorg" target="_blank" rel="noopener" class="btn btn-outline-telegram">
-            Написать в Telegram <img src="assets/Screenshot_27.png" alt="" class="btn-star">
-        </a>
+      <a href="index.html" class="btn btn-primary">Вернуться на главную</a>
+      <a href="https://t.me/tktorg" target="_blank" rel="noopener" class="btn btn-outline-purple">
+        Написать в Telegram <img src="assets/Screenshot_27.png" alt="" class="btn-star" aria-hidden="true">
+      </a>
     </div>
+  </div>
 </div>
 
 <script src="settings.js"></script>
 <script>
-  // Инициализируем иконки
   lucide.createIcons();
   
-  // Яндекс.Метрика на странице спасибо
-  if (typeof SITE_SETTINGS !== 'undefined' && SITE_SETTINGS.yandexMetrikaId && SITE_SETTINGS.yandexMetrikaId !== 'XXXXXX' && SITE_SETTINGS.yandexMetrikaId !== '') {
-    const metrikaId = parseInt(SITE_SETTINGS.yandexMetrikaId);
-    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-    m[i].l=1*new Date();
-    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-    ym(metrikaId, "init", {
-         clickmap:true,
-         trackLinks:true,
-         accurateTrackBounce:true,
-         webvisor:true
-    });
+  // Обновляем ссылки из settings.js
+  if (typeof SITE_SETTINGS !== 'undefined') {
+    if (SITE_SETTINGS.telegramLink) {
+      document.querySelectorAll('a[href^="https://t.me/"]').forEach(link => {
+        link.href = SITE_SETTINGS.telegramLink;
+      });
+    }
   }
 </script>
 </body>

@@ -221,57 +221,20 @@
     });
   }
 
-  // ===== FAQ CATEGORY TABS =====
-  const faqTabs = document.querySelectorAll('.faq-tab-btn');
-  const faqItemsList = document.querySelectorAll('.faq-item');
+  // ===== FAQ SHOW MORE BUTTON =====
+  const faqShowMoreBtn = document.getElementById('faq-show-more-btn');
+  const faqShowMoreWrap = document.getElementById('faq-show-more-wrap');
+  const faqGrid = document.querySelector('.faq-grid');
   
-  if (faqTabs.length > 0 && faqItemsList.length > 0) {
-    faqTabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        // Toggle active class on tabs
-        faqTabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-        
-        const cat = tab.getAttribute('data-category');
-        
-        faqItemsList.forEach(item => {
-          const trigger = item.querySelector('.faq-trigger');
-          const content = item.querySelector('.faq-content');
-          const icon = item.querySelector('.faq-icon-arrow i');
-          
-          // Close all accordions during switch to prevent height glitches
-          if (trigger && content) {
-            trigger.setAttribute('aria-expanded', 'false');
-            content.style.maxHeight = null;
-            if (icon) icon.setAttribute('data-lucide', 'plus');
-          }
-          
-          // Toggle visibility based on category
-          if (item.getAttribute('data-cat') === cat) {
-            item.style.display = 'block';
-            // Force reflow and add visible class
-            item.offsetHeight; 
-            item.classList.add('visible');
-          } else {
-            item.classList.remove('visible');
-            item.style.display = 'none';
-          }
-        });
-        
-        // Re-initialize Lucide icons for the newly visible category
-        if (typeof lucide !== 'undefined') {
-          lucide.createIcons();
-        }
-      });
+  if (faqShowMoreBtn && faqGrid) {
+    faqShowMoreBtn.addEventListener('click', () => {
+      faqGrid.classList.add('faq-expanded');
+      if (faqShowMoreWrap) faqShowMoreWrap.classList.add('faq-hidden');
+      
+      // Re-initialize Lucide icons for the newly visible items
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
     });
-    
-    // Set active tab on load
-    const activeTab = document.querySelector('.faq-tab-btn.active');
-    if (activeTab) {
-      // Small timeout to let everything render first
-      setTimeout(() => {
-        activeTab.click();
-      }, 50);
-    }
   }
 })();

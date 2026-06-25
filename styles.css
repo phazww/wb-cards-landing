@@ -893,3 +893,336 @@ section { padding: 90px 48px; }
 .footer-contact-item:hover { color: var(--white); }
 .footer-contact-item svg { stroke: currentColor; }
 
+
+
+/* ===== ADDED STYLES ===== */
+
+.section--cta h2 { color: var(--white); }
+
+.cta-desc { font-size: 16px; color: rgba(255,255,255,0.85); margin-bottom: 32px; line-height: 1.6; text-align: center; }
+
+.cta-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 32px;
+  margin-bottom: 36px;
+  list-style: none;
+}
+
+.cta-features li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.cta-check-gold { width: 18px; height: 18px; color: var(--yellow) !important; }
+
+.btn-white {
+  background: var(--white);
+  color: var(--purple);
+  font-weight: 800;
+  border: none;
+}
+
+.btn-white:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Pricing box in featured - title */
+.price-box-featured h3 { color: var(--text-heading); }
+
+/* Hero icon sizing in benefits */
+.hero-benefit-item .icon-3d {
+  width: 36px;
+  height: 36px;
+}
+
+.lucide-img { width: 24px; height: 24px; object-fit: contain; }
+.secure-badge .lucide-img { width: 18px; height: 18px; }
+
+/* ===== NEW SERVICE: WHITE BG ===== */
+.white-bg-service-card {
+  background: var(--bg-light);
+  border: 1px solid var(--border-purple);
+  border-radius: var(--radius);
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 280px 1fr 320px;
+  gap: 40px;
+  align-items: center;
+  box-shadow: var(--shadow-md);
+  position: relative;
+}
+
+.wbs-image {
+  position: relative;
+}
+
+.wbs-badge {
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  background: var(--purple);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.wbs-content h2 {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: var(--text-heading);
+}
+
+.wbs-desc {
+  font-size: 15px;
+  color: var(--text-body);
+  margin-bottom: 24px;
+}
+
+.wbs-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.wbs-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-heading);
+  font-weight: 500;
+}
+
+.wbs-features i {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.wbs-pricing {
+  background: var(--bg-section);
+  border-radius: var(--radius-sm);
+  padding: 24px;
+  text-align: center;
+  border: 1px solid var(--border);
+}
+
+.wbs-price-item {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: 8px;
+}
+
+.wbs-price-item:nth-child(2) {
+  margin-bottom: 24px;
+}
+
+.wbs-cost {
+  color: var(--purple);
+}
+
+.wbs-pricing .btn {
+  margin-bottom: 16px;
+}
+
+.wbs-disclaimer {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+@media (max-width: 1024px) {
+  .white-bg-service-card {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+  .wbs-image {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .wbs-features {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== Compact Cases Grid ===== */
+.cases-compact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.case-compact-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.044);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.case-compact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(24, 16, 36, 0.08);
+}
+
+.case-compact-category {
+  font-size: 13px;
+  font-weight: 700;
+  color: #6B7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.case-compact-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.case-compact-img {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #F9FAFB;
+  aspect-ratio: 3/4;
+}
+
+.case-compact-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.case-compact-label {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 11px;
+  color: #fff;
+  background: #9CA3AF;
+  z-index: 2;
+}
+
+.case-compact-label--after {
+  background: var(--purple);
+}
+
+.case-compact-quote {
+  font-size: 13px;
+  font-style: italic;
+  color: #374151;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.case-compact-author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 8px;
+  border-top: 1px solid #F3F4F6;
+  margin-top: auto;
+}
+
+.case-compact-author img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.case-compact-author strong {
+  display: block;
+  font-size: 13px;
+  color: var(--text-color);
+}
+
+.case-compact-author span {
+  font-size: 11px;
+  color: #9CA3AF;
+}
+
+@media (max-width: 992px) {
+  .cases-compact-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+  .cases-compact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===== DESKTOP STYLES FOR FEATURED PRICE BOX (BANNER LAYOUT) ===== */
+@media (min-width: 1025px) {
+  .price-box-featured {
+    display: grid !important;
+    grid-template-columns: 1.2fr 1.5fr 1fr;
+    gap: 32px;
+    align-items: center;
+    padding: 40px 32px;
+  }
+  .price-featured-col {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+  }
+  .price-featured-col--main {
+    text-align: left;
+  }
+  .price-featured-col--main h3 {
+    text-align: left !important;
+    margin-bottom: 8px !important;
+  }
+  .price-featured-col--main .price-featured-subtitle {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .price-featured-col--main .price-hero-value {
+    text-align: left;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .price-featured-col--main .price-big {
+    display: inline;
+    margin-bottom: 0;
+  }
+  .price-featured-col--features .price-features {
+    margin-bottom: 0;
+  }
+  .price-featured-col--cta {
+    justify-content: center;
+    align-items: stretch;
+  }
+  .price-featured-col--cta .btn {
+    margin-top: 0;
+  }
+}

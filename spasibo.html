@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Спасибо за заявку! — IdealPick</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=2.0">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: #0B0814;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 24px;
+        }
+        .thanks-card {
+            background: #161129;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 24px;
+            padding: 48px 32px;
+            max-width: 480px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .logo-wrap {
+            margin-bottom: 32px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .thanks-card .logo-brand-text {
+            color: #ffffff !important;
+        }
+        .thanks-icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: rgba(139, 65, 255, 0.15);
+            border: 2px solid #8B41FF;
+            color: #8B41FF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            box-shadow: 0 0 20px rgba(139, 65, 255, 0.3);
+        }
+        .thanks-icon svg,
+        .thanks-icon i {
+            width: 36px !important;
+            height: 36px !important;
+            stroke-width: 2.5px;
+            display: block;
+        }
+        .thanks-card h1 {
+            font-size: 28px;
+            font-weight: 900;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+        .thanks-card p {
+            font-size: 15px;
+            color: #94A3B8;
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+        .thanks-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            width: 100%;
+        }
+        .btn-outline-telegram {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1) !important;
+            color: #ffffff !important;
+        }
+        .btn-outline-telegram:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.25) !important;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+<div class="thanks-card">
+    <div class="logo-wrap">
+        <a class="logo" href="index.html">
+          <img src="assets/logo_icon.png" alt="" class="logo-icon-img" style="width:36px; height:36px;">
+          <div class="logo-text-wrap" style="text-align:left;">
+            <span class="logo-brand-text"><span class="logo-gold" style="color:#FBBF24;">ideal</span>pick</span>
+          </div>
+        </a>
+    </div>
+    
+    <div class="thanks-icon">
+        <i data-lucide="check-circle-2"></i>
+    </div>
+    
+    <h1>Спасибо!<br>Заявка принята!</h1>
+    <p>Мы подготовим бесплатный разбор вашей карточки Wildberries и свяжемся с вами в ближайшее время.</p>
+    
+    <div class="thanks-buttons">
+        <a href="index.html" class="btn btn-primary">Вернуться на главную</a>
+        <a href="https://t.me/tktorg" target="_blank" rel="noopener" class="btn btn-outline-telegram">
+            Написать в Telegram <img src="assets/Screenshot_27.png" alt="" class="btn-star">
+        </a>
+    </div>
+</div>
+
+<script src="settings.js"></script>
+<script>
+  // Инициализируем иконки
+  lucide.createIcons();
+  
+  // Яндекс.Метрика на странице спасибо
+  if (typeof SITE_SETTINGS !== 'undefined' && SITE_SETTINGS.yandexMetrikaId && SITE_SETTINGS.yandexMetrikaId !== 'XXXXXX' && SITE_SETTINGS.yandexMetrikaId !== '') {
+    const metrikaId = parseInt(SITE_SETTINGS.yandexMetrikaId);
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(metrikaId, "init", {
+         clickmap:true,
+         trackLinks:true,
+         accurateTrackBounce:true,
+         webvisor:true
+    });
+  }
+</script>
+</body>
+</html>

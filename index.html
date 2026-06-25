@@ -3,564 +3,833 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TKtorg — Обновление карточек Wildberries под ключ</title>
+    <title>IdealPick — Обновление карточек Wildberries под ключ</title>
     <meta name="description" content="Обновим карточки на Wildberries без большой предоплаты. Новые фото, описания, SEO-наименования. Оплата с результата.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=1.2">
+    <link rel="stylesheet" href="styles.css?v=3.0">
     <link rel="icon" type="image/png" href="assets/favicon.png">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=110150404', 'ym');
+        ym(110150404, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/110150404" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </head>
 <body>
 
 <div class="page" id="top">
 
-  <!-- HEADER -->
+  <!-- ======================== HEADER ======================== -->
   <header class="header" id="header">
     <a class="logo" href="#top" id="header-logo">
-      <img src="assets/logo_icon.png" alt="" class="logo-icon-img" aria-hidden="true">
+      <img src="assets/logo_icon.png" alt="Логотип IdealPick" class="logo-icon-img">
       <div class="logo-text-wrap">
-        <span class="logo-brand-text"><span class="logo-gold">TK</span>torg</span>
-        <span class="logo-subtitle">карточки <span class="logo-purple-text">Wildberries</span> под ключ</span>
+        <span class="logo-brand-text"><span class="logo-purple">ideal</span>pick</span>
+        <span class="logo-subtitle">Контент для карточек Wildberries: фото, описание, SEO, характеристики</span>
       </div>
     </a>
+
+    <nav class="nav" id="nav" aria-label="Главная навигация">
+      <a href="#services">Услуги</a>
+      <a href="#how-it-works">Как работаем</a>
+      <a href="#cases">Кейсы</a>
+      <a href="#cases">Отзывы</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+
+    <a class="header-cta" href="#hero-form-anchor">Получить бесплатный разбор <img src="assets/Screenshot_27.png" alt="" class="btn-star" aria-hidden="true"></a>
+
     <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
       <span></span><span></span><span></span>
     </button>
-    <nav class="nav" id="nav" aria-label="Главная навигация">
-      <a href="#benefits">Преимущества</a>
-      <a href="#includes">Кейсы</a>
-      <a href="#how-works">Как работает</a>
-      <a href="#pricing">Форматы</a>
-      <a href="#contact">Контакты</a>
-      <a class="nav-cta-mobile" href="https://t.me/tktorg" target="_blank" rel="noopener">Обсудить артикулы <img src="assets/Screenshot_27.png" alt="" class="btn-star"></a>
-    </nav>
-    <a class="header-cta" href="https://t.me/tktorg" target="_blank" rel="noopener">Обсудить артикулы <img src="assets/Screenshot_27.png" alt="" class="btn-star"></a>
   </header>
 
   <main>
 
-  <!-- HERO -->
-  <section class="hero" id="hero" aria-label="Главный экран">
-    <div class="hero-inner">
-      <div class="hero-content reveal-left">
-        <span class="hero-tag">ДЛЯ СЕЛЛЕРОВ С АССОРТИМЕНТОМ</span>
-        <h1 id="dynamic-hero-title">Обновим карточки <span class="text-purple">Wildberries</span> без большой предоплаты</h1>
-        <p id="dynamic-hero-desc" class="hero-desc">Создадим новое главное фото, комплект из 5 фото, продающее описание и SEO-наименование.<br>Оплата — <strong class="text-yellow">10 ₽ с выкупленного товара</strong> после обновления карточки в течение <strong class="text-yellow">12 месяцев</strong>.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="https://t.me/tktorg" target="_blank" rel="noopener">Получить тест на 1–3 карточки</a>
-          <a class="btn btn-outline-light" href="https://t.me/tktorg" target="_blank" rel="noopener">Обсудить артикулы <img src="assets/Screenshot_27.png" alt="" class="btn-star"></a>
-        </div>
-        <p class="hero-trust">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#C49A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 14px; height: 14px;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          Ничего не публикуем без вашего согласия
-        </p>
-      </div>
+  <!-- ======================== HERO ======================== -->
+  <section class="hero hero--dark" id="hero" aria-label="Главный экран">
+    <div id="hero-form-anchor"></div>
+    <div class="container hero-3col">
       
-      <div class="hero-visual reveal-right">
-        <div class="hero-card hero-card-before">
-          <span class="hero-tag-red">БЫЛО</span>
-          <img id="dynamic-img-before" src="assets/headphones_before.png" alt="До обновления" class="card-img-before">
-          <div class="before-card-stats">
-            <div class="stars stars-bad">
-              <div class="stars-icons"><span class="star-active">★</span><span class="star-inactive">★★★★</span></div>
-              <span>2 отзыва</span>
+      <!-- Колонка 1: Текст и преимущества -->
+      <div class="hero-top reveal">
+        <h1 id="dynamic-hero-title">Пришлите артикул WB — <span class="text-purple">бесплатно</span> покажем, что мешает карточке продавать</h1>
+        <p id="dynamic-hero-desc" class="hero-desc">Разберем главное фото, SEO-наименование, описание, характеристики и визуальную подачу товара. После разбора подскажем, какой формат работы выгоднее именно для вашего магазина.</p>
+
+        <!-- Сетка преимуществ -->
+        <div class="hero-benefits-grid">
+          <div class="hero-benefit-item">
+            <img src="assets/hero-no-access.png" alt="Без доступа к кабинету" class="icon-3d">
+            <span>Доступ к кабинету не нужен</span>
+          </div>
+          <div class="hero-benefit-item">
+            <img src="assets/hero-no-publish.png" alt="Ничего не публикуем без согласия" class="icon-3d">
+            <span>Ничего не публикуем без согласия</span>
+          </div>
+          <div class="hero-benefit-item">
+            <img src="assets/hero-fast-audit.png" alt="Разбор за 24 часа" class="icon-3d">
+            <span>Разбор за 24 часа</span>
+          </div>
+          <div class="hero-benefit-item">
+            <img src="assets/hero-no-prepay.png" alt="Без большой предоплаты" class="icon-3d">
+            <span>Без большой предоплаты</span>
+          </div>
+        </div>
+
+        <p class="hero-disclaimer">* Вы присылаете только артикул. Мы смотрим открытую карточку на Wildberries и показываем слабые места.</p>
+      </div>
+
+      <!-- Колонка 2: ДО/ПОСЛЕ -->
+      <div class="hero-media reveal">
+        <div class="hero-split-preview">
+          <div class="split-before">
+            <span class="split-label">до</span>
+            <img src="assets/headphones_before.png" alt="Карточка до обновления — низкое качество фото">
+            <div class="split-rating">
+              <span class="rating-stars">3.0 ★★★☆☆</span>
+              <span class="rating-count">116 отзывов</span>
+            </div>
+          </div>
+          <div class="split-divider">
+            <i data-lucide="chevron-right"></i>
+          </div>
+          <div class="split-after">
+            <span class="split-label split-label--after">после</span>
+            <img src="assets/headphones_after.jpg" alt="Карточка после обновления — профессиональное фото с инфографикой">
+            <div class="split-rating split-rating--after">
+              <span class="rating-stars">4.8 ★★★★★</span>
+              <span class="rating-count">1248 отзывов</span>
             </div>
           </div>
         </div>
-        <div class="hero-arrow">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </div>
-        <div class="hero-card hero-card-after">
-          <span class="hero-tag-green">СТАЛО</span>
-          <div class="after-card-inner">
-             <img id="dynamic-img-after" src="assets/headphones_after.jpg" alt="После обновления" class="card-img-after">
-             <div class="after-card-info">
-               <div class="after-card-stats">
-                  <div class="stars">★★★★★ <span>312 отзывов</span></div>
-               </div>
-             </div>
-          </div>
-          <div class="hero-badge-price">
-            <span class="badge-amount">10₽</span>
-            <span class="badge-label">с выкупа<br>товара</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ПРЕИМУЩЕСТВА -->
-  <section class="benefits" id="benefits">
-    <span class="section-eyebrow reveal">ПОЧЕМУ ЭТО ВЫГОДНО СЕЛЛЕРУ</span>
-    <h2 class="reveal">Не платите десятки тысяч заранее — оплачивайте обновление карточки с продаж</h2>
-    <div class="benefits-grid reveal-stagger">
-      <article class="benefit-item reveal">
-        <div class="benefit-icon">
-          <img src="assets/Screenshot_3.png" alt="Нет большой предоплаты" style="width: 100%; height: 100%; object-fit: contain; transform: scale(1.4) translate(2px, 1px);">
-        </div>
-        <h3>Нет большой предоплаты</h3>
-        <p>Оплата идёт постепенно с выкупов</p>
-      </article>
-      <article class="benefit-item reveal">
-        <div class="benefit-icon">
-          <img src="assets/Screenshot_1.png" alt="" style="width: 100%; height: 100%; object-fit: contain; transform: scale(1.6) translate(3px, 2px);">
-        </div>
-        <h3>Работаем с вашим ассортиментом</h3>
-        <p>Берём в работу большое количество карточек</p>
-      </article>
-      <article class="benefit-item reveal">
-        <div class="benefit-icon">
-          <img src="assets/Screenshot_2.png" alt="" style="width: 100%; height: 100%; object-fit: contain; transform: scale(1.4);">
-        </div>
-        <h3>Карточка становится сильнее</h3>
-        <p>Новый визуал, описание и SEO повышают конверсию</p>
-      </article>
-      <article class="benefit-item reveal">
-        <div class="benefit-icon">
-          <img src="assets/Screenshot_4.png" alt="" style="width: 100%; height: 100%; object-fit: contain; transform: scale(1.4) translate(-5px, 10px);">
-        </div>
-        <h3>Экономите время</h3>
-        <p>Мы берём на себя всю работу по фото и контенту</p>
-      </article>
-      <article class="benefit-item reveal">
-        <div class="benefit-icon">
-          <img src="assets/Screenshot_5.png" alt="" style="width: 100%; height: 100%; object-fit: contain; transform: scale(1.4);">
-        </div>
-        <h3>Безопасно и прозрачно</h3>
-        <p>Всё фиксируем до начала работы</p>
-      </article>
-      <article class="benefit-item reveal">
-        <div class="benefit-icon">
-          <img src="assets/Screenshot_6.png" alt="" style="width: 100%; height: 100%; object-fit: contain; transform: scale(1.1);">
-        </div>
-        <h3>Партнёрская модель</h3>
-        <p>Мы заходим в результат вместе с вами</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- ЧТО ВХОДИТ -->
-  <section class="includes" id="includes">
-    <span class="section-eyebrow reveal">ЧТО ВХОДИТ В ОБНОВЛЕНИЕ КАРТОЧКИ</span>
-    <h2 class="sr-only">Что входит в обновление карточки</h2>
-    <div class="includes-grid reveal-stagger">
-      <article class="include-card reveal">
-        <span class="include-num">1</span>
-        <div class="include-img-wrap"><img src="assets/update_1.png" alt="Новое главное фото товара" class="include-img"></div>
-        <h3>Новое главное фото</h3>
-        <p>Яркое, продающее, соответствует требованиям Wildberries и выдаёт ваш товар в выдаче.</p>
-      </article>
-      <article class="include-card reveal">
-        <span class="include-num">2</span>
-        <div class="include-img-wrap"><img src="assets/update_2.png" alt="Комплект из 5 фото товара" class="include-img"></div>
-        <h3>Комплект из 5 фото</h3>
-        <p>Фото с преимуществами, применением, составом, характеристиками и отзывами.</p>
-      </article>
-      <article class="include-card reveal">
-        <span class="include-num">3</span>
-        <div class="include-img-wrap"><img src="assets/update_3.png" alt="Продающее описание товара" class="include-img"></div>
-        <h3>Продающее описание</h3>
-        <p>Понятно раскрывает товар, его пользу, особенности и сценарии использования.</p>
-      </article>
-      <article class="include-card reveal">
-        <span class="include-num">4</span>
-        <div class="include-img-wrap"><img src="assets/update_4.png" alt="SEO-наименование карточки" class="include-img"></div>
-        <h3>SEO-наименование</h3>
-        <p>Название с учётом поисковых фраз, типа товара, назначения и других параметров.</p>
-      </article>
-      <article class="include-card reveal">
-        <span class="include-num">5</span>
-        <div class="include-img-wrap"><img src="assets/update_5.png" alt="Фото с отзывами покупателей" class="include-img"></div>
-        <h3>Фото с отзывами</h3>
-        <p>Оформляем реальные отзывы покупателей в продающем формате.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- КАК РАБОТАЕТ -->
-  <section class="how-works" id="how-works">
-    <div class="how-inner">
-      <span class="section-eyebrow section-eyebrow-light reveal">КАК РАБОТАЕТ ОПЛАТА 10 ₽ С ВЫКУПА</span>
-      <h2 class="sr-only">Как работает оплата</h2>
-      <div class="steps-grid reveal-stagger">
-        <article class="step-item reveal">
-          <div class="step-circle">1</div>
-          <div class="step-icon">
-            <img src="assets/Screenshot_12.png" alt="" style="width: 100%; height: 100%; object-fit: contain; transform: scale(1.4);">
-          </div>
-          <h3>Вы присылаете артикулы&nbsp;WB</h3>
-          <p>Отправляете список карточек, которые нужно обновить.</p>
-        </article>
-        <div class="step-arrow reveal" aria-hidden="true">→</div>
-        <article class="step-item reveal">
-          <div class="step-circle">2</div>
-          <div class="step-icon">
-            <img src="assets/Screenshot_13.png" alt="" style="width: 100%; height: 100%; object-fit: contain; transform: scale(1.4);">
-          </div>
-          <h3>Мы обновляем карточку</h3>
-          <p>Делаем новое фото, 5 изображений, описание и&nbsp;SEO.</p>
-        </article>
-        <div class="step-arrow reveal" aria-hidden="true">→</div>
-        <article class="step-item reveal">
-          <div class="step-circle">3</div>
-          <div class="step-icon">
-            <img src="assets/Screenshot_14.png" alt="" style="width: 100%; height: 100%; object-fit: contain; transform: scale(1.4);">
-          </div>
-          <h3>Вы проверяете и&nbsp;согласовываете</h3>
-          <p>Показываем результат. Вносим правки при необходимости.</p>
-        </article>
-        <div class="step-arrow reveal" aria-hidden="true">→</div>
-        <article class="step-item reveal">
-          <div class="step-circle">4</div>
-          <div class="step-icon">
-            <img src="assets/Screenshot_15.png" alt="" style="width: 100%; height: 100%; object-fit: contain; transform: scale(1.4);">
-          </div>
-          <h3>Обновляем карточку на&nbsp;Wildberries</h3>
-          <p>Публикуем новые материалы после вашего полного согласия.</p>
-        </article>
-        <div class="step-arrow reveal" aria-hidden="true">→</div>
-        <article class="step-item reveal">
-          <div class="step-circle">5</div>
-          <div class="step-icon">
-            <img src="assets/Screenshot_16.png" alt="" style="width: 100%; height: 100%; object-fit: contain; transform: scale(1.4);">
-          </div>
-          <h3>Оплата 10 ₽ с выкупа в течение 12&nbsp;месяцев</h3>
-          <p>Считаем только по выкупленным товарам. Если не выкупили — оплаты нет.</p>
-        </article>
-      </div>
-      <div class="how-notice">
-        <span class="notice-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-        </span>
-        <p>Оплата считается только по тем артикулам, карточки которых мы обновили.<br>Период оплаты — <strong>12 месяцев</strong> с даты публикации обновлённой карточки.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ФОРМАТЫ РАБОТЫ -->
-  <section class="pricing" id="pricing">
-    <span class="section-eyebrow reveal">ФОРМАТЫ РАБОТЫ</span>
-    <h2 class="sr-only">Форматы работы</h2>
-    <div class="pricing-grid reveal-stagger">
-      <article class="price-card reveal">
-        <div class="price-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-        </div>
-        <h3 class="price-title">СТАРТ</h3>
-        <div id="dynamic-price-start" class="price-value">15 000 ₽</div>
-        <p class="price-desc">Базовое обновление для 1–3 артикулов.</p>
-        <ul>
-          <li>Фото, 5 фото, описание, SEO</li>
-          <li>Цена зависит от объёма</li>
-          <li>Подходит для любого количества карточек</li>
-        </ul>
-        <a class="btn btn-primary" href="https://t.me/tktorg" target="_blank" rel="noopener">Узнать стоимость</a>
-      </article>
-      <article class="price-card price-card-featured reveal">
-        <div class="price-popular">Популярно</div>
-        <div class="price-icon price-icon-gold">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
-        </div>
-        <h3 class="price-title">ПРО</h3>
-        <div id="dynamic-price-pro" class="price-value">10 ₽ / выкуп</div>
-        <p class="price-desc">Партнёрская модель для селлеров с большим ассортиментом.</p>
-        <ul>
-          <li>10 ₽ с каждого выкупленного товара</li>
-          <li>Период — 12 месяцев</li>
-          <li>Без большой предоплаты</li>
-        </ul>
-        <a class="btn btn-gold" href="https://t.me/tktorg" target="_blank" rel="noopener">Обсудить условия</a>
-      </article>
-      <article class="price-card reveal">
-        <div class="price-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        </div>
-        <h3 class="price-title">МАКСИМУМ</h3>
-        <div id="dynamic-price-max" class="price-value">40 000 ₽</div>
-        <p class="price-desc">Для магазинов от 1000+ карточек.</p>
-        <ul>
-          <li>Индивидуальные условия</li>
-          <li>Приоритетная обработка</li>
-          <li>Персональный менеджер</li>
-        </ul>
-        <a class="btn btn-primary" href="https://t.me/tktorg" target="_blank" rel="noopener">Обсудить проект</a>
-      </article>
-    </div>
-  </section>
-
-  <!-- КАКИМ СЕЛЛЕРАМ ПОДХОДИТ -->
-  <section class="audience" id="audience">
-    <span class="section-eyebrow reveal">КАКИМ СЕЛЛЕРАМ ПОДХОДИТ</span>
-    <h2 class="sr-only">Каким селлерам подходит</h2>
-    <div class="audience-grid reveal-stagger">
-      <div class="audience-item reveal">
-        <div class="audience-icon">
-          <img src="assets/Screenshot_17.png" alt="" style="width: 100%; height: 100%; object-fit: contain; transform: scale(1.3);">
-        </div>
-        <div class="audience-text">
-          <b>От 500 карточек</b><br>в одном магазине
-        </div>
-      </div>
-      <div class="audience-item reveal">
-        <div class="audience-icon">
-          <img src="assets/Screenshot_18.png" alt="" style="width: 100%; height: 100%; object-fit: contain; transform: scale(1.3) translate(-5px, 10px);">
-        </div>
-        <div class="audience-text">
-          <b>Есть товары</b><br>с регулярными продажами
-        </div>
-      </div>
-      <div class="audience-item reveal">
-        <div class="audience-icon">
-          <img src="assets/Screenshot_19.png" alt="" style="width: 100%; height: 100%; object-fit: contain; transform: scale(1.3);">
-        </div>
-        <div class="audience-text">
-          <b>Карточки визуально</b><br>устарели
-        </div>
-      </div>
-      <div class="audience-item reveal">
-        <div class="audience-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        </div>
-        <div class="audience-text">
-          <b>Нет времени обновлять</b><br>каждую карточку
-        </div>
-      </div>
-      <div class="audience-item reveal">
-        <div class="audience-icon">
-          <img src="assets/Screenshot_20.png" alt="" style="width: 100%; height: 100%; object-fit: contain; transform: scale(1.15);">
-        </div>
-        <div class="audience-text">
-          <b>Нужен партнёр</b><br>на долгий срок
-        </div>
-      </div>
-    </div>
-    <div class="audience-note reveal">
-      <p>Партнёрская модель 10 ₽ с выкупа доступна для селлеров Wildberries с ассортиментом от <strong>500 карточек</strong> в одном магазине.<br>Для меньших объёмов работаем по фиксированной стоимости.</p>
-    </div>
-  </section>
-
-  <!-- БЕЗОПАСНОСТЬ -->
-  <section class="security" id="security">
-    <div class="security-inner">
-      <span class="section-eyebrow section-eyebrow-light reveal">БЕЗОПАСНОСТЬ И КОНТРОЛЬ</span>
-      <h2 class="sr-only">Безопасность и контроль</h2>
-      <div class="security-grid reveal-stagger">
-        <div class="security-item reveal">
-          <div class="security-icon">
-            <img src="assets/Screenshot_21.png" alt="" style="width: 100%; height: 100%; object-fit: contain; transform: scale(1.55) translate(0.9px, 0.2px);">
-          </div>
-          <p>Ничего не публикуем без вашего согласия</p>
-        </div>
-        <div class="security-item reveal">
-          <div class="security-icon">
-            <img src="assets/Screenshot_22.png" alt="" style="width: 100%; height: 100%; object-fit: contain; transform: scale(1.45) translate(1.7px, 0.5px);">
-          </div>
-          <p>Можно начать с теста без доступа к кабинету</p>
-        </div>
-        <div class="security-item reveal">
-          <div class="security-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transform: scale(1.15);"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" fill="#ffffff"/><circle cx="12" cy="12" r="3" fill="#ffffff"/></svg>
-          </div>
-          <p>Доступ нужен только для размещения изменений</p>
-        </div>
-        <div class="security-item reveal">
-          <div class="security-icon">
-            <img src="assets/Screenshot_24.png" alt="" style="width: 100%; height: 100%; object-fit: contain; transform: scale(1.3) translate(2.2px, 1.4px);">
-          </div>
-          <p>Старые фото можно сохранить</p>
-        </div>
-        <div class="security-item reveal">
-          <div class="security-icon">
-            <img src="assets/Screenshot_25.png" alt="" style="width: 100%; height: 100%; object-fit: contain; transform: scale(1.55) translate(1.4px, 0.9px);">
-          </div>
-          <p>Условия оплаты фиксируем заранее</p>
-        </div>
-        <div class="security-item reveal">
-          <div class="security-icon">
-            <img src="assets/Screenshot_26.png" alt="" style="width: 100%; height: 100%; object-fit: contain; transform: scale(1.5);">
-          </div>
-          <p>Работаем по договору, предоставляем отчёты</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ОТЗЫВЫ -->
-  <section class="reviews" id="reviews">
-    <div class="reviews-inner">
-      <div class="reviews-badge-wrap reveal">
-        <span class="reviews-badge">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="reviews-badge-icon">
-            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        <!-- График конверсии -->
+        <div class="hero-chart-container">
+          <svg class="hero-chart-svg" viewBox="0 0 400 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="chartGrad" x1="0" y1="0" x2="400" y2="0" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#7C3AED"/>
+                <stop offset="100%" stop-color="#F59E0B"/>
+              </linearGradient>
+              <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="100" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.18"/>
+                <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.01"/>
+              </linearGradient>
+            </defs>
+            <path d="M0 85 C40 82, 80 78, 120 65 C160 52, 200 40, 240 30 C280 20, 320 14, 360 10 L400 8 L400 100 L0 100Z" fill="url(#chartFill)"/>
+            <path d="M0 85 C40 82, 80 78, 120 65 C160 52, 200 40, 240 30 C280 20, 320 14, 360 10 L400 8" stroke="url(#chartGrad)" stroke-width="3" stroke-linecap="round"/>
           </svg>
-          <span id="dynamic-reviews-eyebrow">ДОВЕРИЕ СЕЛЛЕРОВ</span>
-        </span>
-      </div>
-      <h2 class="reveal" id="dynamic-reviews-title">Отзывы клиентов <span class="text-purple">о нас</span></h2>
-      <p class="reviews-subtitle reveal" id="dynamic-reviews-subtitle">Что говорят селлеры о работе с нами</p>
-      
-      <div class="reviews-grid reveal-stagger">
-        <!-- Card 1 -->
-        <article class="review-card reveal">
-          <div class="review-header">
-            <img width="52" height="52" id="dynamic-review-1-img" src="assets/alexey_avatar.png" alt="Алексей С." class="review-avatar">
-            <div class="review-user-info">
-              <b id="dynamic-review-1-author">Алексей С.</b>
-              <small id="dynamic-review-1-niche">Спорт и отдых</small>
-            </div>
-          </div>
-          <div class="review-stars">★★★★★</div>
-          <p id="dynamic-review-1-text">Карточки стали намного понятнее и профессиональнее. Улучшили SEO и структуру — выросли просмотры и конверсия. Отдельно отмечу, что показывают результат до публикации — это очень удобно.</p>
-          <div class="review-tag">
-            <span class="review-tag-check">✓</span>
-            <span id="dynamic-review-1-tagtext">Работаем по согласованию</span>
-          </div>
-        </article>
-
-        <!-- Card 2 -->
-        <article class="review-card reveal">
-          <div class="review-header">
-            <img width="52" height="52" id="dynamic-review-2-img" src="assets/maria_avatar.png" alt="Мария К." class="review-avatar">
-            <div class="review-user-info">
-              <b id="dynamic-review-2-author">Мария К.</b>
-              <small id="dynamic-review-2-niche">Красота и уход</small>
-            </div>
-          </div>
-          <div class="review-stars">★★★★★</div>
-          <p id="dynamic-review-2-text">У нас большой каталог, и раньше было сложно поддерживать единообразие. Команда привела карточки к единому стилю, добавила инфографику и преимущества. Стало проще масштабироваться и запускать новые товары.</p>
-          <div class="review-tag">
-            <span class="review-tag-check">✓</span>
-            <span id="dynamic-review-2-tagtext">Подходит для больших каталогов</span>
-          </div>
-        </article>
-
-        <!-- Card 3 -->
-        <article class="review-card reveal">
-          <div class="review-header">
-            <img width="52" height="52" id="dynamic-review-3-img" src="assets/dmitry_avatar.png" alt="Дмитрий П." class="review-avatar">
-            <div class="review-user-info">
-              <b id="dynamic-review-3-author">Дмитрий П.</b>
-              <small id="dynamic-review-3-niche">Электроника</small>
-            </div>
-          </div>
-          <div class="review-stars">★★★★★</div>
-          <p id="dynamic-review-3-text">Понравился системный подход и внимание к деталям. Карточки выглядят аккуратно, информация структурирована. Особенно ценно, что можно согласовать всё заранее и внести правки до публикации.</p>
-          <div class="review-tag">
-            <span class="review-tag-check">✓</span>
-            <span id="dynamic-review-3-tagtext">Тест на 1–3 карточках</span>
-          </div>
-        </article>
-
-        <!-- Card 4 -->
-        <article class="review-card reveal">
-          <div class="review-header">
-            <img width="52" height="52" id="dynamic-review-4-img" src="assets/ekaterina_avatar.png" alt="Екатерина Л." class="review-avatar">
-            <div class="review-user-info">
-              <b id="dynamic-review-4-author">Екатерина Л.</b>
-              <small id="dynamic-review-4-niche">Дом и интерьер</small>
-            </div>
-          </div>
-          <div class="review-stars">★★★★★</div>
-          <p id="dynamic-review-4-text">Сервис экономит нам кучу времени. Больше не нужно собирать информацию и думать, как оформить — всё делают за нас и показывают результат до публикации. Очень удобно и безопасно.</p>
-          <div class="review-tag">
-            <span class="review-tag-check">✓</span>
-            <span id="dynamic-review-4-tagtext">Безопасный доступ</span>
-          </div>
-        </article>
+          <span class="hero-chart-label">+167% к конверсии</span>
+        </div>
       </div>
 
-      <!-- Trust features row below reviews -->
-      <div class="trust-features reveal-stagger">
-        <div class="trust-feature-item reveal">
-          <div class="trust-feature-icon gold-border">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-              <path d="M9 11l2 2 4-4" stroke="#FFAA00"/>
-            </svg>
+      <!-- Колонка 3: Форма -->
+      <div class="hero-form-card reveal-right">
+        <h3>Получить бесплатный разбор</h3>
+        <form id="lead-form" autocomplete="on">
+          <input type="hidden" name="access_key" id="web3forms-key-input" value="33201825-3cf2-401e-bcdf-91c592ab54ba">
+          <input type="hidden" name="subject" value="Новая заявка с IdealPick">
+          <input type="hidden" name="from_name" value="IdealPick Landing">
+          <input type="hidden" name="cards_count" id="hidden-cards-count" value="500+">
+
+          <div class="form-group">
+            <label for="form-name">Ваше имя</label>
+            <input type="text" id="form-name" name="name" placeholder="Ваше имя" required>
           </div>
-          <div class="trust-feature-text">
-            <b id="dynamic-trust-1-title">Работаем по согласованию</b>
-            <p id="dynamic-trust-1-desc">Все материалы согласуются перед публикацией</p>
+          <div class="form-group">
+            <label for="form-contact">Телефон / Telegram</label>
+            <input type="text" id="form-contact" name="contact" placeholder="Телефон / Telegram" required>
+          </div>
+          <div class="form-group">
+            <label for="form-sku">Артикул WB</label>
+            <input type="text" id="form-sku" name="sku" placeholder="Артикул WB" required>
+          </div>
+
+          <div class="form-selector">
+            <span class="selector-label">Сколько карточек в магазине?</span>
+            <div class="selector-options">
+              <button type="button" class="selector-btn" data-value="1-50">1-50</button>
+              <button type="button" class="selector-btn" data-value="51-999">51-999</button>
+              <button type="button" class="selector-btn active" data-value="500+">500+</button>
+              <button type="button" class="selector-btn" data-value="1000+">1000+</button>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100" id="form-submit-btn">Получить бесплатный разбор</button>
+
+          <p class="form-privacy"><i data-lucide="lock" aria-hidden="true"></i> Ваши данные защищены и не передаются третьим лицам</p>
+
+          <!-- Скрытые поля для UTM-аналитики Яндекс Директа -->
+          <input type="hidden" name="utm_source" id="utm_source" value="">
+          <input type="hidden" name="utm_medium" id="utm_medium" value="">
+          <input type="hidden" name="utm_campaign" id="utm_campaign" value="">
+          <input type="hidden" name="utm_content" id="utm_content" value="">
+          <input type="hidden" name="utm_term" id="utm_term" value="">
+          <input type="hidden" name="yclid" id="yclid" value="">
+          <input type="hidden" name="page_url" id="page_url" value="">
+          <input type="hidden" name="referrer" id="referrer" value="">
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================== ЧТО ВЫ ПОЛУЧИТЕ ======================== -->
+  <section class="section section--gray" id="what-you-get" aria-label="Что вы получите после разбора">
+    <div class="container">
+      <h2 class="section-title reveal">Что вы получите после разбора</h2>
+      <div class="get-grid reveal-stagger">
+        <div class="get-card">
+          <img src="assets/get-target.png" alt="Анализ карточки" class="icon-3d">
+          <p>Поймёте, что мешает клиентам и выкупам</p>
+        </div>
+        <div class="get-card">
+          <img src="assets/get-clipboard.png" alt="Список ошибок" class="icon-3d">
+          <p>Получите список ошибок и точек роста</p>
+        </div>
+        <div class="get-card">
+          <img src="assets/get-user.png" alt="Формат работы" class="icon-3d">
+          <p>Узнаете, какой формат работы подойдет именно вам</p>
+        </div>
+        <div class="get-card">
+          <img src="assets/get-rocket.png" alt="Тест на карточках" class="icon-3d">
+          <p>Сможете начать с теста на 1–3 карточках</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== УСЛУГИ ======================== -->
+  <section class="section" id="services" aria-label="Наши услуги">
+    <div class="container">
+      <h2 class="section-title reveal">Что входит в наши услуги</h2>
+      <div class="services-grid reveal-stagger">
+
+        <article class="service-card">
+          <img src="assets/inc-camera.png" alt="Новое главное фото" class="icon-3d">
+          <h3>Новое главное фото</h3>
+          <p>Яркое, продающее главное фото, которое останавливает взгляд.</p>
+        </article>
+
+        <article class="service-card">
+          <img src="assets/inc-squares.png" alt="Комплект фото" class="icon-3d">
+          <h3>Комплект из 5 фото</h3>
+          <p>Показываем товар со всех сторон и в деталях.</p>
+        </article>
+
+        <article class="service-card">
+          <img src="assets/inc-seo.png" alt="Поисковый запрос" class="icon-3d">
+          <h3>Провести входящий поисковый запрос</h3>
+          <p>Отслеживаем его поиски и релевантность карточки.</p>
+        </article>
+
+        <article class="service-card">
+          <img src="assets/inc-desc.png" alt="Продающее описание" class="icon-3d">
+          <h3>Продающее описание</h3>
+          <p>Структурированное описание, которое убеждает и продаёт.</p>
+        </article>
+
+        <article class="service-card">
+          <img src="assets/inc-chars.png" alt="Характеристики товара" class="icon-3d">
+          <h3>Характеристики товара</h3>
+          <p>Точные и понятные характеристики без лишней воды.</p>
+        </article>
+
+        <article class="service-card">
+          <img src="assets/inc-cloud.png" alt="Публикация контента" class="icon-3d">
+          <h3>Подготовка и публикация</h3>
+          <p>Загрузка и публикация контента через личный кабинет или API.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== НОВАЯ УСЛУГА ======================== -->
+  <section class="section" id="new-service" aria-label="Новая услуга">
+    <div class="container">
+      <div class="white-bg-service-card reveal">
+        
+        <!-- Левая часть с картинкой -->
+        <div class="wbs-image">
+          <div class="wbs-badge">НОВОЕ</div>
+          <div class="wbs-image-placeholder">
+            <img src="assets/white_bottle_service.png" alt="Фото на белом фоне" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: var(--radius-sm); border: 1px solid var(--border);">
           </div>
         </div>
-        <div class="trust-feature-item reveal">
-          <div class="trust-feature-icon purple-border">
-            <span class="badge-num-icon">1-3</span>
+
+        <!-- Центральная часть с описанием -->
+        <div class="wbs-content">
+          <h2>Новая услуга: фото на белом фоне</h2>
+          <p class="wbs-desc">Подготовим и загрузим дополнительное фото на белом фоне для международной выдачи Wildberries</p>
+          
+          <ul class="wbs-features">
+            <li><i data-lucide="check-circle-2" class="text-purple"></i> Без инфографики</li>
+            <li><i data-lucide="check-circle-2" class="text-purple"></i> Фон FBF8F8–FFFFFF</li>
+            <li><i data-lucide="check-circle-2" class="text-purple"></i> Загрузим последним в карусель</li>
+            <li><i data-lucide="check-circle-2" class="text-purple"></i> Можно разместить автоматически у вас в магазине</li>
+          </ul>
+        </div>
+
+        <!-- Правая часть с ценой -->
+        <div class="wbs-pricing">
+          <div class="wbs-price-item">
+            <span class="wbs-count">1–99 фото</span> — <span class="wbs-cost">150 ₽ / фото</span>
           </div>
-          <div class="trust-feature-text">
-            <b id="dynamic-trust-2-title">Тест на 1–3 карточках</b>
-            <p id="dynamic-trust-2-desc">Покажем результат на небольших карточках перед стартом</p>
+          <div class="wbs-price-item">
+            <span class="wbs-count">от 100 фото</span> — <span class="wbs-cost">50 ₽ / фото</span>
+          </div>
+          <a href="#hero-form-anchor" class="btn btn-primary w-100">Подготовить фото</a>
+          <p class="wbs-disclaimer">Подходит для карточек, которые нужно подготовить под новые требования WB</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== ТАРИФЫ ======================== -->
+  <section class="section section--gray" id="pricing" aria-label="Форматы работы и стоимость">
+    <div class="container">
+      <h2 class="section-title reveal">Форматы работы и стоимость</h2>
+      <div class="pricing-grid reveal-stagger">
+
+        <!-- Тариф 1 -->
+        <div class="price-box price-box--dashed">
+          <h3>Для 1–50 карточек</h3>
+          <div class="price-items">
+            <div class="price-row">
+              <span class="price-label">Главное фото —</span>
+              <span class="price-value" id="price-t1-main">500 ₽</span>
+            </div>
+            <p class="price-row-desc">Новое продающее главное фото для карточки Wildberries.</p>
+            <div class="price-row">
+              <span class="price-label">Полное оформление —</span>
+              <span class="price-value" id="price-t1-full">3 000 ₽</span>
+            </div>
+            <p class="price-row-desc">Главное фото, 5 фото, описание, SEO‑наименование, характеристики.</p>
+          </div>
+          <p class="price-bottom-label">Подходит для точечного улучшения и теста</p>
+          <a href="#hero-form-anchor" class="btn btn-outline-purple">Обсудить задачу</a>
+        </div>
+
+        <!-- Тариф 2 -->
+        <div class="price-box price-box--dashed">
+          <h3>Для 51–999 карточек</h3>
+          <p class="price-text" id="price-t2-text">Индивидуальный расчёт под объём, нишу и задачи. Можно начать с теста на 1–3 карточках.</p>
+          <ul class="price-features">
+            <li><i data-lucide="check" aria-hidden="true"></i> Гибкая стоимость</li>
+            <li><i data-lucide="check" aria-hidden="true"></i> Подготовка под публикацию</li>
+            <li><i data-lucide="check" aria-hidden="true"></i> Возможна публикация через API</li>
+          </ul>
+          <p class="price-bottom-label">&nbsp;</p>
+          <a href="#hero-form-anchor" class="btn btn-purple">Получить расчёт</a>
+        </div>
+
+        <!-- Тариф 3 -->
+        <div class="price-box price-box--dashed">
+          <h3>Для 1000+ карточек</h3>
+          <div class="price-items">
+            <div class="price-row">
+              <span class="price-label">Главное фото —</span>
+              <span class="price-value" id="price-t3-main">от 50 ₽</span>
+            </div>
+            <div class="price-row">
+              <span class="price-label">Полное оформление —</span>
+              <span class="price-value" id="price-t3-full">от 300 ₽</span>
+            </div>
+          </div>
+          <p class="price-row-desc">Выгодно для массового обновления контента в большом ассортименте.</p>
+          <p class="price-bottom-label">Пакетные условия</p>
+          <a href="#hero-form-anchor" class="btn btn-purple">Запросить условия</a>
+        </div>
+
+        <!-- Тариф 4 — Featured -->
+        <div class="price-box price-box-featured">
+          <span class="price-badge">ЛУЧШЕЕ РЕШЕНИЕ ДЛЯ КРУПНЫХ СЕЛЛЕРОВ</span>
+          
+          <div class="price-featured-col price-featured-col--main">
+            <h3>Для селлеров от 500+ карточек</h3>
+            <p class="price-featured-subtitle">Работаем без большой предоплаты!</p>
+            <div class="price-hero-value">
+              <span class="price-big" id="price-t4-val">10 ₽</span>
+              <span class="price-period">с каждого выкупленного товара<br>в течение 12 месяцев</span>
+            </div>
+          </div>
+          
+          <div class="price-featured-col price-featured-col--features">
+            <ul class="price-features price-features--gold">
+              <li><i data-lucide="check" aria-hidden="true"></i> Мы сами создаём и публикуем материалы</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> Главное фото, 5 фото, SEO, описание, характеристики</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> Селлеру не нужно тратить время на контент</li>
+              <li><i data-lucide="check" aria-hidden="true"></i> Оплата только по тем артикулам, которые мы обновили</li>
+            </ul>
+          </div>
+          
+          <div class="price-featured-col price-featured-col--cta">
+            <a href="#hero-form-anchor" class="btn btn-gold">Обсудить партнёрскую модель</a>
+            <p class="price-note"><i data-lucide="info" aria-hidden="true"></i> Удобно для большого ассортимента и системного обновления карточек.</p>
           </div>
         </div>
-        <div class="trust-feature-item reveal">
-          <div class="trust-feature-icon gold-border">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-            </svg>
-          </div>
-          <div class="trust-feature-text">
-            <b id="dynamic-trust-3-title">Безопасный доступ</b>
-            <p id="dynamic-trust-3-desc">Доступ к кабинету только с вашего разрешения</p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== ЗАЧЕМ АРТИКУЛ + КАК РАБОТАЕМ ======================== -->
+  <section class="section" id="how-it-works" aria-label="Как это работает">
+    <div class="container">
+      <div class="how-split-grid">
+
+        <!-- Левая колонка — Зачем артикул -->
+        <div class="how-info-block reveal-left">
+          <h2>Зачем нужен артикул WB?</h2>
+          <ul class="how-checklist">
+            <li>
+              <span class="check-circle"><i data-lucide="check" aria-hidden="true"></i></span>
+              <span>Чтобы мы нашли вашу карточку и сделали точный разбор</span>
+            </li>
+            <li>
+              <span class="check-circle"><i data-lucide="check" aria-hidden="true"></i></span>
+              <span>Доступ к кабинету до разбора не нужен</span>
+            </li>
+            <li>
+              <span class="check-circle"><i data-lucide="check" aria-hidden="true"></i></span>
+              <span>После разбора вы сами решаете, запускать обновление или нет</span>
+            </li>
+            <li>
+              <span class="check-circle"><i data-lucide="check" aria-hidden="true"></i></span>
+              <span>Ничего не меняем и не публикуем без вашего согласия</span>
+            </li>
+          </ul>
+          <div class="secure-badge">
+            <img src="assets/articul-lock.png" alt="Безопасно" class="lucide-img" aria-hidden="true">
+            <span>Безопасно и конфиденциально</span>
           </div>
         </div>
-        <div class="trust-feature-item reveal">
-          <div class="trust-feature-icon purple-border">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="3" y="3" width="7" height="7"/>
-              <rect x="14" y="3" width="7" height="7"/>
-              <rect x="14" y="14" width="7" height="7"/>
-              <rect x="3" y="14" width="7" height="7"/>
-            </svg>
+
+        <!-- Правая колонка — Как это работает -->
+        <div class="how-steps-block reveal-right">
+          <h2>Как это работает</h2>
+          <div class="flow-items">
+            <div class="flow-item">
+              <span class="flow-num">1</span>
+              <img src="assets/how-send.png" alt="" class="lucide-img" aria-hidden="true">
+              <span>Вы присылаете артикул WB</span>
+            </div>
+            <div class="flow-item">
+              <span class="flow-num">2</span>
+              <img src="assets/how-search.png" alt="" class="lucide-img" aria-hidden="true">
+              <span>Мы делаем бесплатный разбор</span>
+            </div>
+            <div class="flow-item">
+              <span class="flow-num">3</span>
+              <img src="assets/how-doc.png" alt="" class="lucide-img" aria-hidden="true">
+              <div>
+                <span>Предлагаем подходящий формат</span>
+                <small>500 / 3000 ₽, индивидуальный расчёт, пакетные условия или 10 ₽ с выкупа</small>
+              </div>
+            </div>
+            <div class="flow-item">
+              <span class="flow-num">4</span>
+              <i data-lucide="check-circle-2" aria-hidden="true"></i>
+              <span>Создаём и публикуем материалы после согласования</span>
+            </div>
           </div>
-          <div class="trust-feature-text">
-            <b id="dynamic-trust-4-title">Подходит для больших каталогов</b>
-            <p id="dynamic-trust-4-desc">Работаем с каталогами от 500 карточек и более</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== КЕЙСЫ И ОТЗЫВЫ ======================== -->
+  <section class="section section--gray" id="cases" aria-label="Кейсы и отзывы">
+    <div class="container">
+      <div class="cases-header reveal">
+        <h2 class="section-title">Кейсы и отзывы клиентов</h2>
+        <a href="https://t.me/tktorg" target="_blank" rel="noopener" class="more-cases-link">Смотреть больше кейсов <i data-lucide="arrow-right" aria-hidden="true"></i></a>
+      </div>
+
+      <div class="cases-compact-grid reveal-stagger">
+
+        <!-- Case 1: Косметика -->
+        <article class="case-compact-card">
+          <div class="case-compact-category">Косметика</div>
+          <div class="case-compact-images">
+            <div class="case-compact-img">
+              <span class="case-compact-label">ДО</span>
+              <img src="assets/update_1.png" alt="До">
+            </div>
+            <div class="case-compact-img">
+              <span class="case-compact-label case-compact-label--after">ПОСЛЕ</span>
+              <img src="assets/update_2.png" alt="После">
+            </div>
+          </div>
+          <blockquote class="case-compact-quote">
+            &laquo;Стало гораздо понятнее, за что покупатель платит. Карточка выглядит дороже и аккуратнее.&raquo;
+          </blockquote>
+          <div class="case-compact-author">
+            <img src="assets/maria_avatar.png" alt="Анна">
+            <div>
+              <strong>Анна</strong>
+              <span>селлер WB</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case 2: Товары для дома -->
+        <article class="case-compact-card">
+          <div class="case-compact-category">Товары для дома</div>
+          <div class="case-compact-images">
+            <div class="case-compact-img">
+              <span class="case-compact-label">ДО</span>
+              <img src="assets/update_3.png" alt="До">
+            </div>
+            <div class="case-compact-img">
+              <span class="case-compact-label case-compact-label--after">ПОСЛЕ</span>
+              <img src="assets/update_4.png" alt="После">
+            </div>
+          </div>
+          <blockquote class="case-compact-quote">
+            &laquo;Сэкономили нам много времени. Не пришлось вручную менять контент по карточкам.&raquo;
+          </blockquote>
+          <div class="case-compact-author">
+            <img src="assets/dmitry_avatar.png" alt="Игорь">
+            <div>
+              <strong>Игорь</strong>
+              <span>бренд товаров</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case 3: Спортпит -->
+        <article class="case-compact-card">
+          <div class="case-compact-category">Спортпит</div>
+          <div class="case-compact-images">
+            <div class="case-compact-img">
+              <span class="case-compact-label">ДО</span>
+              <img src="assets/case_sportpit_before.png" alt="До">
+            </div>
+            <div class="case-compact-img">
+              <span class="case-compact-label case-compact-label--after">ПОСЛЕ</span>
+              <img src="assets/case_sportpit_after.png" alt="После">
+            </div>
+          </div>
+          <blockquote class="case-compact-quote">
+            &laquo;После разбора стало ясно, что именно мешало расти. Удобный формат работы и понятная коммуникация.&raquo;
+          </blockquote>
+          <div class="case-compact-author">
+            <img src="assets/alexey_avatar.png" alt="Мария">
+            <div>
+              <strong>Мария</strong>
+              <span>магазин спортпита</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== ПОЧЕМУ НАМ ДОВЕРЯЮТ ======================== -->
+  <section class="section" id="benefits-why" aria-label="Почему нам доверяют">
+    <div class="container">
+      <h2 class="section-title reveal">Почему нам доверяют</h2>
+      <div class="why-grid reveal-stagger">
+        <div class="why-item">
+          <img src="assets/hero-no-access.png" alt="Без доступа к кабинету" class="icon-3d">
+          <span>Без доступа в кабинет для разбора</span>
+        </div>
+        <div class="why-item">
+          <img src="assets/trust-no-publish.png" alt="Согласование" class="icon-3d">
+          <span>Ничего не публикуем без согласования</span>
+        </div>
+        <div class="why-item">
+          <img src="assets/trust-custom.png" alt="Индивидуальный подход" class="icon-3d">
+          <span>Работаем под ваши товары и задачи</span>
+        </div>
+        <div class="why-item">
+          <img src="assets/trust-time.png" alt="Экономия времени" class="icon-3d">
+          <span>Экономим время селлера</span>
+        </div>
+        <div class="why-item">
+          <img src="assets/trust-transparent.png" alt="Прозрачные условия" class="icon-3d">
+          <span>Прозрачные условия оплаты</span>
+        </div>
+        <div class="why-item">
+          <img src="assets/trust-test.png" alt="Тестовые карточки" class="icon-3d">
+          <span>Можно начать с теста на 1–3 карточках</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== КОМУ ПОДХОДИТ + FAQ ======================== -->
+  <section class="section section--gray" id="who-faq" aria-label="Кому подходит и FAQ">
+    <div class="container">
+      <div class="who-faq-grid">
+
+        <!-- Кому подходит -->
+        <div class="fits-block reveal-left">
+          <h2>Кому подходит</h2>
+          <div class="fits-list">
+            <div class="fits-item">
+              <img src="assets/fit-ctr.png" alt="Низкий CTR" class="icon-3d">
+              <span>Селлерам с низким CTR и конверсией</span>
+            </div>
+            <div class="fits-item">
+              <img src="assets/fit-old.png" alt="Устаревшие карточки" class="icon-3d">
+              <span>Тем, у кого карточки устарели визуально</span>
+            </div>
+            <div class="fits-item">
+              <img src="assets/fit-content.png" alt="Крутой контент" class="icon-3d">
+              <span>Тем, кто хочет крутой контент</span>
+            </div>
+            <div class="fits-item">
+              <img src="assets/fit-assort.png" alt="Большой ассортимент" class="icon-3d">
+              <span>Магазинам с большим ассортиментом</span>
+            </div>
+            <div class="fits-item">
+              <img src="assets/trust-test.png" alt="Тестовые карточки" class="icon-3d">
+              <span>Тем, кто хочет начать с 1-3 тестовых карточек</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="faq-block reveal-right" id="faq">
+          <h2>Часто задаваемые вопросы</h2>
+          <div class="faq-list">
+            <div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false" type="button">
+                <span>1. Это действительно бесплатный разбор?</span>
+                <span class="faq-icon-arrow"><i data-lucide="plus"></i></span>
+              </button>
+              <div class="faq-content" role="region">
+                <p>Да. Вы присылаете артикул одной карточки Wildberries, а мы бесплатно смотрим, что можно улучшить: главное фото, SEO-наименование, описание, характеристики, визуальную подачу и доверие к товару.</p><p>После разбора вы сами решаете, заказывать услугу или нет.</p>
+              </div>
+            </div>
+<div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false" type="button">
+                <span>2. Зачем вам нужен артикул WB?</span>
+                <span class="faq-icon-arrow"><i data-lucide="plus"></i></span>
+              </button>
+              <div class="faq-content" role="region">
+                <p>Артикул нужен только для того, чтобы найти вашу карточку на Wildberries и посмотреть её как обычный покупатель. Мы оцениваем открытую карточку: фото, название, описание, характеристики, отзывы и общую подачу товара.</p><p>Доступ к кабинету для бесплатного разбора не нужен.</p>
+              </div>
+            </div>
+<div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false" type="button">
+                <span>3. Нужно ли давать доступ к личному кабинету Wildberries?</span>
+                <span class="faq-icon-arrow"><i data-lucide="plus"></i></span>
+              </button>
+              <div class="faq-content" role="region">
+                <p>Для бесплатного разбора доступ не нужен. Мы смотрим только открытую карточку по артикулу.</p><p>Если вы захотите, чтобы мы сами опубликовали фото, описание или характеристики, условия доступа и публикации обсуждаются отдельно. Без вашего согласия мы ничего не меняем и не публикуем.</p>
+              </div>
+            </div>
+<div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false" type="button">
+                <span>4. Что я получу после бесплатного разбора?</span>
+                <span class="faq-icon-arrow"><i data-lucide="plus"></i></span>
+              </button>
+              <div class="faq-content" role="region">
+                <p>Вы получите короткий понятный вывод:</p><ul><li>что мешает карточке выделяться в выдаче;</li><li>где покупатель может терять интерес;</li><li>что лучше исправить в первую очередь;</li><li>какой формат работы вам подойдёт: разовая услуга, пакетное обновление или партнёрская модель.</li></ul>
+              </div>
+            </div>
+<div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false" type="button">
+                <span>5. Какие услуги можно заказать после разбора?</span>
+                <span class="faq-icon-arrow"><i data-lucide="plus"></i></span>
+              </button>
+              <div class="faq-content" role="region">
+                <p>Вы можете выбрать один из форматов:</p><ul><li>новое главное фото;</li><li>комплект из 5 фото;</li><li>SEO-наименование;</li><li>продающее описание;</li><li>характеристики товара;</li><li>подготовка фото на белом фоне для международной выдачи WB;</li><li>публикация материалов после согласования;</li><li>партнёрская модель для селлеров от 500+ карточек с оплатой 10 ₽ с выкупленного товара.</li></ul>
+              </div>
+            </div>
+<div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false" type="button">
+                <span>6. Сколько стоит оформление карточек?</span>
+                <span class="faq-icon-arrow"><i data-lucide="plus"></i></span>
+              </button>
+              <div class="faq-content" role="region">
+                <p>Для объёма 1–50 карточек:</p><ul><li>главное фото — 500 ₽ за карточку;</li><li>полное оформление карточки — 3000 ₽ за карточку.</li></ul><p>Для объёма 51–999 карточек стоимость рассчитывается индивидуально.</p><p>Для объёма от 1000 карточек:</p><ul><li>главное фото — от 50 ₽ за карточку;</li><li>полное оформление карточки — от 300 ₽ за карточку.</li></ul><p>Стоимость зависит от ниши, сложности товара, количества карточек, объёма описаний, характеристик и необходимости публикации.</p>
+              </div>
+            </div>
+<div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false" type="button">
+                <span>7. Что входит в полное оформление карточки?</span>
+                <span class="faq-icon-arrow"><i data-lucide="plus"></i></span>
+              </button>
+              <div class="faq-content" role="region">
+                <p>В полное оформление может входить:</p><ul><li>новое главное фото;</li><li>комплект из 5 фото;</li><li>SEO-наименование;</li><li>продающее описание;</li><li>характеристики товара;</li><li>подготовка материалов к публикации;</li><li>публикация через API Wildberries после согласования или передача готовых файлов вам.</li></ul>
+              </div>
+            </div>
+<div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false" type="button">
+                <span>8. Что такое услуга “фото на белом фоне для WB”?</span>
+                <span class="faq-icon-arrow"><i data-lucide="plus"></i></span>
+              </button>
+              <div class="faq-content" role="region">
+                <p>Wildberries тестирует новый подход для международной выдачи. Чтобы товар могли видеть и заказывать покупатели из других стран, в карточку нужно добавить дополнительное фото товара на чистом белом фоне без инфографики.</p><p>Мы можем подготовить такое фото и добавить его последним в карусель изображений.</p>
+              </div>
+            </div>
+<div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false" type="button">
+                <span>9. Какие требования к фото на белом фоне?</span>
+                <span class="faq-icon-arrow"><i data-lucide="plus"></i></span>
+              </button>
+              <div class="faq-content" role="region">
+                <p>Фото должно быть без инфографики, на чистом белом фоне или прозрачном фоне. Для белого фона используется диапазон F8F8F8–FFFFFF.</p><p>Главная задача такого фото — показать товар понятно и нейтрально для зарубежного покупателя.</p>
+              </div>
+            </div>
+<div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false" type="button">
+                <span>10. Сколько стоит фото на белом фоне?</span>
+                <span class="faq-icon-arrow"><i data-lucide="plus"></i></span>
+              </button>
+              <div class="faq-content" role="region">
+                <p>Стоимость услуги:</p><ul><li>от 1 до 99 фото — 150 ₽ за фото;</li><li>от 100 фото — 50 ₽ за фото.</li></ul><p>В услугу может входить подготовка изображения и загрузка последним фото в карусель после согласования.</p>
+              </div>
+            </div>
+<div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false" type="button">
+                <span>11. Вы сами можете загрузить фото в карточку?</span>
+                <span class="faq-icon-arrow"><i data-lucide="plus"></i></span>
+              </button>
+              <div class="faq-content" role="region">
+                <p>Да, можем. Есть два варианта:</p><ul><li>мы подготавливаем фото и передаём готовые файлы вам;</li><li>мы сами публикуем материалы после согласования.</li></ul><p>Публикация через кабинет или API Wildberries обсуждается отдельно. Без согласования ничего не размещаем.</p>
+              </div>
+            </div>
+<div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false" type="button">
+                <span>12. Как работает модель 10 ₽ с выкупа?</span>
+                <span class="faq-icon-arrow"><i data-lucide="plus"></i></span>
+              </button>
+              <div class="faq-content" role="region">
+                <p>Этот формат подходит селлерам от 500+ карточек.</p><p>Мы сами создаём и публикуем материалы: главное фото, комплект из 5 фото, SEO-наименование, описание и характеристики. Оплата — 10 ₽ с каждого выкупленного товара в течение 12 месяцев.</p><p>Оплата считается только по тем артикулам, которые мы обновили и опубликовали после вашего согласования.</p>
+              </div>
+            </div>
+<div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false" type="button">
+                <span>13. Почему модель 10 ₽ с выкупа выгодна селлеру?</span>
+                <span class="faq-icon-arrow"><i data-lucide="plus"></i></span>
+              </button>
+              <div class="faq-content" role="region">
+                <p>Вы не вкладываете сразу большой бюджет в обновление сотен карточек. Мы берём на себя создание контента, подготовку материалов и публикацию.</p><p>Это удобно для магазинов с большим ассортиментом, где нет времени вручную обновлять фото, SEO, описания и характеристики.</p>
+              </div>
+            </div>
+<div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false" type="button">
+                <span>14. Можно ли начать с теста на 1–3 карточках?</span>
+                <span class="faq-icon-arrow"><i data-lucide="plus"></i></span>
+              </button>
+              <div class="faq-content" role="region">
+                <p>Да. Это хороший вариант, если вы хотите сначала оценить качество работы. Мы можем обновить 1–3 карточки, показать результат, а дальше вы решите, стоит ли масштабировать работу на весь ассортимент.</p>
+              </div>
+            </div>
+<div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false" type="button">
+                <span>15. Вы гарантируете рост продаж?</span>
+                <span class="faq-icon-arrow"><i data-lucide="plus"></i></span>
+              </button>
+              <div class="faq-content" role="region">
+                <p>Мы не обещаем гарантированный рост продаж, потому что на результат влияют цена, товар, отзывы, рейтинг, реклама, остатки, конкуренты и сезонность.</p><p>Наша задача — усилить те элементы карточки, которые влияют на внимание покупателя и доверие: главное фото, визуальную подачу, SEO-наименование, описание и характеристики.</p>
+              </div>
+            </div>
+<div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false" type="button">
+                <span>16. Сколько времени занимает бесплатный разбор?</span>
+                <span class="faq-icon-arrow"><i data-lucide="plus"></i></span>
+              </button>
+              <div class="faq-content" role="region">
+                <p>Обычно бесплатный разбор готовим в течение 24 часов после получения артикула и контакта для связи.</p><p>Если заявок много или карточка требует более внимательного анализа, срок может быть чуть больше, но мы заранее сообщим об этом.</p>
+              </div>
+            </div>
+<div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false" type="button">
+                <span>17. Сколько времени занимает оформление карточки?</span>
+                <span class="faq-icon-arrow"><i data-lucide="plus"></i></span>
+              </button>
+              <div class="faq-content" role="region">
+                <p>Срок зависит от количества карточек, сложности товара и объёма работы.</p><p>Для 1–3 карточек сроки обсуждаются индивидуально. Для больших объёмов мы составляем план работ и согласовываем порядок обновления.</p>
+              </div>
+            </div>
+<div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false" type="button">
+                <span>18. Можно ли заказать только главное фото?</span>
+                <span class="faq-icon-arrow"><i data-lucide="plus"></i></span>
+              </button>
+              <div class="faq-content" role="region">
+                <p>Да. Можно заказать только главное фото для карточки WB.</p><p>Для объёма 1–50 карточек стоимость — 500 ₽ за карточку.</p><p>Для объёма от 1000 карточек — от 50 ₽ за карточку.</p>
+              </div>
+            </div>
+<div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false" type="button">
+                <span>19. Можно ли заказать только описание или SEO-наименование?</span>
+                <span class="faq-icon-arrow"><i data-lucide="plus"></i></span>
+              </button>
+              <div class="faq-content" role="region">
+                <p>Да, можно. Но чаще всего лучший результат даёт комплексная работа: фото, SEO-наименование, описание и характеристики. Если нужно обновить только текстовую часть, стоимость обсуждается индивидуально.</p>
+              </div>
+            </div>
+<div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false" type="button">
+                <span>20. Можно ли работать по договору?</span>
+                <span class="faq-icon-arrow"><i data-lucide="plus"></i></span>
+              </button>
+              <div class="faq-content" role="region">
+                <p>Да. Для больших объёмов и партнёрской модели условия можно оформить договором. В нём фиксируются список артикулов, порядок согласования, публикация, сроки и условия оплаты.</p>
+              </div>
+            </div>
+<div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false" type="button">
+                <span>21. Это подходит только крупным селлерам?</span>
+                <span class="faq-icon-arrow"><i data-lucide="plus"></i></span>
+              </button>
+              <div class="faq-content" role="region">
+                <p>Нет. Мы работаем и с небольшими, и с крупными селлерами.</p><ul><li>Если у вас 1–50 карточек — подойдёт разовое оформление.</li><li>Если 51–999 карточек — можно обсудить индивидуальные условия.</li><li>Если 500+ карточек — можно рассмотреть партнёрскую модель 10 ₽ с выкупа.</li><li>Если 1000+ карточек — доступны пакетные цены от 50 ₽ и от 300 ₽.</li></ul>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false" type="button">
+                <span>22. Что делать, если у меня нет хороших и качественных фотографий товара?</span>
+                <span class="faq-icon-arrow"><i data-lucide="plus"></i></span>
+              </button>
+              <div class="faq-content" role="region">
+                <p>Не проблема! Мы можем найти подходящие изображения в открытых источниках, использовать стоковые фото, улучшить ваши любительские снимки с помощью нейросетей (убрать фон, улучшить резкость, скорректировать цвета) или провести разбор на основе аналогичных товаров. Главное — пришлите артикул, а визуальное решение мы подберём.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA + КОНТАКТЫ -->
+  <!-- ======================== CTA SECTION ======================== -->
   <section class="cta-section" id="contact" aria-label="Обратная связь">
-    <div class="cta-inner reveal">
-      <h2>Готовы обновить карточки и платить с результата?</h2>
-      <p>Оставьте контакты — обсудим ваш ассортимент и покажем тест на 1–3 карточках бесплатно.</p>
-      <div class="cta-form">
-        <input type="text" id="cta-name" placeholder="Имя" aria-label="Ваше имя">
-        <input type="text" id="cta-contact" placeholder="Телефон / Telegram" aria-label="Телефон или Telegram">
-        <button class="btn btn-primary cta-submit" id="cta-submit" type="button">Отправить заявку <img src="assets/Screenshot_27.png" alt="" class="btn-star"></button>
-      </div>
-      <p class="cta-privacy">Нажимая кнопку, вы соглашаетесь с обработкой персональных данных.</p>
-      
-      <!-- Direct Messenger Contacts -->
-      <div class="cta-direct-contacts">
-        <span class="cta-direct-label">Или свяжитесь с нами напрямую через мессенджер:</span>
-        <div class="cta-direct-links">
-          <a href="https://t.me/tktorg" class="cta-direct-link tg-link" target="_blank" rel="noopener" id="dynamic-direct-tg">
-            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-            <span>Telegram</span>
-          </a>
-          <a href="https://wa.me/79528771718" class="cta-direct-link wa-link" target="_blank" rel="noopener" id="dynamic-direct-wa">
-            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
-            </svg>
-            <span>WhatsApp</span>
-          </a>
-          <a href="https://max.ru/u/79528771718" class="cta-direct-link max-link" target="_blank" rel="noopener" id="dynamic-direct-max">
-            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-              <path d="M8 10h.01M12 10h.01M16 10h.01"/>
-            </svg>
-            <span>МаКС</span>
-          </a>
-          <a href="tel:+79528771718" class="cta-direct-link phone-link" id="dynamic-direct-phone">
-            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-            </svg>
-            <span id="dynamic-direct-phone-text">+7 (952) 877-17-18</span>
+    <div class="cta-inner">
+      <div class="cta-content reveal-right">
+        <h2>Готовы получить бесплатный разбор карточки?</h2>
+        <p>Оставьте артикул WB и контакт — покажем, что можно усилить, и предложим подходящий формат работы.</p>
+        
+        <ul class="cta-bullet-features">
+          <li><i data-lucide="check" class="text-gold" aria-hidden="true"></i> Работаем по договору</li>
+          <li><i data-lucide="check" class="text-gold" aria-hidden="true"></i> Безопасно и конфиденциально</li>
+          <li><i data-lucide="check" class="text-gold" aria-hidden="true"></i> Поддержка на всех этапах</li>
+        </ul>
+        
+        <div class="cta-actions">
+          <a href="#hero-form-anchor" class="btn btn-gold-solid">Отправить артикул</a>
+          <a href="https://t.me/tktorg" target="_blank" rel="noopener" class="btn btn-outline-telegram">
+            Написать в Telegram <img src="assets/Screenshot_27.png" alt="" class="btn-star" aria-hidden="true">
           </a>
         </div>
       </div>
@@ -569,55 +838,48 @@
 
   </main>
 
-  <!-- FOOTER -->
+  <!-- ======================== FOOTER ======================== -->
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand">
         <a class="logo" href="#top">
-          <img src="assets/logo_icon.png" alt="" class="logo-icon-img logo-icon-img-sm" aria-hidden="true">
+          <img src="assets/logo_icon.png" alt="Логотип IdealPick" class="logo-icon-img">
           <div class="logo-text-wrap">
-            <span class="logo-brand-text"><span class="logo-gold">TK</span>torg</span>
-            <span class="logo-subtitle">карточки <span class="logo-purple-text">Wildberries</span> под ключ</span>
+            <span class="logo-brand-text"><span class="logo-purple">ideal</span>pick</span>
           </div>
         </a>
-        <div class="footer-slogan-wrap">
-          <span class="footer-divider" aria-hidden="true">|</span>
-          <small class="footer-slogan">Продаём образы, которые покупают</small>
-        </div>
+        <p class="footer-subtitle">Контент для карточек Wildberries: фото, описание, SEO, характеристики.</p>
       </div>
       
-      <!-- Footer Contacts Row -->
       <div class="footer-contacts">
-        <a href="tel:+79528771718" class="footer-contact-item" id="dynamic-footer-phone">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" style="stroke-width: 2.5px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <span id="dynamic-footer-phone-text">+7 (952) 877-17-18</span>
-        </a>
-        <a href="https://wa.me/79528771718" target="_blank" rel="noopener" class="footer-contact-item" id="dynamic-footer-wa">WhatsApp</a>
-        <a href="https://t.me/tktorg" target="_blank" rel="noopener" class="footer-contact-item" id="dynamic-footer-tg">Telegram</a>
-        <a href="https://max.ru/u/79528771718" target="_blank" rel="noopener" class="footer-contact-item" id="dynamic-footer-max">МаКС</a>
+        <a href="https://idealpick.ru" class="footer-link"><i data-lucide="globe" aria-hidden="true"></i> idealpick.ru</a>
+        <a href="https://t.me/tktorg" target="_blank" rel="noopener" class="footer-link"><img src="assets/how-send.png" alt="" class="lucide-img" aria-hidden="true"> @tktorg_service</a>
+        <a href="tel:+79528771718" class="footer-link"><i data-lucide="phone" aria-hidden="true"></i> +7 (952) 877-17-18</a>
       </div>
       
-      <div class="footer-copy">TKtorg © 2026. Все права защищены.</div>
+      <div class="footer-copy">IdealPick &copy; 2026. Все права защищены.</div>
     </div>
   </footer>
 
 </div>
 
+<!-- Скрипт синхронизации с settings.js -->
 <script src="settings.js"></script>
 <script>
-  // Применяем настройки из файла settings.js
+  // Синхронизируем базовые контакты и цены из settings.js
   if (typeof SITE_SETTINGS !== 'undefined') {
     // 0. SEO / Meta
     if (SITE_SETTINGS.pageTitle) document.title = SITE_SETTINGS.pageTitle;
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc && SITE_SETTINGS.pageMetaDesc) metaDesc.content = SITE_SETTINGS.pageMetaDesc;
 
-    // 1. Ссылка во всех href
-    // 1. Ссылки контактов
+    // 1. Мессенджеры и телефоны
     if (SITE_SETTINGS.telegramLink) {
       document.querySelectorAll('a[href^="https://t.me/"]').forEach(link => {
         link.href = SITE_SETTINGS.telegramLink;
       });
+      const tgMoreBtn = document.querySelector('.more-cases-link');
+      if (tgMoreBtn) tgMoreBtn.href = SITE_SETTINGS.telegramLink;
     }
     if (SITE_SETTINGS.whatsappLink) {
       document.querySelectorAll('a[href^="https://wa.me/"]').forEach(link => {
@@ -635,355 +897,41 @@
       });
     }
     if (SITE_SETTINGS.phoneVal) {
-      const pText = document.getElementById('dynamic-direct-phone-text');
-      if (pText) pText.innerHTML = SITE_SETTINGS.phoneVal;
-      const fText = document.getElementById('dynamic-footer-phone-text');
-      if (fText) fText.innerHTML = SITE_SETTINGS.phoneVal;
-    }
-
-    // 2. Шапка (Логотип и Меню)
-    const logoMark = document.querySelector('#header-logo .logo-mark');
-    if (logoMark && SITE_SETTINGS.logoMark) logoMark.innerHTML = SITE_SETTINGS.logoMark;
-
-    const logoTextBold = document.querySelector('#header-logo .logo-text b');
-    if (logoTextBold && SITE_SETTINGS.logoTextBold) {
-      let val = SITE_SETTINGS.logoTextBold;
-      if (val === 'TKtorg') {
-        val = '<span class="logo-gold-text">TK</span>torg';
-      } else if (val.startsWith('TK')) {
-        val = '<span class="logo-gold-text">TK</span>' + val.substring(2);
-      }
-      logoTextBold.innerHTML = val;
-    }
-
-    const logoTextSmall = document.querySelector('#header-logo .logo-text small');
-    if (logoTextSmall && SITE_SETTINGS.logoTextSmall) {
-      let val = SITE_SETTINGS.logoTextSmall;
-      if (val === 'Карточки товаров для Wildberries' || val === 'карточки Wildberries под ключ') {
-        val = 'карточки <span class="logo-purple-text">Wildberries</span> под ключ';
-      } else if (val.toLowerCase().includes('wildberries')) {
-        val = val.replace(/wildberries/i, '<span class="logo-purple-text">Wildberries</span>');
-      }
-      logoTextSmall.innerHTML = val;
-    }
-
-    const navLinks = document.querySelectorAll('#nav > a:not(.nav-cta-mobile)');
-    if (navLinks.length >= 5) {
-      if (SITE_SETTINGS.navBenefits) navLinks[0].innerHTML = SITE_SETTINGS.navBenefits;
-      if (SITE_SETTINGS.navCases) navLinks[1].innerHTML = SITE_SETTINGS.navCases;
-      if (SITE_SETTINGS.navHowWorks) navLinks[2].innerHTML = SITE_SETTINGS.navHowWorks;
-      if (SITE_SETTINGS.navFormats) navLinks[3].innerHTML = SITE_SETTINGS.navFormats;
-      if (SITE_SETTINGS.navContacts) navLinks[4].innerHTML = SITE_SETTINGS.navContacts;
-    }
-
-    const navCtaMobile = document.querySelector('.nav-cta-mobile');
-    if (navCtaMobile && SITE_SETTINGS.navCtaBtn) {
-      navCtaMobile.innerHTML = `${SITE_SETTINGS.navCtaBtn} <img src="assets/Screenshot_27.png" alt="" class="btn-star">`;
-    }
-
-    const headerCta = document.querySelector('.header-cta');
-    if (headerCta && SITE_SETTINGS.navCtaBtn) {
-      headerCta.innerHTML = `${SITE_SETTINGS.navCtaBtn} <img src="assets/Screenshot_27.png" alt="" class="btn-star">`;
-    }
-
-    // 3. Главный экран (Hero)
-    const heroTag = document.querySelector('.hero-tag');
-    if (heroTag && SITE_SETTINGS.heroTag) heroTag.innerHTML = SITE_SETTINGS.heroTag;
-
-    const hTitle = document.querySelector('#dynamic-hero-title');
-    if (hTitle && SITE_SETTINGS.heroTitle) hTitle.innerHTML = SITE_SETTINGS.heroTitle;
-
-    const hDesc = document.querySelector('#dynamic-hero-desc');
-    if (hDesc && SITE_SETTINGS.heroDesc) hDesc.innerHTML = SITE_SETTINGS.heroDesc;
-
-    const heroBtnPrimary = document.querySelector('.hero-actions .btn-primary');
-    if (heroBtnPrimary && SITE_SETTINGS.heroBtnTest) heroBtnPrimary.innerHTML = SITE_SETTINGS.heroBtnTest;
-
-    const heroBtnOutline = document.querySelector('.hero-actions .btn-outline-light');
-    if (heroBtnOutline && SITE_SETTINGS.heroBtnCta) {
-      heroBtnOutline.innerHTML = `${SITE_SETTINGS.heroBtnCta} <img src="assets/Screenshot_27.png" alt="" class="btn-star">`;
-    }
-
-    const heroTrust = document.querySelector('.hero-trust');
-    if (heroTrust && SITE_SETTINGS.heroTrustText) {
-      const icon = heroTrust.querySelector('svg');
-      if (icon) {
-        heroTrust.innerHTML = '';
-        heroTrust.appendChild(icon);
-        heroTrust.appendChild(document.createTextNode(' ' + SITE_SETTINGS.heroTrustText));
-      } else {
-        heroTrust.innerHTML = SITE_SETTINGS.heroTrustText;
+      const footerPhone = document.querySelector('.footer-contacts a[href^="tel:"]');
+      if (footerPhone) {
+        footerPhone.innerHTML = `<i data-lucide="phone" aria-hidden="true"></i> ${SITE_SETTINGS.phoneVal}`;
       }
     }
-
-    // 4. Сравнение ДО/ПОСЛЕ (Hero)
-    const tagBefore = document.querySelector('.hero-tag-red');
-    if (tagBefore && SITE_SETTINGS.beforeTag) tagBefore.innerHTML = SITE_SETTINGS.beforeTag;
-
-    const imgBefore = document.querySelector('#dynamic-img-before');
-    if (imgBefore && SITE_SETTINGS.beforeImage) imgBefore.src = SITE_SETTINGS.beforeImage;
-
-    const beforeReviews = document.querySelector('.before-card-stats .stars > span');
-    if (beforeReviews && SITE_SETTINGS.beforeReviews) beforeReviews.innerHTML = SITE_SETTINGS.beforeReviews;
-
-    const tagAfter = document.querySelector('.hero-tag-green');
-    if (tagAfter && SITE_SETTINGS.afterTag) tagAfter.innerHTML = SITE_SETTINGS.afterTag;
-
-    const imgAfter = document.querySelector('#dynamic-img-after');
-    if (imgAfter && SITE_SETTINGS.afterImage) imgAfter.src = SITE_SETTINGS.afterImage;
-
-    const afterReviews = document.querySelector('.after-card-stats .stars span');
-    if (afterReviews && SITE_SETTINGS.afterReviews) afterReviews.innerHTML = SITE_SETTINGS.afterReviews;
-
-    const afterGuarantee = document.querySelector('.hero-badge-guarantee');
-    if (afterGuarantee && SITE_SETTINGS.afterGuarantee) afterGuarantee.innerHTML = SITE_SETTINGS.afterGuarantee;
-
-    const afterPriceAmount = document.querySelector('.hero-badge-price .badge-amount');
-    if (afterPriceAmount && SITE_SETTINGS.afterPriceValue) afterPriceAmount.innerHTML = SITE_SETTINGS.afterPriceValue;
-
-    const afterPriceLabel = document.querySelector('.hero-badge-price .badge-label');
-    if (afterPriceLabel && SITE_SETTINGS.afterPriceLabel) afterPriceLabel.innerHTML = SITE_SETTINGS.afterPriceLabel;
-
-    // 5. Блок "Почему это выгодно" (Преимущества)
-    const benefitsEyebrow = document.querySelector('#benefits .section-eyebrow');
-    if (benefitsEyebrow && SITE_SETTINGS.benefitsEyebrow) benefitsEyebrow.innerHTML = SITE_SETTINGS.benefitsEyebrow;
-
-    const benefitsTitle = document.querySelector('#benefits h2');
-    if (benefitsTitle && SITE_SETTINGS.benefitsTitle) benefitsTitle.innerHTML = SITE_SETTINGS.benefitsTitle;
-
-    const benefits = document.querySelectorAll('.benefit-item');
-    if (benefits.length >= 6) {
-      for (let i = 1; i <= 6; i++) {
-        const title = benefits[i-1].querySelector('h3');
-        const desc = benefits[i-1].querySelector('p');
-        if (title && SITE_SETTINGS['benefit' + i + '_title']) title.innerHTML = SITE_SETTINGS['benefit' + i + '_title'];
-        if (desc && SITE_SETTINGS['benefit' + i + '_desc']) desc.innerHTML = SITE_SETTINGS['benefit' + i + '_desc'];
-      }
+    
+    // 2. Web3Forms Key
+    if (SITE_SETTINGS.web3formsKey) {
+      const keyInput = document.getElementById('web3forms-key-input');
+      if (keyInput) keyInput.value = SITE_SETTINGS.web3formsKey;
     }
 
-    // 6. Блок "Что входит в обновление"
-    const includesEyebrow = document.querySelector('#includes .section-eyebrow');
-    if (includesEyebrow && SITE_SETTINGS.includesEyebrow) includesEyebrow.innerHTML = SITE_SETTINGS.includesEyebrow;
+    // 3. Синхронизация цен
+    if (SITE_SETTINGS.pricing) {
+      const p1Main = document.getElementById('price-t1-main');
+      const p1Full = document.getElementById('price-t1-full');
+      const p2Text = document.getElementById('price-t2-text');
+      const p3Main = document.getElementById('price-t3-main');
+      const p3Full = document.getElementById('price-t3-full');
+      const p4Val = document.getElementById('price-t4-val');
 
-    const includes = document.querySelectorAll('.include-card');
-    if (includes.length >= 5) {
-      for (let i = 1; i <= 5; i++) {
-        const img = includes[i-1].querySelector('img');
-        const title = includes[i-1].querySelector('h3');
-        const desc = includes[i-1].querySelector('p');
-        if (img && SITE_SETTINGS['include' + i + '_img']) img.src = SITE_SETTINGS['include' + i + '_img'];
-        if (title && SITE_SETTINGS['include' + i + '_title']) title.innerHTML = SITE_SETTINGS['include' + i + '_title'];
-        if (desc && SITE_SETTINGS['include' + i + '_desc']) desc.innerHTML = SITE_SETTINGS['include' + i + '_desc'];
+      if (p1Main && SITE_SETTINGS.pricing.tariff1.mainPhoto) p1Main.innerText = SITE_SETTINGS.pricing.tariff1.mainPhoto;
+      if (p1Full && SITE_SETTINGS.pricing.tariff1.fullPack) p1Full.innerText = SITE_SETTINGS.pricing.tariff1.fullPack;
+      if (p2Text && SITE_SETTINGS.pricing.tariff2.text) p2Text.innerText = SITE_SETTINGS.pricing.tariff2.text;
+      if (p3Main && SITE_SETTINGS.pricing.tariff3.mainPhoto) p3Main.innerText = SITE_SETTINGS.pricing.tariff3.mainPhoto;
+      if (p3Full && SITE_SETTINGS.pricing.tariff3.fullPack) p3Full.innerText = SITE_SETTINGS.pricing.tariff3.fullPack;
+      
+      if (p4Val && SITE_SETTINGS.pricing.tariff4.value) {
+        p4Val.innerText = SITE_SETTINGS.pricing.tariff4.value;
       }
     }
-
-    // 7. Блок "Как работает" (Шаги)
-    const howWorksEyebrow = document.querySelector('#how-works .section-eyebrow');
-    if (howWorksEyebrow && SITE_SETTINGS.howWorksEyebrow) howWorksEyebrow.innerHTML = SITE_SETTINGS.howWorksEyebrow;
-
-    const steps = document.querySelectorAll('.step-item');
-    if (steps.length >= 5) {
-      for (let i = 1; i <= 5; i++) {
-        const title = steps[i-1].querySelector('h3');
-        const desc = steps[i-1].querySelector('p');
-        if (title && SITE_SETTINGS['step' + i + '_title']) title.innerHTML = SITE_SETTINGS['step' + i + '_title'];
-        if (desc && SITE_SETTINGS['step' + i + '_desc']) desc.innerHTML = SITE_SETTINGS['step' + i + '_desc'];
-      }
-    }
-
-    const howWorksNotice = document.querySelector('.how-notice p');
-    if (howWorksNotice && SITE_SETTINGS.howWorksNotice) howWorksNotice.innerHTML = SITE_SETTINGS.howWorksNotice;
-
-    // 8. Блок "Форматы работы" (Тарифы)
-    const pricingEyebrow = document.querySelector('#pricing .section-eyebrow');
-    if (pricingEyebrow && SITE_SETTINGS.pricingEyebrow) pricingEyebrow.innerHTML = SITE_SETTINGS.pricingEyebrow;
-
-    const priceCards = document.querySelectorAll('.price-card');
-    if (priceCards.length >= 3) {
-      // СТАРТ (Card 0)
-      const pStartTitle = priceCards[0].querySelector('.price-title');
-      if (pStartTitle && SITE_SETTINGS.priceStart_title) pStartTitle.innerHTML = SITE_SETTINGS.priceStart_title;
-      const pStartVal = priceCards[0].querySelector('.price-value');
-      if (pStartVal && SITE_SETTINGS.priceStart_val) pStartVal.innerHTML = SITE_SETTINGS.priceStart_val;
-      const pStartDesc = priceCards[0].querySelector('.price-desc');
-      if (pStartDesc && SITE_SETTINGS.priceStart_desc) pStartDesc.innerHTML = SITE_SETTINGS.priceStart_desc;
-      const pStartFeatures = priceCards[0].querySelectorAll('ul li');
-      if (pStartFeatures.length >= 3) {
-        if (SITE_SETTINGS.priceStart_feature1) pStartFeatures[0].innerHTML = SITE_SETTINGS.priceStart_feature1;
-        if (SITE_SETTINGS.priceStart_feature2) pStartFeatures[1].innerHTML = SITE_SETTINGS.priceStart_feature2;
-        if (SITE_SETTINGS.priceStart_feature3) pStartFeatures[2].innerHTML = SITE_SETTINGS.priceStart_feature3;
-      }
-      const pStartBtn = priceCards[0].querySelector('.btn');
-      if (pStartBtn && SITE_SETTINGS.priceStart_btn) pStartBtn.innerHTML = SITE_SETTINGS.priceStart_btn;
-
-      // ПРО (Card 1)
-      const pProPopular = priceCards[1].querySelector('.price-popular');
-      if (pProPopular && SITE_SETTINGS.pricePro_popular) pProPopular.innerHTML = SITE_SETTINGS.pricePro_popular;
-      const pProTitle = priceCards[1].querySelector('.price-title');
-      if (pProTitle && SITE_SETTINGS.pricePro_title) pProTitle.innerHTML = SITE_SETTINGS.pricePro_title;
-      const pProVal = priceCards[1].querySelector('.price-value');
-      if (pProVal && SITE_SETTINGS.pricePro_val) pProVal.innerHTML = SITE_SETTINGS.pricePro_val;
-      const pProDesc = priceCards[1].querySelector('.price-desc');
-      if (pProDesc && SITE_SETTINGS.pricePro_desc) pProDesc.innerHTML = SITE_SETTINGS.pricePro_desc;
-      const pProFeatures = priceCards[1].querySelectorAll('ul li');
-      if (pProFeatures.length >= 3) {
-        if (SITE_SETTINGS.pricePro_feature1) pProFeatures[0].innerHTML = SITE_SETTINGS.pricePro_feature1;
-        if (SITE_SETTINGS.pricePro_feature2) pProFeatures[1].innerHTML = SITE_SETTINGS.pricePro_feature2;
-        if (SITE_SETTINGS.pricePro_feature3) pProFeatures[2].innerHTML = SITE_SETTINGS.pricePro_feature3;
-      }
-      const pProBtn = priceCards[1].querySelector('.btn');
-      if (pProBtn && SITE_SETTINGS.pricePro_btn) pProBtn.innerHTML = SITE_SETTINGS.pricePro_btn;
-
-      // МАКСИМУМ (Card 2)
-      const pMaxTitle = priceCards[2].querySelector('.price-title');
-      if (pMaxTitle && SITE_SETTINGS.priceMax_title) pMaxTitle.innerHTML = SITE_SETTINGS.priceMax_title;
-      const pMaxVal = priceCards[2].querySelector('.price-value');
-      if (pMaxVal && SITE_SETTINGS.priceMax_val) pMaxVal.innerHTML = SITE_SETTINGS.priceMax_val;
-      const pMaxDesc = priceCards[2].querySelector('.price-desc');
-      if (pMaxDesc && SITE_SETTINGS.priceMax_desc) pMaxDesc.innerHTML = SITE_SETTINGS.priceMax_desc;
-      const pMaxFeatures = priceCards[2].querySelectorAll('ul li');
-      if (pMaxFeatures.length >= 3) {
-        if (SITE_SETTINGS.priceMax_feature1) pMaxFeatures[0].innerHTML = SITE_SETTINGS.priceMax_feature1;
-        if (SITE_SETTINGS.priceMax_feature2) pMaxFeatures[1].innerHTML = SITE_SETTINGS.priceMax_feature2;
-        if (SITE_SETTINGS.priceMax_feature3) pMaxFeatures[2].innerHTML = SITE_SETTINGS.priceMax_feature3;
-      }
-      const pMaxBtn = priceCards[2].querySelector('.btn');
-      if (pMaxBtn && SITE_SETTINGS.priceMax_btn) pMaxBtn.innerHTML = SITE_SETTINGS.priceMax_btn;
-    }
-
-    // 9. Блок "Каким селлерам подходит"
-    const audienceEyebrow = document.querySelector('#audience .section-eyebrow');
-    if (audienceEyebrow && SITE_SETTINGS.audienceEyebrow) audienceEyebrow.innerHTML = SITE_SETTINGS.audienceEyebrow;
-
-    const audienceItems = document.querySelectorAll('.audience-item');
-    if (audienceItems.length >= 5) {
-      for (let i = 1; i <= 5; i++) {
-        const textNode = audienceItems[i-1];
-        if (textNode && SITE_SETTINGS['audience_item' + i]) {
-          const icon = textNode.firstElementChild;
-          if (icon) {
-            textNode.innerHTML = '';
-            textNode.appendChild(icon);
-            const wrapper = document.createElement('div');
-            wrapper.className = 'audience-text';
-            const temp = document.createElement('div');
-            temp.innerHTML = ' ' + SITE_SETTINGS['audience_item' + i];
-            while (temp.firstChild) {
-              wrapper.appendChild(temp.firstChild);
-            }
-            textNode.appendChild(wrapper);
-          } else {
-            textNode.innerHTML = SITE_SETTINGS['audience_item' + i];
-          }
-        }
-      }
-    }
-
-    const audienceNote = document.querySelector('.audience-note p');
-    if (audienceNote && SITE_SETTINGS.audienceNote) audienceNote.innerHTML = SITE_SETTINGS.audienceNote;
-
-    // 10. Блок "Безопасность и контроль"
-    const securityEyebrow = document.querySelector('#security .section-eyebrow');
-    if (securityEyebrow && SITE_SETTINGS.securityEyebrow) securityEyebrow.innerHTML = SITE_SETTINGS.securityEyebrow;
-
-    const securityItems = document.querySelectorAll('.security-item');
-    if (securityItems.length >= 6) {
-      for (let i = 1; i <= 6; i++) {
-        const pNode = securityItems[i-1].querySelector('p');
-        if (pNode && SITE_SETTINGS['security_item' + i]) {
-          pNode.innerHTML = SITE_SETTINGS['security_item' + i];
-        }
-      }
-    }
-
-    // 10.5. Блок "Отзывы клиентов"
-    const reviewsEyebrow = document.querySelector('#reviews #dynamic-reviews-eyebrow');
-    if (reviewsEyebrow && SITE_SETTINGS.reviewsEyebrow) reviewsEyebrow.innerHTML = SITE_SETTINGS.reviewsEyebrow;
-
-    const reviewsTitle = document.querySelector('#reviews #dynamic-reviews-title');
-    if (reviewsTitle && SITE_SETTINGS.reviewsTitle) reviewsTitle.innerHTML = SITE_SETTINGS.reviewsTitle;
-
-    const reviewsSubtitle = document.querySelector('#reviews #dynamic-reviews-subtitle');
-    if (reviewsSubtitle && SITE_SETTINGS.reviewsSubtitle) reviewsSubtitle.innerHTML = SITE_SETTINGS.reviewsSubtitle;
-
-    for (let i = 1; i <= 4; i++) {
-      const img = document.getElementById('dynamic-review-' + i + '-img');
-      if (img && SITE_SETTINGS['review' + i + '_img']) img.src = SITE_SETTINGS['review' + i + '_img'];
-
-      let authorName = SITE_SETTINGS['review' + i + '_author'];
-      let parsedNiche = SITE_SETTINGS['review' + i + '_niche'];
-
-      if (authorName && authorName.includes('(Ниша:')) {
-        const parts = authorName.split('(Ниша:');
-        authorName = parts[0].trim();
-        if (!parsedNiche) {
-          parsedNiche = parts[1].replace(')', '').trim();
-        }
-      }
-
-      const author = document.getElementById('dynamic-review-' + i + '-author');
-      if (author && authorName) author.innerHTML = authorName;
-
-      const niche = document.getElementById('dynamic-review-' + i + '-niche');
-      if (niche && parsedNiche) niche.innerHTML = parsedNiche;
-
-      const text = document.getElementById('dynamic-review-' + i + '-text');
-      if (text && SITE_SETTINGS['review' + i + '_text']) text.innerHTML = SITE_SETTINGS['review' + i + '_text'];
-
-      const tagText = document.getElementById('dynamic-review-' + i + '-tagtext');
-      if (tagText && SITE_SETTINGS['review' + i + '_tagtext']) tagText.innerHTML = SITE_SETTINGS['review' + i + '_tagtext'];
-    }
-
-    for (let i = 1; i <= 4; i++) {
-      const title = document.getElementById('dynamic-trust-' + i + '-title');
-      if (title && SITE_SETTINGS['trust' + i + '_title']) title.innerHTML = SITE_SETTINGS['trust' + i + '_title'];
-
-      const desc = document.getElementById('dynamic-trust-' + i + '-desc');
-      if (desc && SITE_SETTINGS['trust' + i + '_desc']) desc.innerHTML = SITE_SETTINGS['trust' + i + '_desc'];
-    }
-
-    // 11. Блок CTA (Оставить заявку)
-    const ctaTitle = document.querySelector('.cta-section h2');
-    if (ctaTitle && SITE_SETTINGS.ctaTitle) ctaTitle.innerHTML = SITE_SETTINGS.ctaTitle;
-
-    const ctaDesc = document.querySelector('.cta-section > p');
-    if (ctaDesc && SITE_SETTINGS.ctaDesc) ctaDesc.innerHTML = SITE_SETTINGS.ctaDesc;
-
-    const ctaInputName = document.getElementById('cta-name');
-    if (ctaInputName && SITE_SETTINGS.ctaPlaceholderName) ctaInputName.placeholder = SITE_SETTINGS.ctaPlaceholderName;
-
-    const ctaInputContact = document.getElementById('cta-contact');
-    if (ctaInputContact && SITE_SETTINGS.ctaPlaceholderContact) ctaInputContact.placeholder = SITE_SETTINGS.ctaPlaceholderContact;
-
-    const ctaSubmit = document.getElementById('cta-submit');
-    if (ctaSubmit && SITE_SETTINGS.ctaSubmitBtn) {
-      ctaSubmit.innerHTML = `${SITE_SETTINGS.ctaSubmitBtn} <img src="assets/Screenshot_27.png" alt="" class="btn-star">`;
-    }
-
-    const ctaPrivacy = document.querySelector('.cta-privacy');
-    if (ctaPrivacy && SITE_SETTINGS.ctaPrivacy) ctaPrivacy.innerHTML = SITE_SETTINGS.ctaPrivacy;
-
-    // 12. Подвал (Footer)
-    const footerLogoMark = document.querySelector('.footer .logo-mark');
-    if (footerLogoMark && SITE_SETTINGS.logoMark) footerLogoMark.innerHTML = SITE_SETTINGS.logoMark;
-
-    const footerLogoBold = document.querySelector('.footer-brand b');
-    if (footerLogoBold && SITE_SETTINGS.footerLogoTextBold) {
-      let val = SITE_SETTINGS.footerLogoTextBold;
-      if (val === 'TKtorg') {
-        val = '<span class="logo-gold-text">TK</span>torg';
-      } else if (val.startsWith('TK')) {
-        val = '<span class="logo-gold-text">TK</span>' + val.substring(2);
-      }
-      footerLogoBold.innerHTML = val;
-    }
-
-    const footerLogoSmall = document.querySelector('.footer-brand small');
-    if (footerLogoSmall && SITE_SETTINGS.footerLogoTextSmall) footerLogoSmall.innerHTML = SITE_SETTINGS.footerLogoTextSmall;
-
-    const footerCopy = document.querySelector('.footer-copy');
-    if (footerCopy && SITE_SETTINGS.footerCopy) footerCopy.innerHTML = SITE_SETTINGS.footerCopy;
   }
+  
+  // Инициализируем иконки Lucide после применения настроек
+  lucide.createIcons();
 </script>
 <script src="script.js"></script>
 </body>

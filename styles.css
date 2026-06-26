@@ -427,8 +427,8 @@ img { max-width: 100%; height: auto; }
   color: rgba(255, 255, 255, 0.55);
 }
 .hero-split-card {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   padding: 10px;
   width: 100%;
@@ -447,8 +447,9 @@ img { max-width: 100%; height: auto; }
   object-fit: cover;
 }
 .hero-split-card--after {
-  border-color: rgba(109, 40, 217, 0.3);
-  background: rgba(109, 40, 217, 0.08);
+  border-color: rgba(109, 40, 217, 0.4);
+  background: linear-gradient(135deg, rgba(109, 40, 217, 0.15) 0%, rgba(139, 92, 246, 0.25) 100%);
+  background-color: rgba(255, 255, 255, 0.95);
 }
 .hero-split-col:first-child {
   flex: 0.8;

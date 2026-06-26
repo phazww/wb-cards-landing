@@ -1,0 +1,566 @@
+/* ================================================
+   MOBILE OVERRIDES — IdealPick Landing
+   Self-contained mobile stylesheet
+   Loaded AFTER styles.css to override desktop rules
+   ================================================ */
+
+/* ======= MOBILE (≤768px) ======= */
+@media (max-width: 768px) {
+
+  /* --- RESET SCATTERED OVERRIDES --- */
+  /* Override any inline media queries from the base CSS */
+
+  /* === BASE === */
+  html { -webkit-text-size-adjust: 100%; }
+  body { overflow-x: hidden; }
+  section,
+  .section { padding: 48px 16px !important; }
+  .container { padding: 0; }
+  .page { overflow-x: hidden; }
+
+  /* === HEADER === */
+  .header {
+    padding: 0 16px;
+    height: 60px;
+  }
+  .header.header--shrink {
+    height: 52px;
+  }
+  .logo-icon-img { width: 28px; height: 28px; }
+  .logo-brand-text { font-size: 18px; }
+  .logo-subtitle { display: none; }
+  .nav { display: none; }
+  .header-cta { display: none; }
+
+  /* === BURGER MENU === */
+  .burger { display: block; }
+  .burger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .burger.active span:nth-child(2) { opacity: 0; }
+  .burger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+  .nav.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 80px 32px 60px;
+    gap: 20px;
+    z-index: 100;
+    animation: mobileMenuIn 0.3s ease-out;
+  }
+  .nav.open a {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-heading);
+    padding: 10px 0;
+  }
+  .nav.open a::after { display: none; }
+
+  @keyframes mobileMenuIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .nav-mobile-cta {
+    display: block !important;
+    margin-top: 16px;
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+
+  /* === HERO === */
+  .hero {
+    padding-top: 80px !important;
+    padding-bottom: 40px !important;
+  }
+  .hero-3col {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+  }
+  .hero-top {
+    order: 1;
+    grid-column: auto !important;
+    margin-bottom: 0 !important;
+  }
+  .hero-top h1 {
+    text-align: center;
+    font-size: 24px !important;
+    line-height: 1.2;
+  }
+  .hero--dark .hero-top h1 { font-size: 24px !important; }
+  .hero-desc {
+    text-align: center;
+    font-size: 14px;
+    margin: 0 auto 16px;
+  }
+  .hero-benefits-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px;
+    margin: 0 auto;
+  }
+  .hero-benefit-item {
+    padding: 10px 10px;
+    gap: 8px;
+  }
+  .hero-benefit-item span { font-size: 11px; }
+  .hero-benefit-item .icon-3d { width: 26px; height: 26px; }
+  .hero-disclaimer {
+    text-align: center;
+    font-size: 10px;
+    margin-top: 12px;
+  }
+
+  /* Form comes third on mobile */
+  .hero-form-card {
+    order: 3;
+    padding: 24px 20px !important;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 100%;
+  }
+  .hero-form-card h3 {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 18px;
+  }
+  .hero-form-card:hover {
+    transform: none;
+  }
+
+  /* Before/After goes second */
+  .hero-media {
+    order: 2;
+    gap: 16px;
+  }
+  .hero-split-preview {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin: 0 auto 20px auto !important;
+    max-width: 100% !important;
+  }
+  .hero-split-col:first-child {
+    flex: 0.8 !important;
+    transform: scale(0.92) !important;
+    opacity: 0.85 !important;
+  }
+  .hero-split-col:last-child {
+    flex: 1.2 !important;
+  }
+  .hero-split-card {
+    padding: 6px !important;
+    border-radius: 12px !important;
+  }
+  .hero-split-badge {
+    font-size: 9px !important;
+    padding: 3px 10px !important;
+    margin-bottom: 2px !important;
+  }
+  .hero-split-chevron {
+    transform: none !important;
+    margin: 0 !important;
+    width: 22px !important;
+    height: 22px !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .hero-split-chevron i,
+  .hero-split-chevron svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+  .hero-split-rating {
+    padding: 4px 6px !important;
+    font-size: 9px !important;
+    margin-top: 4px !important;
+    border-radius: 6px !important;
+    gap: 1px !important;
+  }
+  .hero-split-rating .rating-stars {
+    font-size: 10px !important;
+  }
+  .hero-split-rating .rating-count {
+    font-size: 8px !important;
+  }
+  .hero-chart-container {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  /* === FORM ELEMENTS === */
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    font-size: 16px !important; /* prevents iOS auto-zoom */
+    padding: 12px 14px;
+  }
+  .selector-label { font-size: 12px; }
+  .selector-options { gap: 6px; }
+  .selector-btn {
+    padding: 8px 10px;
+    font-size: 12px;
+    min-height: 38px;
+  }
+  .form-privacy { font-size: 10px; }
+
+  /* === BUTTONS — TOUCH FRIENDLY === */
+  .btn {
+    min-height: 46px;
+    padding: 12px 20px;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn.w-100 { width: 100%; }
+
+  /* === SECTION TITLES === */
+  .section-title {
+    font-size: 24px !important;
+    margin-bottom: 28px;
+  }
+  h2 { font-size: 24px; }
+
+  /* === WHAT YOU GET === */
+  .get-grid-horizontal,
+  .get-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px;
+  }
+  .get-card-h {
+    padding: 18px 14px;
+    gap: 10px;
+  }
+  .get-card-h .icon-3d { width: 36px; height: 36px; }
+  .get-card-h h4 { font-size: 13px; }
+  .get-card-h p { font-size: 11px; }
+
+  /* === SERVICES === */
+  .services-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px;
+  }
+  .service-card {
+    padding: 18px 14px;
+  }
+  .service-card .icon-3d { width: 40px; height: 40px; }
+  .service-card h3 { font-size: 13px; }
+  .service-card p { font-size: 11px; }
+  /* Remove stagger offset on mobile */
+  .services-grid .service-card:nth-child(2),
+  .services-grid .service-card:nth-child(5) {
+    transform: none !important;
+  }
+
+  /* === WHITE BG SERVICE CARD === */
+  .white-bg-service-card {
+    grid-template-columns: 1fr !important;
+    padding: 20px !important;
+    gap: 20px;
+  }
+  .wbs-image {
+    max-width: 240px;
+    margin: 0 auto;
+  }
+  .wbs-content h2 { font-size: 20px; text-align: center; }
+  .wbs-desc { font-size: 14px; text-align: center; }
+  .wbs-features { grid-template-columns: 1fr !important; }
+  .wbs-pricing { text-align: center; }
+
+  /* === PRICING === */
+  .pricing-grid-top {
+    grid-template-columns: 1fr !important;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .price-card {
+    padding: 22px 18px 20px;
+  }
+  .price-card__title { font-size: 15px; }
+  .price-card__val { font-size: 15px; }
+  .price-card__desc { font-size: 12px; }
+  .price-card__note { font-size: 11px; }
+
+  .price-featured-banner {
+    padding: 32px 18px 24px;
+  }
+  .price-featured-badge {
+    font-size: 9px;
+    padding: 5px 12px;
+    top: -11px;
+  }
+  .price-featured__inner {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+  .price-featured__left h3 {
+    text-align: center;
+    font-size: 17px;
+  }
+  .price-featured__price { justify-content: center; }
+  .price-featured__big { font-size: 34px; }
+  .price-featured__subtitle { text-align: center; }
+  .price-featured__list { text-align: left; }
+  .price-featured__list li { font-size: 12px; }
+  .price-featured__right { text-align: center; }
+
+  /* === HOW IT WORKS === */
+  .how-split-grid {
+    grid-template-columns: 1fr !important;
+    gap: 28px;
+  }
+  .how-info-block h2,
+  .how-steps-block h2 { text-align: center; }
+  .how-checklist li span:last-child { font-size: 14px; }
+  .flow-items { padding-left: 14px; }
+  .flow-items .flow-item {
+    padding: 16px 16px 16px 24px;
+    gap: 14px;
+    margin-bottom: 12px;
+  }
+  .flow-items .flow-num {
+    width: 26px; height: 26px;
+    font-size: 11px;
+    left: -13px;
+    border-width: 2px;
+  }
+  .flow-items::before { left: 12px; }
+  .flow-item > .lucide-img { width: 24px; height: 24px; }
+  .flow-item > i { width: 22px; height: 22px; }
+  .flow-item > span,
+  .flow-item > div > span { font-size: 13px; }
+  .flow-item > div small { font-size: 10px; }
+  .secure-badge { font-size: 12px; padding: 10px 16px; }
+
+  /* === CASES === */
+  .cases-compact-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+  .case-compact-card { padding: 16px; }
+  .case-compact-quote { font-size: 12px; }
+  .cases-header,
+  .cases-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .more-cases-link { font-size: 13px; }
+
+  /* === WHY US === */
+  .why-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px;
+  }
+  .why-item {
+    padding: 18px 14px;
+  }
+  .why-item .icon-3d { width: 40px; height: 40px; }
+  .why-item span { font-size: 12px; }
+
+  /* === FITS === */
+  .fits-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px;
+  }
+  .fits-card {
+    padding: 18px 14px;
+  }
+  .fits-card .icon-3d { width: 36px; height: 36px; margin-bottom: 8px; }
+  .fits-card span { font-size: 12px; }
+
+  /* === FAQ === */
+  .faq-grid {
+    grid-template-columns: 1fr !important;
+    gap: 8px;
+  }
+  .faq-trigger {
+    padding: 14px 16px;
+    font-size: 14px;
+  }
+  .faq-trigger:hover { padding-left: 16px; }
+  .faq-icon-arrow { width: 24px; height: 24px; }
+  .faq-icon-arrow i { width: 16px; height: 16px; }
+  .faq-content { padding: 0 16px; }
+  .faq-content p { font-size: 13px; }
+
+  /* === CTA === */
+  .cta-section {
+    padding: 48px 16px !important;
+  }
+  .cta-inner { text-align: center; }
+  .cta-inner h2 { font-size: 24px; }
+  .cta-inner p { font-size: 14px; margin-bottom: 20px; }
+  .cta-bullet-features {
+    justify-content: center;
+    gap: 8px 16px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+  .cta-bullet-features li { font-size: 13px; }
+  .cta-actions {
+    flex-direction: column !important;
+    gap: 12px;
+    align-items: center;
+  }
+  .cta-actions .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* === FOOTER === */
+  .footer { padding: 32px 16px; }
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+  .footer-brand { align-items: center; }
+  .footer-subtitle { text-align: center; font-size: 12px; }
+  .footer-contacts {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-copy { text-align: center; }
+
+  /* === CALCULATOR === */
+  .pricing-calculator { padding: 24px 16px !important; }
+  .calc-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+  }
+  .calc-summary { position: static; }
+  .summary-card { padding: 20px 16px; }
+  .cost-value { font-size: 24px; }
+
+  /* === ANIMATIONS — REDUCE MOVEMENT === */
+  .reveal { transform: translateY(16px); }
+  .reveal-left { transform: translateX(-16px); }
+  .reveal-right { transform: translateX(16px); }
+  .reveal-scale { transform: scale(0.96); }
+}
+
+/* ======= SMALL MOBILE (≤480px) ======= */
+@media (max-width: 480px) {
+  section,
+  .section { padding: 36px 12px !important; }
+
+  /* Hero */
+  .hero { padding-top: 72px !important; padding-bottom: 32px !important; }
+  .hero-top h1 { font-size: 21px !important; }
+  .hero-desc { font-size: 13px; }
+  .hero-benefits-grid { grid-template-columns: 1fr !important; gap: 8px; }
+  .hero-benefit-item { padding: 10px 12px; }
+  .hero-split-preview {
+    flex-direction: row !important;
+    gap: 4px !important;
+    max-width: 100% !important;
+    margin-bottom: 16px !important;
+  }
+  .hero-split-card {
+    padding: 4px !important;
+    border-radius: 8px !important;
+  }
+  .hero-split-badge {
+    font-size: 8px !important;
+    padding: 2px 6px !important;
+  }
+  .hero-split-chevron {
+    transform: none !important;
+    width: 16px !important;
+    height: 16px !important;
+  }
+  .hero-split-chevron i,
+  .hero-split-chevron svg {
+    width: 12px !important;
+    height: 12px !important;
+  }
+  .hero-split-rating {
+    padding: 2px 4px !important;
+    font-size: 8px !important;
+    margin-top: 2px !important;
+    border-radius: 4px !important;
+    gap: 0px !important;
+  }
+  .hero-split-rating .rating-stars {
+    font-size: 8px !important;
+  }
+  .hero-split-rating .rating-count {
+    font-size: 7px !important;
+  }
+  .hero-form-card { padding: 18px 14px !important; }
+
+  /* All grids → 1 column */
+  .get-grid-horizontal,
+  .get-grid { grid-template-columns: 1fr !important; }
+  .services-grid { grid-template-columns: 1fr !important; }
+  .why-grid { grid-template-columns: 1fr !important; }
+  .fits-grid { grid-template-columns: 1fr !important; }
+
+  /* Form */
+  .selector-options { grid-template-columns: repeat(2, 1fr) !important; }
+  .selector-btn { font-size: 11px; padding: 6px 8px; }
+
+  /* Pricing */
+  .price-card { padding: 18px 14px 16px; }
+  .price-featured-banner { padding: 24px 14px 20px; }
+  .price-featured__big { font-size: 28px; }
+
+  /* How-it-works */
+  .flow-items .flow-item { padding: 12px 12px 12px 18px; gap: 10px; }
+  .flow-items .flow-num { width: 22px; height: 22px; font-size: 10px; left: -11px; border-width: 2px; }
+  .flow-items::before { left: 9px; width: 1.5px; }
+  .flow-item > .lucide-img { width: 20px; height: 20px; }
+  .flow-item > i { width: 18px; height: 18px; }
+
+  /* Cases */
+  .cases-compact-grid { max-width: 100%; }
+
+  /* FAQ */
+  .faq-trigger { padding: 12px 14px; font-size: 13px; }
+  .faq-content p,
+  .faq-content li { font-size: 12px; }
+
+  /* CTA */
+  .cta-section { padding: 36px 12px !important; }
+  .cta-inner h2 { font-size: 20px; }
+  .cta-bullet-features { flex-direction: column; align-items: center; gap: 6px; }
+  .cta-bullet-features li { font-size: 12px; }
+
+  /* Footer */
+  .footer-contacts {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  /* Calculator */
+  .calc-cb-label { padding: 12px 14px; gap: 10px; }
+  .cb-text strong { font-size: 12px; }
+  .cb-text small { font-size: 10px; }
+  .cb-price { font-size: 13px; }
+  .cost-value { font-size: 22px; }
+}
+
+/* ======= VERY SMALL (≤360px) ======= */
+@media (max-width: 360px) {
+  .hero-top h1 { font-size: 19px !important; }
+  .section-title { font-size: 20px !important; }
+  .hero-form-card h3 { font-size: 16px; }
+  .hero-benefit-item span { font-size: 10px; }
+  .price-featured__big { font-size: 24px; }
+  .cta-inner h2 { font-size: 18px; }
+}

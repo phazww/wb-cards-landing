@@ -59,16 +59,29 @@
   const burger = document.getElementById('burger');
   const nav = document.getElementById('nav');
   if (burger && nav) {
+    // Inject CTA button into nav for mobile menu
+    const navCta = document.createElement('a');
+    navCta.href = '#hero-form-anchor';
+    navCta.className = 'btn btn-primary nav-mobile-cta';
+    navCta.textContent = 'Получить бесплатный разбор';
+    navCta.style.display = 'none';
+    nav.appendChild(navCta);
+
     burger.addEventListener('click', () => {
       const active = burger.classList.toggle('active');
       nav.classList.toggle('open');
       burger.setAttribute('aria-expanded', active ? 'true' : 'false');
+      // Lock body scroll when menu is open
+      document.body.style.overflow = active ? 'hidden' : '';
     });
+
+    // Close menu on nav link click
     nav.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
         burger.classList.remove('active');
         nav.classList.remove('open');
         burger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
       });
     });
   }
@@ -206,9 +219,10 @@
     counterObserver.observe(chartLabel);
   }
 
-  // ===== SUBTLE PARALLAX ON HERO =====
+  // ===== SUBTLE PARALLAX ON HERO (desktop only) =====
   const heroSection = document.getElementById('hero');
-  if (heroSection) {
+  const isMobile = window.matchMedia('(max-width: 768px)');
+  if (heroSection && !isMobile.matches) {
     let parallaxTicking = false;
     const heroTop = heroSection.querySelector('.hero-top');
     const heroMedia = heroSection.querySelector('.hero-media');

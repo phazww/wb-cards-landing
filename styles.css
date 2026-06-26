@@ -403,6 +403,95 @@ img { max-width: 100%; height: auto; }
   align-items: center;
 }
 
+/* Static ДО/ПОСЛЕ Split Preview */
+.hero-split-preview {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 auto 24px auto;
+  max-width: 420px;
+  width: 100%;
+}
+.hero-split-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.hero-split-heading {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.55);
+}
+.hero-split-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 10px;
+  width: 100%;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.hero-split-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(109, 40, 217, 0.2);
+}
+.hero-split-card img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+}
+.hero-split-card--after {
+  border-color: rgba(109, 40, 217, 0.3);
+  background: rgba(109, 40, 217, 0.08);
+}
+.hero-split-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  margin-top: 8px;
+  padding: 6px 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  font-size: 11px;
+}
+.hero-split-rating .rating-stars {
+  font-weight: 700;
+  color: #FBBF24;
+  font-size: 13px;
+}
+.hero-split-rating .rating-count {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 10px;
+  font-weight: 500;
+}
+.hero-split-rating--after {
+  background: rgba(109, 40, 217, 0.1);
+}
+.hero-split-chevron {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 20px;
+}
+.hero-split-chevron i {
+  width: 20px;
+  height: 20px;
+}
+@media (max-width: 480px) {
+  .hero-split-preview { gap: 8px; max-width: 320px; }
+  .hero-split-card { padding: 6px; }
+}
 /* Draggable Before/After Slider */
 .before-after-slider {
   position: relative;

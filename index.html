@@ -91,30 +91,28 @@
 
       <!-- Колонка 2: ДО/ПОСЛЕ -->
       <div class="hero-media reveal">
-        <div class="before-after-slider" id="hero-slider" aria-label="Сравнение карточки товара до и после обновления">
-          <!-- Слой ДО -->
-          <div class="slider-layer slider-layer--before">
-            <img src="assets/headphones_before.webp" alt="Карточка товара до обновления: стандартное фото без дизайна">
-            <span class="split-label">до</span>
-            <div class="split-rating">
-              <span class="rating-stars">3.0 ★★★☆☆</span>
-              <span class="rating-count">116 отзывов</span>
+        <div class="hero-split-preview" aria-label="Сравнение карточки товара до и после обновления">
+          <div class="hero-split-col">
+            <span class="hero-split-heading">ДО</span>
+            <div class="hero-split-card hero-split-card--before">
+              <img src="assets/headphones_before.webp" alt="Карточка товара до обновления: стандартное фото без дизайна">
+              <div class="hero-split-rating">
+                <span class="rating-stars">3.8 ★★★☆☆</span>
+                <span class="rating-count">196 отзывов</span>
+              </div>
             </div>
           </div>
-          <!-- Слой ПОСЛЕ -->
-          <div class="slider-layer slider-layer--after">
-            <img src="assets/headphones_after.webp" alt="Карточка товара после обновления: профессиональная инфографика">
-            <span class="split-label split-label--after">после</span>
-            <div class="split-rating split-rating--after">
-              <span class="rating-stars">4.8 ★★★★★</span>
-              <span class="rating-count">1248 отзывов</span>
-            </div>
+          <div class="hero-split-chevron">
+            <i data-lucide="chevron-right"></i>
           </div>
-          <!-- Ползунок управления -->
-          <div class="slider-handle" id="hero-slider-handle" role="slider" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" aria-label="Перетащите для сравнения" tabindex="0">
-            <div class="slider-handle-line"></div>
-            <div class="slider-handle-button">
-              <i data-lucide="chevrons-left-right"></i>
+          <div class="hero-split-col">
+            <span class="hero-split-heading">ПОСЛЕ</span>
+            <div class="hero-split-card hero-split-card--after">
+              <img src="assets/headphones_after.webp" alt="Карточка товара после обновления: профессиональная инфографика">
+              <div class="hero-split-rating hero-split-rating--after">
+                <span class="rating-stars">4.8 ★★★★★</span>
+                <span class="rating-count">1248 отзывов</span>
+              </div>
             </div>
           </div>
         </div>
@@ -124,12 +122,10 @@
           <svg class="hero-chart-svg" viewBox="0 0 400 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <defs>
               <linearGradient id="chartGrad" x1="0" y1="0" x2="400" y2="0" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#D91F8B"/>
-                <stop offset="100%" stop-color="#E5A93C"/>
+                <stop offset="0%" stop-color="#6D28D9"/><stop offset="100%" stop-color="#E5A93C"/>
               </linearGradient>
               <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="100" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#D91F8B" stop-opacity="0.18"/>
-                <stop offset="100%" stop-color="#E5A93C" stop-opacity="0.01"/>
+                <stop offset="0%" stop-color="#6D28D9" stop-opacity="0.18"/><stop offset="100%" stop-color="#E5A93C" stop-opacity="0.01"/>
               </linearGradient>
             </defs>
             <path d="M0 85 C40 82, 80 78, 120 65 C160 52, 200 40, 240 30 C280 20, 320 14, 360 10 L400 8 L400 100 L0 100Z" fill="url(#chartFill)"/>

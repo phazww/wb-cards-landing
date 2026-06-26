@@ -85,13 +85,72 @@
       const el = document.querySelector(id);
       if (el) {
         e.preventDefault();
-        el.scrollIntoView({ behavior: 'smooth' });
+        const headerH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h')) || 72;
+        const top = el.getBoundingClientRect().top + window.scrollY - headerH - 16;
+        window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
       }
     });
   });
 
+  // ===== HEADER SHRINK ON SCROLL =====
+  const headerEl = document.getElementById('header');
+  if (headerEl) {
+    let shrinkTicking = false;
+    
+    function updateHeaderShrink() {
+      const scrollY = window.scrollY || window.pageYOffset;
+      if (scrollY > 80) {
+        headerEl.classList.add('header--shrink');
+      } else {
+        headerEl.classList.remove('header--shrink');
+      }
+      shrinkTicking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+      if (!shrinkTicking) {
+        requestAnimationFrame(updateHeaderShrink);
+        shrinkTicking = true;
+      }
+    }, { passive: true });
+  }
+
+  // ===== ACTIVE NAV HIGHLIGHT =====
+  const navLinksAll = document.querySelectorAll('.nav a[href^="#"]');
+  const navSections = [];
+  navLinksAll.forEach(link => {
+    const id = link.getAttribute('href').substring(1);
+    const sec = document.getElementById(id);
+    if (sec) navSections.push({ el: sec, link: link });
+  });
+
+  if (navSections.length > 0) {
+    let navTicking = false;
+    function updateActiveNav() {
+      const scrollY = window.scrollY + 120;
+      let activeIdx = 0;
+      for (let i = 0; i < navSections.length; i++) {
+        if (navSections[i].el.offsetTop <= scrollY) {
+          activeIdx = i;
+        }
+      }
+      navLinksAll.forEach(l => l.classList.remove('nav-active'));
+      navSections[activeIdx].link.classList.add('nav-active');
+      navTicking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+      if (!navTicking) {
+        requestAnimationFrame(updateActiveNav);
+        navTicking = true;
+      }
+    }, { passive: true });
+
+    updateActiveNav();
+  }
+
   // ===== SCROLL REVEAL ANIMATIONS =====
-  const revealSelectors = '.reveal, .reveal-left, .reveal-right, .reveal-scale';
+  const revealSelectors = '.reveal, .reveal-left, .reveal-right, .reveal-scale, .reveal-stagger';
   const revealEls = document.querySelectorAll(revealSelectors);
 
   if (revealEls.length > 0 && 'IntersectionObserver' in window) {
@@ -103,13 +162,78 @@
         }
       });
     }, {
-      threshold: 0.15,
-      rootMargin: '0px 0px -60px 0px'
+      threshold: 0.12,
+      rootMargin: '0px 0px -40px 0px'
     });
 
     revealEls.forEach(el => revealObserver.observe(el));
   } else {
     revealEls.forEach(el => el.classList.add('visible'));
+  }
+
+  // ===== COUNTER ANIMATION =====
+  const chartLabel = document.querySelector('.hero-chart-label');
+  if (chartLabel && 'IntersectionObserver' in window) {
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const text = chartLabel.textContent || chartLabel.innerText;
+          const match = text.match(/(\+?)(\d+)(%.*)$/);
+          if (match) {
+            const prefix = match[1];
+            const target = parseInt(match[2]);
+            const suffix = match[3];
+            const duration = 1200;
+            const startTime = performance.now();
+
+            function animateCounter(now) {
+              const elapsed = now - startTime;
+              const progress = Math.min(elapsed / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              const current = Math.round(eased * target);
+              chartLabel.textContent = prefix + current + suffix;
+              if (progress < 1) {
+                requestAnimationFrame(animateCounter);
+              }
+            }
+            requestAnimationFrame(animateCounter);
+          }
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    counterObserver.observe(chartLabel);
+  }
+
+  // ===== SUBTLE PARALLAX ON HERO =====
+  const heroSection = document.getElementById('hero');
+  if (heroSection) {
+    let parallaxTicking = false;
+    const heroTop = heroSection.querySelector('.hero-top');
+    const heroMedia = heroSection.querySelector('.hero-media');
+    
+    window.addEventListener('scroll', () => {
+      if (!parallaxTicking) {
+        requestAnimationFrame(() => {
+          const scrollY = window.scrollY || window.pageYOffset;
+          const heroHeight = heroSection.offsetHeight;
+          
+          if (scrollY < heroHeight) {
+            const ratio = scrollY / heroHeight;
+            if (heroTop) {
+              heroTop.style.transform = `translateY(${ratio * 15}px)`;
+              heroTop.style.opacity = 1 - ratio * 0.3;
+            }
+            if (heroMedia) {
+              heroMedia.style.transform = `translateY(${ratio * 10}px)`;
+            }
+          }
+          parallaxTicking = false;
+        });
+        parallaxTicking = true;
+      }
+    }, { passive: true });
   }
 
   // ===== FAQ ACCORDION =====

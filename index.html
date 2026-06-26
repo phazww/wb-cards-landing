@@ -191,198 +191,28 @@
     <div class="container">
       <h2 class="section-title reveal" data-text="whatYouGetTitle">Что вы получите после разбора</h2>
       
-      <div class="audit-section-split">
-        <!-- Левая часть: список результатов -->
-        <div class="audit-results-list reveal-left">
-          <div class="get-card-vertical">
+      <div class="get-grid-horizontal reveal">
+          <div class="get-card-h">
             <img src="assets/get-target.webp" alt="Иконка: анализ слабых мест карточки" class="icon-3d" loading="lazy">
-            <div>
-              <h4>Анализ слабых мест</h4>
-              <p>Поймёте, что именно мешает клиентам выкупать ваш товар прямо сейчас.</p>
-            </div>
+            <h4>Анализ слабых мест</h4>
+            <p>Поймёте, что именно мешает клиентам выкупать ваш товар прямо сейчас.</p>
           </div>
-          <div class="get-card-vertical">
+          <div class="get-card-h">
             <img src="assets/get-clipboard.webp" alt="Иконка: список ошибок и точек роста" class="icon-3d" loading="lazy">
-            <div>
-              <h4>Список ошибок и точек роста</h4>
-              <p>Получите готовый чек-лист с конкретными исправлениями для вашего товара.</p>
-            </div>
+            <h4>Список ошибок и точек роста</h4>
+            <p>Получите готовый чек-лист с конкретными исправлениями для вашего товара.</p>
           </div>
-          <div class="get-card-vertical">
-            <img src="assets/get-user.webp" alt="Иконка: определение оптимального формата работы" class="icon-3d" loading="lazy">
-            <div>
-              <h4>Оптимальный формат работы</h4>
-              <p>Узнаете, какой формат работы (разовый, пакетный или партнёрский) выгоднее для вас.</p>
-            </div>
+          <div class="get-card-h">
+            <img src="assets/get-user.webp" alt="Иконка: оптимальный формат работы" class="icon-3d" loading="lazy">
+            <h4>Оптимальный формат работы</h4>
+            <p>Узнаете, какой формат работы (разовый, пакетный или партнёрский) выгоднее для вас.</p>
           </div>
-          <div class="get-card-vertical">
-            <img src="assets/get-rocket.webp" alt="Иконка: запуск бесплатного теста на карточках" class="icon-3d" loading="lazy">
-            <div>
-              <h4>Быстрый тест на 1-3 карточках</h4>
-              <p>Сможете оценить качество нашей работы на бесплатном тесте перед масштабированием.</p>
-            </div>
+          <div class="get-card-h">
+            <img src="assets/get-rocket.webp" alt="Иконка: быстрый тест на карточках" class="icon-3d" loading="lazy">
+            <h4>Быстрый тест на 1-3 карточках</h4>
+            <p>Сможете оценить качество нашей работы на бесплатном тесте перед масштабированием.</p>
           </div>
         </div>
-
-        <!-- Правая часть: интерактивный симулятор аудита -->
-        <div class="audit-sandbox reveal-right" id="audit-sandbox">
-          <div class="sandbox-phone-frame">
-            <div class="phone-screen">
-              
-              <!-- Экран 1: Ввод артикула -->
-              <div class="sandbox-screen active" id="sandbox-screen-input">
-                <div class="sandbox-screen-header">
-                  <div class="phone-time">12:00</div>
-                  <div class="phone-icons">
-                    <i data-lucide="wifi" aria-hidden="true"></i>
-                    <i data-lucide="battery" aria-hidden="true"></i>
-                  </div>
-                </div>
-                <div class="sandbox-screen-body">
-                  <div class="sandbox-logo-wrap">
-                    <img src="assets/logo_icon.webp" alt="Логотип IdealPick" class="sandbox-logo-icon">
-                    <span class="sandbox-logo-text">IdealPick <span class="badge-mini">audit v2.0</span></span>
-                  </div>
-                  <h3>Протестируйте аудит карточки в реальном времени</h3>
-                  <p class="sandbox-intro-text">Введите любой тестовый артикул WB ниже или нажмите кнопку демо-анализа, чтобы увидеть симуляцию разбора.</p>
-                  
-                  <div class="sandbox-input-group">
-                    <label for="sandbox-sku-input" class="sr-only">Артикул WB</label>
-                    <input type="text" id="sandbox-sku-input" value="195384029" placeholder="Введите артикул WB..." aria-label="Артикул Wildberries">
-                    <button type="button" class="btn btn-primary w-100" id="sandbox-start-btn">Запустить аудит карточки</button>
-                  </div>
-                  <button type="button" class="sandbox-demo-link" id="sandbox-demo-btn">Попробовать с демо-артикулом</button>
-                </div>
-              </div>
-
-              <!-- Экран 2: Загрузка -->
-              <div class="sandbox-screen" id="sandbox-screen-loading">
-                <div class="sandbox-screen-header">
-                  <div class="phone-time">12:00</div>
-                  <div class="phone-icons">
-                    <i data-lucide="wifi" aria-hidden="true"></i>
-                    <i data-lucide="battery" aria-hidden="true"></i>
-                  </div>
-                </div>
-                <div class="sandbox-loading-body">
-                  <div class="spinner"></div>
-                  <h4 id="sandbox-loading-status">Получение данных по артикулу...</h4>
-                  <div class="loading-progress-bar">
-                    <div class="loading-progress-fill" id="sandbox-loading-progress"></div>
-                  </div>
-                  <p class="sandbox-loading-note">Подключаемся к открытому API Wildberries...</p>
-                </div>
-              </div>
-
-              <!-- Экран 3: Интерактивный разбор -->
-              <div class="sandbox-screen" id="sandbox-screen-result">
-                <div class="sandbox-screen-header">
-                  <div class="phone-time">12:00</div>
-                  <div class="phone-icons">
-                    <i data-lucide="wifi" aria-hidden="true"></i>
-                    <i data-lucide="battery" aria-hidden="true"></i>
-                  </div>
-                </div>
-                <div class="sandbox-result-header">
-                  <button type="button" class="sandbox-back-btn" id="sandbox-reset-btn"><i data-lucide="chevron-left" aria-hidden="true"></i> Назад</button>
-                  <span>Результат разбора</span>
-                  <span class="sandbox-sku-badge" id="sandbox-sku-display">арт. 195384029</span>
-                </div>
-                
-                <div class="sandbox-result-body">
-                  <!-- Карточка товара в симуляторе -->
-                  <div class="sandbox-product-card">
-                    <div class="sandbox-product-img-wrap">
-                      <img src="assets/headphones_before.webp" alt="Товар до оптимизации" id="sandbox-product-img">
-                      
-                      <!-- Горячие точки (Hotspots) -->
-                      <button type="button" id="hotspot-photo-btn" class="hotspot hotspot-photo" data-target="info-photo" aria-label="Анализ фото" aria-expanded="false">
-                        <span class="hotspot-pulse"></span>
-                        <span class="hotspot-number">1</span>
-                      </button>
-                      <button type="button" id="hotspot-title-btn" class="hotspot hotspot-title" data-target="info-title" aria-label="Анализ названия" aria-expanded="false">
-                        <span class="hotspot-pulse"></span>
-                        <span class="hotspot-number">2</span>
-                      </button>
-                      <button type="button" id="hotspot-details-btn" class="hotspot hotspot-details" data-target="info-details" aria-label="Анализ характеристик" aria-expanded="false">
-                        <span class="hotspot-pulse"></span>
-                        <span class="hotspot-number">3</span>
-                      </button>
-                    </div>
-
-                    <div class="sandbox-product-info">
-                      <h4 id="sandbox-product-title">Беспроводные наушники</h4>
-                      <div class="sandbox-rating-row">
-                        <span class="stars-gold">★★★☆☆</span>
-                        <span>116 отзывов</span>
-                      </div>
-                      <div class="sandbox-price-row">
-                        <span class="sandbox-price-new">2 490 ₽</span>
-                        <span class="sandbox-price-old">5 000 ₽</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Информационные панели для хотспотов -->
-                  <div class="sandbox-hotspot-info-container">
-                    <div class="sandbox-hotspot-placeholder" id="sandbox-info-placeholder">
-                      <i data-lucide="hand" aria-hidden="true"></i>
-                      <span>Нажмите на любую цифру на фото, чтобы увидеть слабые места</span>
-                    </div>
-
-                    <!-- Панель 1: Фото -->
-                    <div class="sandbox-info-panel" id="info-photo" role="region" aria-live="polite">
-                      <div class="info-panel-title">
-                        <span class="badge-error">Ошибка 1</span>
-                        <h5>Слабый CTR главного фото</h5>
-                      </div>
-                      <div class="info-panel-content">
-                        <p class="text-danger">❌ Наушники сливаются с фоном, преимущества не показаны. CTR ~2.1%.</p>
-                        <p class="text-success">💡 <strong>Решение:</strong> Новое фото с инфографикой, акцентом на влагозащиту и 30ч работы повысит CTR до 5.8% (+176% переходов).</p>
-                      </div>
-                    </div>
-
-                    <!-- Панель 2: Название -->
-                    <div class="sandbox-info-panel" id="info-title" role="region" aria-live="polite">
-                      <div class="info-panel-title">
-                        <span class="badge-error">Ошибка 2</span>
-                        <h5>Слабое SEO-наименование</h5>
-                      </div>
-                      <div class="info-panel-content">
-                        <p class="text-danger">❌ Название "Беспроводные наушники" упускает 15+ ключевых запросов. Потеря 65% поискового охвата.</p>
-                        <p class="text-success">💡 <strong>Решение:</strong> Расширить название до "Беспроводные наушники Bluetooth с микрофоном для телефона детские спортивные", повысив охват на 240%.</p>
-                      </div>
-                    </div>
-
-                    <!-- Панель 3: Характеристики -->
-                    <div class="sandbox-info-panel" id="info-details" role="region" aria-live="polite">
-                      <div class="info-panel-title">
-                        <span class="badge-error">Ошибка 3</span>
-                        <h5>Заполнено лишь 35% характеристик</h5>
-                      </div>
-                      <div class="info-panel-content">
-                        <p class="text-danger">❌ Не заполнены параметры "время зарядки", "совместимость", "тип разъема". Карточка скрыта в фильтрах.</p>
-                        <p class="text-success">💡 <strong>Решение:</strong> Заполнение всех 12 характеристик выведет карточку в 6 дополнительных категорий поиска Wildberries.</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Общая оценка карточки -->
-                  <div class="sandbox-score-card">
-                    <div class="sandbox-score-text">
-                      <span>Итоговая оценка карточки:</span>
-                      <strong class="text-danger">3.5 / 10</strong>
-                    </div>
-                    <a href="#hero-form-anchor" class="btn btn-purple btn-sm w-100" id="sandbox-action-btn">Улучшить карточку до 10/10</a>
-                  </div>
-
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 

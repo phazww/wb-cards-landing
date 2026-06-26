@@ -783,6 +783,54 @@ section h2 {
   gap: 20px;
 }
 
+/* Horizontal 4-column grid for "Что вы получите" */
+.get-grid-horizontal {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 8px;
+}
+.get-card-h {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.25s var(--ease-smooth), box-shadow 0.25s, border-color 0.2s;
+}
+.get-card-h:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-purple);
+}
+.get-card-h .icon-3d {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+.get-card-h h4 {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--text-heading);
+  line-height: 1.3;
+}
+.get-card-h p {
+  font-size: 13px;
+  color: var(--text-body);
+  line-height: 1.6;
+  margin: 0;
+}
+@media (max-width: 900px) {
+  .get-grid-horizontal { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 500px) {
+  .get-grid-horizontal { grid-template-columns: 1fr; }
+}
+
 .get-card-vertical {
   display: flex;
   gap: 20px;

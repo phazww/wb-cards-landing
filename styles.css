@@ -450,6 +450,14 @@ img { max-width: 100%; height: auto; }
   border-color: rgba(109, 40, 217, 0.3);
   background: rgba(109, 40, 217, 0.08);
 }
+.hero-split-col:first-child {
+  flex: 0.8;
+  transform: scale(0.92);
+  opacity: 0.85;
+}
+.hero-split-col:last-child {
+  flex: 1.2;
+}
 .hero-split-rating {
   display: flex;
   flex-direction: column;

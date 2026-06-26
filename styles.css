@@ -443,8 +443,7 @@ img { max-width: 100%; height: auto; }
   width: 100%;
   border-radius: 12px;
   display: block;
-  aspect-ratio: 3/4;
-  object-fit: cover;
+  object-fit: contain;
 }
 .hero-split-card--after {
   border-color: rgba(109, 40, 217, 0.4);

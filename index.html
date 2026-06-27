@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=6.2">
-    <link rel="stylesheet" href="mobile.css?v=2.2">
+    <link rel="stylesheet" href="styles.css?v=6.3">
+    <link rel="stylesheet" href="mobile.css?v=2.3">
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -224,37 +224,79 @@
       <div class="services-grid reveal-stagger">
 
         <article class="service-card">
-          <img src="assets/inc-camera.webp" alt="Новое главное фото" class="icon-3d">
+          <div class="service-card-top-icon">
+            <i data-lucide="camera"></i>
+          </div>
+          <div class="card-visual card-visual--bottle">
+            <img src="assets/source_cream.webp" alt="Косметика">
+          </div>
           <h3>Новое главное фото</h3>
           <p>Яркое, продающее главное фото, которое останавливает взгляд.</p>
         </article>
 
         <article class="service-card">
-          <img src="assets/inc-squares.webp" alt="Комплект фото" class="icon-3d">
+          <div class="service-card-top-icon">
+            <i data-lucide="layers"></i>
+          </div>
+          <div class="card-visual card-visual--grid">
+            <div class="mini-grid-item"><img src="assets/case_sportpit_before.webp" alt=""></div>
+            <div class="mini-grid-item"><img src="assets/case_sportpit_after.webp" alt=""></div>
+            <div class="mini-grid-item"><img src="assets/headphones_before.webp" alt=""></div>
+            <div class="mini-grid-item"><img src="assets/headphones_after.webp" alt=""></div>
+          </div>
           <h3>Комплект из 5 фото</h3>
           <p>Показываем товар со всех сторон и в деталях.</p>
         </article>
 
         <article class="service-card">
-          <img src="assets/inc-seo.webp" alt="Поисковый запрос" class="icon-3d">
+          <div class="service-card-top-icon">
+            <i data-lucide="search"></i>
+          </div>
+          <div class="card-visual card-visual--seo">
+            <span class="seo-pill-badge">SEO</span>
+          </div>
           <h3>Провести входящий поисковый запрос</h3>
           <p>Отслеживаем его поиски и релевантность карточки.</p>
         </article>
 
         <article class="service-card">
-          <img src="assets/inc-desc.webp" alt="Продающее описание" class="icon-3d">
+          <div class="service-card-top-icon">
+            <i data-lucide="file-text"></i>
+          </div>
+          <div class="card-visual card-visual--list">
+            <ul>
+              <li>Выгоды продукта</li>
+              <li>Состав</li>
+              <li>Способ применения</li>
+            </ul>
+          </div>
           <h3>Продающее описание</h3>
           <p>Структурированное описание, которое убеждает и продаёт.</p>
         </article>
 
         <article class="service-card">
-          <img src="assets/inc-chars.webp" alt="Характеристики товара" class="icon-3d">
+          <div class="service-card-top-icon">
+            <i data-lucide="list"></i>
+          </div>
+          <div class="card-visual card-visual--list">
+            <ul>
+              <li>Бренд</li>
+              <li>Вес</li>
+              <li>Вкус</li>
+              <li>Форма выпуска</li>
+            </ul>
+          </div>
           <h3>Характеристики товара</h3>
           <p>Точные и понятные характеристики без лишней воды.</p>
         </article>
 
         <article class="service-card">
-          <img src="assets/inc-cloud.webp" alt="Публикация контента" class="icon-3d">
+          <div class="service-card-top-icon">
+            <i data-lucide="upload-cloud"></i>
+          </div>
+          <div class="card-visual card-visual--cloud">
+            <i data-lucide="upload-cloud" class="cloud-large-icon"></i>
+          </div>
           <h3>Подготовка и публикация</h3>
           <p>Загрузка и публикация контента через личный кабинет или API.</p>
         </article>

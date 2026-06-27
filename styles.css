@@ -1469,16 +1469,7 @@ section h2 {
   z-index: 2;
 }
 
-@media (min-width: 769px) {
-  .services-grid .service-card:nth-child(2),
-  .services-grid .service-card:nth-child(5) {
-    transform: translateY(24px);
-  }
-  .services-grid .service-card:nth-child(2):hover,
-  .services-grid .service-card:nth-child(5):hover {
-    transform: translateY(18px) scale(1.02);
-  }
-}
+/* Stagger removed for compact layout */
 .service-icon-wrap {
   width: 60px;
   height: 60px;

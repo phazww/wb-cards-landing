@@ -505,12 +505,31 @@
   }
   .hero-form-card { padding: 18px 14px !important; }
 
-  /* All grids → 1 column */
+  /* All grids → 2 columns (Compact Mobile Tile Layout) */
   .get-grid-horizontal,
-  .get-grid { grid-template-columns: 1fr !important; }
-  .services-grid { grid-template-columns: 1fr !important; }
-  .why-grid { grid-template-columns: 1fr !important; }
-  .fits-grid { grid-template-columns: 1fr !important; }
+  .get-grid { grid-template-columns: 1fr 1fr !important; gap: 8px !important; }
+  .services-grid { grid-template-columns: 1fr 1fr !important; gap: 8px !important; }
+  .why-grid { grid-template-columns: 1fr 1fr !important; gap: 8px !important; }
+  .fits-grid { grid-template-columns: 1fr 1fr !important; gap: 8px !important; }
+
+  .get-card-h, .service-card, .why-item, .fits-card {
+    padding: 12px 10px !important;
+    border-radius: 8px !important;
+  }
+  .get-card-h .icon-3d, .service-card .icon-3d, .why-item .icon-3d, .fits-card .icon-3d {
+    width: 30px !important;
+    height: 30px !important;
+    margin-bottom: 8px !important;
+  }
+  .get-card-h h4, .service-card h3, .why-item h3 {
+    font-size: 13px !important;
+    line-height: 1.25 !important;
+    margin-bottom: 4px !important;
+  }
+  .get-card-h p, .service-card p, .why-item p, .why-item span, .fits-card span {
+    font-size: 11px !important;
+    line-height: 1.35 !important;
+  }
 
   /* Form */
   .selector-options { grid-template-columns: repeat(2, 1fr) !important; }

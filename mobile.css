@@ -240,12 +240,16 @@
     gap: 12px;
   }
   .get-card-h {
-    padding: 14px 12px;
-    gap: 8px;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    padding: 12px 14px !important;
   }
-  .get-card-h .icon-3d { width: 36px; height: 36px; }
-  .get-card-h h4 { font-size: 13px; }
-  .get-card-h p { font-size: 11px; }
+  .get-card-h .icon-3d { width: 36px !important; height: 36px !important; flex-shrink: 0 !important; margin-bottom: 0 !important; }
+  .get-card-text { display: flex !important; flex-direction: column !important; align-items: flex-start !important; text-align: left !important; }
+  .get-card-h h4 { font-size: 14px !important; line-height: 1.25 !important; margin-bottom: 4px !important; }
+  .get-card-h p { font-size: 12px !important; line-height: 1.35 !important; }
 
   /* === SERVICES === */
   .services-grid {
@@ -253,11 +257,16 @@
     gap: 12px;
   }
   .service-card {
-    padding: 14px 12px;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    padding: 12px 14px !important;
   }
-  .service-card .icon-3d { width: 36px; height: 36px; margin-bottom: 10px; }
-  .service-card h3 { font-size: 16px; margin-bottom: 6px; }
-  .service-card p { font-size: 14px; line-height: 1.4; }
+  .service-card .icon-3d { width: 36px !important; height: 36px !important; flex-shrink: 0 !important; margin-bottom: 0 !important; }
+  .service-card-text { display: flex !important; flex-direction: column !important; align-items: flex-start !important; text-align: left !important; }
+  .service-card h3 { font-size: 14px !important; margin-bottom: 4px !important; }
+  .service-card p { font-size: 12px !important; line-height: 1.35 !important; }
   /* Remove stagger offset on mobile */
   .services-grid .service-card:nth-child(2),
   .services-grid .service-card:nth-child(5) {
@@ -366,10 +375,15 @@
     gap: 12px;
   }
   .why-item {
-    padding: 18px 14px;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    padding: 12px 14px !important;
   }
-  .why-item .icon-3d { width: 40px; height: 40px; }
-  .why-item span { font-size: 12px; }
+  .why-item .icon-3d { width: 36px !important; height: 36px !important; flex-shrink: 0 !important; margin-bottom: 0 !important; }
+  .why-item-text { display: flex !important; flex-direction: column !important; align-items: flex-start !important; text-align: left !important; }
+  .why-item span { font-size: 13px !important; line-height: 1.25 !important; }
 
   /* === FITS === */
   .fits-grid {
@@ -377,10 +391,15 @@
     gap: 12px;
   }
   .fits-card {
-    padding: 18px 14px;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    padding: 12px 14px !important;
   }
-  .fits-card .icon-3d { width: 36px; height: 36px; margin-bottom: 8px; }
-  .fits-card span { font-size: 12px; }
+  .fits-card .icon-3d { width: 36px !important; height: 36px !important; flex-shrink: 0 !important; margin-bottom: 0 !important; }
+  .fits-card-text { display: flex !important; flex-direction: column !important; align-items: flex-start !important; text-align: left !important; }
+  .fits-card span { font-size: 13px !important; line-height: 1.25 !important; }
 
   /* === FAQ === */
   .faq-grid {
@@ -505,7 +524,7 @@
   }
   .hero-form-card { padding: 18px 14px !important; }
 
-  /* All grids → 1 column (Large Text, Compact Spacing Layout) */
+  /* All grids → 1 column (Large Text, Compact Spacing Row Layout) */
   .get-grid-horizontal,
   .get-grid { grid-template-columns: 1fr !important; gap: 10px !important; }
   .services-grid { grid-template-columns: 1fr !important; gap: 10px !important; }
@@ -513,22 +532,38 @@
   .fits-grid { grid-template-columns: 1fr !important; gap: 10px !important; }
 
   .get-card-h, .service-card, .why-item, .fits-card {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    gap: 12px !important;
     padding: 14px 16px !important;
     border-radius: 10px !important;
-    align-items: flex-start !important;
     text-align: left !important;
   }
   .get-card-h .icon-3d, .service-card .icon-3d, .why-item .icon-3d, .fits-card .icon-3d {
     width: 36px !important;
     height: 36px !important;
-    margin-bottom: 10px !important;
+    margin-bottom: 0 !important;
+    flex-shrink: 0 !important;
   }
-  .get-card-h h4, .service-card h3, .why-item h3 {
+  .get-card-text, .service-card-text, .why-item-text, .fits-card-text {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    flex-grow: 1 !important;
+  }
+  .get-card-h h4, .service-card h3 {
     font-size: 16px !important;
-    line-height: 1.3 !important;
-    margin-bottom: 6px !important;
+    line-height: 1.25 !important;
+    margin-bottom: 4px !important;
   }
-  .get-card-h p, .service-card p, .why-item p, .why-item span, .fits-card span {
+  .why-item span, .fits-card span {
+    font-size: 15px !important;
+    line-height: 1.3 !important;
+  }
+  .get-card-h p, .service-card p {
     font-size: 14px !important;
     line-height: 1.4 !important;
   }

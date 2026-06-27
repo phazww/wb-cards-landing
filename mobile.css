@@ -14,7 +14,7 @@
   html { -webkit-text-size-adjust: 100%; }
   body { overflow-x: hidden; }
   section,
-  .section { padding: 40px 16px !important; }
+  .section { padding: 24px 16px !important; }
   .container { padding: 0; }
   .page { overflow-x: hidden; }
 
@@ -76,13 +76,13 @@
 
   /* === HERO === */
   .hero {
-    padding-top: 80px !important;
-    padding-bottom: 40px !important;
+    padding-top: 50px !important;
+    padding-bottom: 30px !important;
   }
   .hero-3col {
     display: flex !important;
     flex-direction: column !important;
-    gap: 24px !important;
+    gap: 16px !important;
   }
   .hero-top {
     order: 1;
@@ -97,20 +97,22 @@
   .hero--dark .hero-top h1 { font-size: 26px !important; }
   .hero-desc {
     text-align: center;
-    font-size: 15px;
+    font-size: 16px;
     margin: 0 auto 16px;
+    line-height: 1.4;
   }
   .hero-benefits-grid {
     grid-template-columns: 1fr 1fr !important;
-    gap: 10px;
+    gap: 8px 12px;
     margin: 0 auto;
+    max-width: 320px;
   }
   .hero-benefit-item {
-    padding: 10px 10px;
+    padding: 6px 8px;
     gap: 8px;
   }
-  .hero-benefit-item span { font-size: 11px; }
-  .hero-benefit-item .icon-3d { width: 26px; height: 26px; }
+  .hero-benefit-item span { font-size: 12px; line-height: 1.25; }
+  .hero-benefit-item .icon-3d { width: 24px; height: 24px; }
   .hero-disclaimer {
     text-align: center;
     font-size: 10px;
@@ -226,8 +228,8 @@
 
   /* === SECTION TITLES === */
   .section-title {
-    font-size: 24px !important;
-    margin-bottom: 28px;
+    font-size: 26px !important;
+    margin-bottom: 16px !important;
   }
   h2 { font-size: 26px; }
 
@@ -238,8 +240,8 @@
     gap: 12px;
   }
   .get-card-h {
-    padding: 18px 14px;
-    gap: 10px;
+    padding: 14px 12px;
+    gap: 8px;
   }
   .get-card-h .icon-3d { width: 36px; height: 36px; }
   .get-card-h h4 { font-size: 13px; }
@@ -251,11 +253,11 @@
     gap: 12px;
   }
   .service-card {
-    padding: 18px 14px;
+    padding: 14px 12px;
   }
-  .service-card .icon-3d { width: 40px; height: 40px; }
-  .service-card h3 { font-size: 15px; }
-  .service-card p { font-size: 13px; }
+  .service-card .icon-3d { width: 36px; height: 36px; margin-bottom: 10px; }
+  .service-card h3 { font-size: 16px; margin-bottom: 6px; }
+  .service-card p { font-size: 14px; line-height: 1.4; }
   /* Remove stagger offset on mobile */
   .services-grid .service-card:nth-child(2),
   .services-grid .service-card:nth-child(5) {
@@ -456,14 +458,14 @@
 /* ======= SMALL MOBILE (≤480px) ======= */
 @media (max-width: 480px) {
   section,
-  .section { padding: 36px 12px !important; }
+  .section { padding: 20px 12px !important; }
 
   /* Hero */
-  .hero { padding-top: 72px !important; padding-bottom: 32px !important; }
-  .hero-top h1 { font-size: 21px !important; }
-  .hero-desc { font-size: 13px; }
-  .hero-benefits-grid { grid-template-columns: 1fr !important; gap: 8px; }
-  .hero-benefit-item { padding: 10px 12px; }
+  .hero { padding-top: 48px !important; padding-bottom: 24px !important; }
+  .hero-top h1 { font-size: 24px !important; margin-bottom: 12px !important; }
+  .hero-desc { font-size: 14px; margin-bottom: 12px !important; }
+  .hero-benefits-grid { grid-template-columns: 1fr 1fr !important; gap: 8px 12px; }
+  .hero-benefit-item { padding: 4px 6px; }
   .hero-split-preview {
     flex-direction: row !important;
     gap: 4px !important;

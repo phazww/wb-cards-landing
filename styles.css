@@ -61,8 +61,8 @@ body {
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   background: var(--bg-light);
   color: var(--text-body);
-  font-size: 17px;
-  line-height: 1.5;
+  font-size: 18px;
+  line-height: 1.45;
   overflow-x: hidden;
   width: 100%;
   -webkit-font-smoothing: antialiased;
@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5, h6, .logo-brand-text, .price-featured__big, .price-card__val
   letter-spacing: -0.03em;
 }
 
-section { padding: 58px 24px; position: relative; }
+section { padding: 44px 24px; position: relative; }
 section[id] { scroll-margin-top: var(--header-h); }
 .container { max-width: 1200px; margin: 0 auto; width: 100%; }
 a { text-decoration: none; color: inherit; }
@@ -848,7 +848,7 @@ section h2 {
   font-size: clamp(26px, 3vw, 38px);
   font-weight: 900;
   letter-spacing: -0.02em;
-  margin-bottom: 26px;
+  margin-bottom: 18px;
   text-align: center;
   line-height: 1.12;
   color: var(--text-heading);
@@ -2932,7 +2932,7 @@ section h2 {
 /* ===== EXTRA CLASSES (HTML compatibility) ===== */
 
 /* Section modifiers */
-.section { padding: 58px 24px; position: relative; }
+.section { padding: 44px 24px; position: relative; }
 .section[id] { scroll-margin-top: var(--header-h); }
 .section--gray { background: var(--bg-section); }
 .section--cta {
@@ -2943,7 +2943,7 @@ section h2 {
   font-size: clamp(26px, 3vw, 38px);
   font-weight: 900;
   letter-spacing: -0.02em;
-  margin-bottom: 26px;
+  margin-bottom: 18px;
   text-align: center;
   line-height: 1.12;
   color: var(--text-heading);

@@ -14,7 +14,7 @@
   html { -webkit-text-size-adjust: 100%; }
   body { overflow-x: hidden; }
   section,
-  .section { padding: 48px 16px !important; }
+  .section { padding: 40px 16px !important; }
   .container { padding: 0; }
   .page { overflow-x: hidden; }
 
@@ -91,13 +91,13 @@
   }
   .hero-top h1 {
     text-align: center;
-    font-size: 24px !important;
-    line-height: 1.2;
+    font-size: 26px !important;
+    line-height: 1.1;
   }
-  .hero--dark .hero-top h1 { font-size: 24px !important; }
+  .hero--dark .hero-top h1 { font-size: 26px !important; }
   .hero-desc {
     text-align: center;
-    font-size: 14px;
+    font-size: 15px;
     margin: 0 auto 16px;
   }
   .hero-benefits-grid {
@@ -229,7 +229,7 @@
     font-size: 24px !important;
     margin-bottom: 28px;
   }
-  h2 { font-size: 24px; }
+  h2 { font-size: 26px; }
 
   /* === WHAT YOU GET === */
   .get-grid-horizontal,
@@ -254,8 +254,8 @@
     padding: 18px 14px;
   }
   .service-card .icon-3d { width: 40px; height: 40px; }
-  .service-card h3 { font-size: 13px; }
-  .service-card p { font-size: 11px; }
+  .service-card h3 { font-size: 15px; }
+  .service-card p { font-size: 13px; }
   /* Remove stagger offset on mobile */
   .services-grid .service-card:nth-child(2),
   .services-grid .service-card:nth-child(5) {
@@ -286,8 +286,8 @@
   .price-card {
     padding: 22px 18px 20px;
   }
-  .price-card__title { font-size: 15px; }
-  .price-card__val { font-size: 15px; }
+  .price-card__title { font-size: 17px; }
+  .price-card__val { font-size: 20px; }
   .price-card__desc { font-size: 12px; }
   .price-card__note { font-size: 11px; }
 
@@ -397,7 +397,7 @@
 
   /* === CTA === */
   .cta-section {
-    padding: 48px 16px !important;
+    padding: 40px 16px !important;
   }
   .cta-inner { text-align: center; }
   .cta-inner h2 { font-size: 24px; }

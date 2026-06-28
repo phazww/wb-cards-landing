@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=7.0">
-    <link rel="stylesheet" href="mobile.css?v=3.0">
+    <link rel="stylesheet" href="styles.css?v=7.1">
+    <link rel="stylesheet" href="mobile.css?v=3.1">
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -224,6 +224,11 @@
             </div>
           </div>
 
+          <label class="form-consent">
+            <input type="checkbox" id="consent-checkbox" required>
+            <span>Я согласен(а) на <a href="#" class="consent-link">обработку персональных данных</a></span>
+          </label>
+
           <button type="submit" class="btn btn-primary w-100" id="form-submit-btn">Получить бесплатный разбор</button>
 
           <p class="form-privacy"><i data-lucide="lock" aria-hidden="true"></i> Ваши данные защищены и не передаются третьим лицам</p>
@@ -300,14 +305,6 @@
           <div class="service-card-text">
             <h3>Комплект из 5 фото</h3>
             <p>Показываем товар со всех сторон и в деталях.</p>
-          </div>
-        </article>
-
-        <article class="service-card">
-          <img src="assets/inc-seo.png" alt="Поисковый запрос" class="icon-3d">
-          <div class="service-card-text">
-            <h3>Провести входящий поисковый запрос</h3>
-            <p>Отслеживаем его поиски и релевантность карточки.</p>
           </div>
         </article>
 
